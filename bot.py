@@ -21,4 +21,6 @@ async def start(client, message):
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm Telegraph Bot
 I can upload photos or videos to telegraph. Made by <a href="https://t.me/peaky_blinder_tg">[★] ᴘᴇᴀᴋʏ вℓιи∂єя [★]</a>
-Hit help button to find out more about how to use me</b>""",  
+Hit help button to find out more about how to use me</b>""", 
+                disable_web_page_preview=True,        
+            parse_mode="html") 
