@@ -4,7 +4,10 @@ from pyrogram import Client, filters
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-START_TEXT ="hey iam simpler bot"
+START_TEXT ="""hey I'm just a bot so goway stupid
+"""
+HELP_TEXT = """hey bruhh I can't help you so goway
+"""
 
 Peaky = Client(
    "Lisa_bot",
