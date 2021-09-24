@@ -27,7 +27,7 @@ async def help(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await Peaky.send_message(
         chat_id=update.chat.id,
         text=HELP_TEXT,
         reply_markup=reply_markup,
