@@ -41,8 +41,8 @@ async def start(bot, update):
                     InlineKeyboardButton("♻️ 𝙅𝙊𝙄𝙉 𝙊𝙐𝙍 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 ♻️", url="https://t.me/joinchat/WSO_eDhGmFhmMzE1")
                 ],
                 [
-                    InlineKeyboardButton("💡𝙃𝙀𝙇𝙋", callback_data="about_alert"),
-                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="about_alert"),
+                    InlineKeyboardButton("💡𝙃𝙀𝙇𝙋", callback_data="help"),
+                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
                 ]
             ]
         ),
@@ -66,17 +66,18 @@ async def help(client, message):
           )
 
 # for CallbackQuery
-@Peaky.on_callback_query(filters.regex(r"^(start|help|about|close||help_alert)$"), group=2)
+
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('CREATOR👤', url='https://t.me/PEAKY_BLINDER_TG'),
-            InlineKeyboardButton('GROUP👥 🧾', url ='https://t.me/MGMOVIEGRAM')
+            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/AlbertEinstein_TG'),
+            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Filter-Bot-V2')
         ],[
-            InlineKeyboardButton('CHANNEL 🛠', url='https://t.me/MG_MEDIA')
+            InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
         ],[
             InlineKeyboardButton('Help ⚙', callback_data="help")
         ]]
@@ -84,14 +85,14 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            START_TEXT,
+            Translation.START_TEXT.format(update.from_user.mention),
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
         )
 
 
-    if query_data == "help":
+    elif query_data == "help":
         buttons = [[
             InlineKeyboardButton('Home ⚡', callback_data='start'),
             InlineKeyboardButton('About 🚩', callback_data='about')
@@ -102,14 +103,14 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            HELP_TEXT,
+            Translation.HELP_TEXT,
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
         )
 
 
-    if query_data == "about": 
+    elif query_data == "about": 
         buttons = [[
             InlineKeyboardButton('Home ⚡', callback_data='start'),
             InlineKeyboardButton('Close 🔐', callback_data='close')
@@ -118,15 +119,13 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            ABOUT_TEXT,
+            Translation.ABOUT_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
 
 
-    if query_data == "close":
+    elif query_data == "close":
         await update.message.delete()
 
-    if query_data == "help_alert":
-        await update.answer("do not type movpie", show_alert=True)
 Peaky.run()
