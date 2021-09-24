@@ -4,10 +4,10 @@ from pyrogram import Client, filters
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-START_TEXT ="""<b>ʜᴇʏ ɪᴀᴍ sɪᴍᴘʟᴇ ʙᴏᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ 
+START_TEXT ="""<b>Hᴇʏ {update.from_user.mention}
+ഞാൻ Cɪɴᴇᴍᴀ Zɪʟʟᴀ  എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
 
-sᴇɴᴅ ᴍᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏғ ᴀɴʏ sᴏɴɢ
-ᴡɪᴛʜ /song ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ɪ ᴡɪʟʟ ᴅᴇғɪɴᴇᴛʟʏ ɢᴇᴛ ᴛʜᴇ ʀᴇsᴜʟᴛ ᴡɪᴛʜ ɪɴ sᴇᴄᴏɴᴅs</b>"""
+നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!</b>"""
 HELP_TEXT = """hey bruhh I can't help you so goway
 """
 ABOUT_TEXT ="""<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
@@ -29,7 +29,8 @@ Peaky = Client(
 async def start(bot, update):
     await update.reply_photo(
         photo="https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
-        caption=f"""<b>Hᴇʏ {update.from_user.mention}ഞാൻ Cɪɴᴇᴍᴀ Zɪʟʟᴀ  എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
+        caption=f"""<b>Hᴇʏ {update.from_user.mention}
+ഞാൻ Cɪɴᴇᴍᴀ Zɪʟʟᴀ  എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
 
 നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!</b>""",
         reply_markup=InlineKeyboardMarkup(
