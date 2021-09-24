@@ -5,6 +5,28 @@ from config import Config
 import random
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
+PHOTOS = [
+    "https://telegra.ph/file/b4d4c014012f3c31552ed.jpg",
+    "https://telegra.ph/file/0f1aa03b2162f77871c47.jpg",
+    "https://telegra.ph/file/ecc38a0406adf3ee5ac47.jpg",
+    "https://telegra.ph/file/1ca922556aab3c70d6365.jpg",
+    "https://telegra.ph/file/a596e2b2bc792c0b70777.jpg",
+    "https://telegra.ph/file/aab5d709b5d269bf08e32.jpg",
+    "https://telegra.ph/file/a94fbf80d6e482486e754.jpg",
+    "https://telegra.ph/file/da728cfae93e363b02285.jpg",
+    "https://telegra.ph/file/2720d4e5860f464ff7af6.jpg",
+    "https://telegra.ph/file/14e1badc41205ac7401ee.jpg",
+    "https://telegra.ph/file/22ff59822ed4eb5f4bf12.jpg",
+    "https://telegra.ph/file/05f56fbc072cbf452e786.jpg",
+    "https://telegra.ph/file/be2d1988dad28d3623741.jpg",
+    "https://telegra.ph/file/409880ce7409a7f08cc67.jpg",
+    "https://telegra.ph/file/81653df06e7efcb354af9.jpg",
+    "https://telegra.ph/file/4a66e753a81e7fe216467.jpg",
+    "https://telegra.ph/file/c287c1ec90b6a9876fa73.jpg",
+    "https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
+]
+
+
 START_TEXT ="""<b>Hᴇʏ {update.from_user.mention}
 ഞാൻ Cɪɴᴇᴍᴀ Zɪʟʟᴀ  എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
 
@@ -31,7 +53,7 @@ Peaky = Client(
 @Peaky.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
     await update.reply_photo(
-        photo="https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
+        photo=random.choice(PHOTOS),
         caption=f"""<b>Hᴇʏ {update.from_user.mention}
 ഞാൻ <a href="https://t.me/cinemazilla">Cɪɴᴇᴍᴀ Zɪʟʟᴀ</a> എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
 
