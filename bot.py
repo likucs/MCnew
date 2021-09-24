@@ -1,9 +1,8 @@
 import os
 import logging
 from pyrogram import Client, filters
-from telegraph import upload_file
 from config import Config
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 START_TEXT ="hey iam simpler bot"
 
@@ -21,13 +20,32 @@ async def start(client, message):
                chat_id=message.chat.id,
                text=START_TEXT,
                 reply_markup=InlineKeyboardMarkup(
-              [[
-                  InlineKeyboardButton("Buttton", url="https://t.me/link"),
-                  InlineKeyboardButton("Buttton", url="https://t.me/link")
-              ],[
-                 InlineKeyboardButton("Buttton", url="https://t.me/link")
-              ]]
-             )        
-            )
-print ("""just for fun""")
+            [[
+                InlineKeyboardButton("Buttton", url="https://t.me/link"),
+                InlineKeyboardButton("Buttton", url="https://t.me/link")
+            ],[
+                InlineKeyboardButton("Buttton", url="https://t.me/link")
+            ]]
+           )        
+          )
+
+# for CallbackQuery
+@peaky.on_callback_query()
+def common(client, query: CallbackQuery):
+    data = query.data
+    user_id = query.from_user.id
+    user_name = query.from_user.first_name
+    mention = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+
+    if data == "start":
+        query.message.edit(f"your start message.",
+        reply_markup = InlineKeyboardMarkup(
+      [[
+           InlineKeyboardButton("Buttton", url="https://t.me/link"),
+           InlineKeyboardButton("Buttton", url="https://t.me/link")
+      ],[
+           InlineKeyboardButton("Buttton", url="https://t.me/link")
+      ]]
+     )
+           
 Peaky.run()
