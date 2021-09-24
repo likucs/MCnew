@@ -24,3 +24,7 @@ I can upload photos or videos to telegraph. Made by <a href="https://t.me/peaky_
 Hit help button to find out more about how to use me</b>""", 
                 disable_web_page_preview=True,        
             parse_mode="html") 
+     
+    START_BUTTONS = [[
+                        InlineKeyboardButton("wasilm", url="https://t.me/wafikh"),
+             
