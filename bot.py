@@ -394,7 +394,7 @@ PHONE_NUMBER_TEXT = (
 
 
 
-@Peaky.on_message(filters.private & filters.command("start"))
+@Peaky.on_message(filters.private & filters.command("string"))
 async def generate_str(c, m):
     get_api_id = await c.ask(
         chat_id=m.chat.id,
