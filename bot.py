@@ -9,6 +9,8 @@ START_TEXT ="""<b>Hᴇʏ {update.from_user.mention}
 
 നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!</b>"""
 HELP_TEXT = """<b>നീ ഏതാ..... ഒന്ന് പോടെയ് അവൻ help ചോയ്ച്ച് വന്നിരിക്കുന്നു😤...I'm Different Bot U Know</b>"""
+
+CALLBACK_TEXT = """ONUMILLLBSBSVSVVSBBV"""
 ABOUT_TEXT ="""<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 <b>⍟ DᴇᴠᴇLᴏᴘᴇʀ :- <a href="https://t.me/Xxxtentacion_TG">Xxxtentacion_TG</a></b>
 <b>⍟ Credits :- Everyone in this journey</b>
@@ -85,7 +87,7 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            START_TEXT.format(update.from_user.mention),
+            CALLBACK_TEXT.format(update.from_user.mention),
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
