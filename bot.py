@@ -26,5 +26,8 @@ Hit help button to find out more about how to use me</b>""",
             parse_mode="html") 
      
     START_BUTTONS = [[
-                        InlineKeyboardButton("wasilm", url="https://t.me/wafikh"),
+                     InlineKeyboardButton("wasilm", url="https://t.me/wafikh"),
+                 ],[
+                     InlineKeyboardButton("my dev", url="https://t.me/wafikh")
+                   ]] 
              
