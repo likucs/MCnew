@@ -5,7 +5,7 @@ from telegraph import upload_file
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-START_TEXT ="""hey iam simpler bot"""
+START_TEXT ="hey iam simpler bot"
 
 Peaky = Client(
    "Lisa_bot",
@@ -19,9 +19,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Peaky.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm Telegraph Bot
-I can upload photos or videos to telegraph. Made by <a href="https://t.me/peaky_blinder_tg">[★] ᴘᴇᴀᴋʏ вℓιи∂єя [★]</a>
-Hit help button to find out more about how to use me</b>""", 
+               text=START_TEXT, 
                 disable_web_page_preview=True,        
             parse_mode="html")
 Peaky.run()
