@@ -7,7 +7,7 @@ import requests
 import os
 import time
 
-@Client.on_message(filters.command(['song']))
+@Peaky.on_message(filters.command(['song']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
