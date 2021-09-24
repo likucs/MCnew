@@ -1,4 +1,5 @@
 import os
+from telegraph import upload_file
 import logging
 from pyrogram import Client, filters
 from config import Config
