@@ -13,6 +13,11 @@ import youtube_dl
 from youtube_search import YoutubeSearch
 import requests
 
+from pyrogram import Client, errors
+from pyrogram.types import InlineQuery, InlineQueryResultArticle, InputTextMessageContent
+
+from youtubesearchpython import VideosSearch
+
 import time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
