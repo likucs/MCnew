@@ -29,4 +29,5 @@ async def start(client, message):
               ]]
              )        
             )
+print ("""just for fun""")
 Peaky.run()
