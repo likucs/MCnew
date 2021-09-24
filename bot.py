@@ -89,13 +89,11 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
+                    InlineKeyboardButton("🔎 𝚈𝚃 𝚂𝙴𝙰𝚁𝙲𝙷", url="https://t.me/cinemazilla")
+                ],[
                     InlineKeyboardButton("⚠️ 𝙶𝚁𝙾𝚄𝙿", url="https://t.me/cinemazilla"),
                     InlineKeyboardButton("🕵‍♂ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁", url="https://t.me/peaky_blinder_tg"),
-                ],
-                [
-                    InlineKeyboardButton("♻️ 𝙹𝙾𝙸𝙽 𝙾𝚄𝚁 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ♻️", url="https://t.me/cz_films")
-                ],
-                [
+                ],[
                     InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="help"),
                     InlineKeyboardButton("🔐 𝙲𝙻𝙾𝚂𝙴", callback_data="close"),
                 ]
