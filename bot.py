@@ -27,7 +27,7 @@ async def start(client, message):
                 InlineKeyboardButton("Buttton", url="https://t.me/link"),
                 InlineKeyboardButton("Buttton", callback_data="help"),
             ],[
-                InlineKeyboardButton("Buttton", url="https://t.me/link")
+                InlineKeyboardButton("Buttton", callback_data="close"),
             ]]
            )        
           )
@@ -40,8 +40,8 @@ async def help(client, message):
                text=START_TEXT,
                 reply_markup=InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton("Buttton", url="https://t.me/link"),
-                InlineKeyboardButton("Buttton", url="https://t.me/link")
+                InlineKeyboardButton("Buttton", callback_data="start"),
+                InlineKeyboardButton("Buttton", callback_data="close"),
             ],[
                 InlineKeyboardButton("Buttton", url="https://t.me/link")
             ]]
