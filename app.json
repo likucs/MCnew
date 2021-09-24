@@ -1,11 +1,11 @@
-"name": "Telegra.ph Uploader Bot",
+"name": "lissa",
     "description": "A bot that can upload medias to Telegra.ph",
     "logo": "https://telegra.ph/file/b69c591d9667d187249c0.jpg",
     "keywords": [
-        "Telegra.ph",
-        "Uploader",
+        "Songbot",
+        "TelegraphUploader",
         "Telegram Bot",
-        "Benchamxd"
+        "Info bot"
     ],
     "website": "https://benchamxd.me",
     "repository": "https://github.com/Benchamxd/Telegra.ph-Uploader/",
@@ -16,11 +16,11 @@
             "value": ""
         },
         "API_HASH": {
-            "description": "Your API Hash from my.telegram.org",
+            "description": "Your API Hash from my.telegram.org by wasim",
             "value": ""
         },
         "APP_ID": {
-            "description": "Your API ID from my.telegram.org",
+            "description": "Your API ID from my.telegram.org by wasim",
             "value": ""
         }
     },
