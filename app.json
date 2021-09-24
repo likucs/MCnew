@@ -1,18 +1,18 @@
-{
-    "name": "song/inlinemode",
-    "description": "this is test repo of peaky blinder",
-    "logo": "https://telegra.ph/file/81a2435b00d1d77d511f1.jpg",
+"name": "Telegra.ph Uploader Bot",
+    "description": "A bot that can upload medias to Telegra.ph",
+    "logo": "https://telegra.ph/file/b69c591d9667d187249c0.jpg",
     "keywords": [
-        "Song",
-        "Inline",
-        "peaky_bot",
+        "Telegra.ph",
+        "Uploader",
+        "Telegram Bot",
+        "Benchamxd"
     ],
-    "website": "https://infinityje.com",
-    "repository": "https://github.com/ImJanindu/JETelegraphBot",
-    "success_url": "https://t.me/Infinity_BOTs",
+    "website": "https://benchamxd.me",
+    "repository": "https://github.com/Benchamxd/Telegra.ph-Uploader/",
+    "success_url": "https://telegram.dog/indusbots",
     "env": {
         "TG_BOT_TOKEN": {
-            "description": "Your Telegram Bot Token from @BotFather",
+            "description": "You Telegram Bot Token from @BotFather",
             "value": ""
         },
         "API_HASH": {
@@ -20,16 +20,9 @@
             "value": ""
         },
         "APP_ID": {
-            "description": "Your APP ID from my.telegram.org",
+            "description": "Your API ID from my.telegram.org",
             "value": ""
         }
-        "START_MSG": {
-            "description": "Start Message of BoT",
-            "value": "<b>Hi {},\nIam A Simple Youtube to Mp3 Downloader Bot,</b>\n\nSend me Any Songs name with /song command"
-        },
-        "START_IMG": {
-            "description": "Start Message's Photo.",
-            "value": "https://telegra.ph/file/2a35fca576aa49de77c98.jpg"
     },
     "addons": [],
     "buildpacks": [
@@ -43,4 +36,3 @@
             "size": "free"
         }
     }
-}
