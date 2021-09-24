@@ -25,11 +25,11 @@ Peaky = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Peaky.on_message(filters.command("start"))
-async def start(client, message):
-   if message.chat.type == 'private':
-       await Peaky.send_message(
-        text=f"""**Hello {update.from_user.mention}\nഞാൻ Mᴏᴠɪᴇ Gʀᴀᴍ എന്ന ഗ്രൂപ്പിൽ മൂവി ഫിൽറ്റർ ചെയ്യുന്ന ബോട് അണ്
+@Peaky.on_message(filters.command(["start"]) & filters.private, group=1)
+async def start(bot, update):
+    await update.reply_photo(
+        photo="https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
+        caption=f"""**Hello {update.from_user.mention}\nഞാൻ Mᴏᴠɪᴇ Gʀᴀᴍ എന്ന ഗ്രൂപ്പിൽ മൂവി ഫിൽറ്റർ ചെയ്യുന്ന ബോട് അണ്
 നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!**""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -42,11 +42,12 @@ async def start(client, message):
                 ],
                 [
                     InlineKeyboardButton("💡𝙃𝙀𝙇𝙋", callback_data="about_alert"),
-                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
+                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="about_alert"),
                 ]
             ]
         ),
     )
+
 
 @Peaky.on_message(filters.command("help"))
 async def help(client, message):
