@@ -362,7 +362,7 @@ async def showinfo(client, message):
         parse_mode="html"
     )
 
-@Bot.on_message(filters.private & filters.text)
+@Peaky.on_message(filters.private & filters.text)
 async def filter_text(bot, update):
     await update.reply_text(
         text=f"Click the button below for searching your query.\n\nQuery: `{update.text}`",
