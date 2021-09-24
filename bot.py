@@ -9,7 +9,7 @@ START_TEXT ="""<b>Hᴇʏ  ɪᴀᴍ ᴛᴇsᴛ ʙᴏᴛ ᴇᴘᴘᴏʟᴇ ᴘɪɴ
 HELP_TEXT = """hey bruhh I can't help you so goway
 """
 ABOUT_TEXT ="""<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
-<b>♞ Developer: <a href="https://t.me/peaky_blinder_tg">peaky</a></b>
+<b>🤷 DᴇᴠᴇLᴏᴘᴇʀ :- <a href="https://t.me/Xxxtentacion_TG">Xxxtentacion_TG</a></b>
 <b>♞ Support: <a href="https://t.me/cinemazilla">cinemazilla</a></b>
 <b>♞ Library: <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a></b>
 <b>~ @no_ones_like_me</b>"""
