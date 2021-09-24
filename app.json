@@ -1,12 +1,11 @@
 {
-    "name": "chumma oru bot",
+    "name": "song/inlinemode",
     "description": "this is test repo of peaky blinder",
-    "logo": "https://telegra.ph/file/df88cd27fc2221d3393be.jpg",
+    "logo": "https://telegra.ph/file/81a2435b00d1d77d511f1.jpg",
     "keywords": [
-        "Telegraph",
-        "Uploader",
-        "Telegram Bot",
-        "JE Bots"
+        "Song",
+        "Inline",
+        "peaky_bot",
     ],
     "website": "https://infinityje.com",
     "repository": "https://github.com/ImJanindu/JETelegraphBot",
