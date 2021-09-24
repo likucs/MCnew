@@ -156,7 +156,7 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "close":
         await update.message.delete()
 
-@Jebot.on_message(filters.photo)
+@Peaky.on_message(filters.photo)
 async def telegraphphoto(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -172,7 +172,7 @@ async def telegraphphoto(client, message):
     finally:
         os.remove(download_location)
 
-@Jebot.on_message(filters.video)
+@Peaky.on_message(filters.video)
 async def telegraphvid(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -188,7 +188,7 @@ async def telegraphvid(client, message):
     finally:
         os.remove(download_location)
 
-@Jebot.on_message(filters.animation)
+@Peaky.on_message(filters.animation)
 async def telegraphgif(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
