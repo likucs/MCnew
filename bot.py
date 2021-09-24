@@ -33,7 +33,7 @@ async def start(client, message):
                text=START_TEXT,
                 reply_markup=InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton("𝘾𝙍𝙀𝘼𝙏𝙊𝙍", url="https://t.me/link"),
+                InlineKeyboardButton("𝘾𝙍𝙀𝘼𝙏𝙊𝙍", callback_data="help_alert"),
                 InlineKeyboardButton("⚙ 𝙃𝙀𝙇𝙋", callback_data="help"),
             ],[
                 InlineKeyboardButton("𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
