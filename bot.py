@@ -2,6 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from config import Config
+import random
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 START_TEXT ="""<b>Hᴇʏ {update.from_user.mention}
