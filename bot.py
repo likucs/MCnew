@@ -4,8 +4,10 @@ from pyrogram import Client, filters
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-START_TEXT ="""<b>Hᴇʏ  ɪᴀᴍ ᴛᴇsᴛ ʙᴏᴛ ᴇᴘᴘᴏʟᴇ ᴘɪɴᴀ ᴇɴᴛʜɪɴᴀ ɴɪʟᴋɴᴇ ᴘᴏʏɪᴋᴏᴅᴇ ᴀᴘᴘᴀᴍ ʙʏᴇ</b>
-"""
+START_TEXT ="""<b>ʜᴇʏ ɪᴀᴍ sɪᴍᴘʟᴇ ʙᴏᴛ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢ 
+
+sᴇɴᴅ ᴍᴇ ᴛʜᴇ ɴᴀᴍᴇ ᴏғ ᴀɴʏ sᴏɴɢ
+ᴡɪᴛʜ /song ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ɪ ᴡɪʟʟ ᴅᴇғɪɴᴇᴛʟʏ ɢᴇᴛ ᴛʜᴇ ʀᴇsᴜʟᴛ ᴡɪᴛʜ ɪɴ sᴇᴄᴏɴᴅs</b>"""
 HELP_TEXT = """hey bruhh I can't help you so goway
 """
 ABOUT_TEXT ="""<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
@@ -13,7 +15,7 @@ ABOUT_TEXT ="""<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 <b>⍟ Credits :- Everyone in this journey</b>
 <b>⍟ Server :-<a href="https://herokuapp.com/">Hᴇʀᴏᴋᴜ</a></b>
 <b>⍟ source code :- <a href="https://t.me/AdhavaaBiriyaniKittiyalo">Cʟɪᴄᴋ ʜᴇʀᴇ</a></b>
-<b>♞ Library: <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a></b>
+<b>⍟ Library: <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a></b>
 <b>~ @no_ones_like_me</b>"""
 
 Peaky = Client(
