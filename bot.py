@@ -30,7 +30,7 @@ async def start(bot, update):
     await update.reply_photo(
         photo="https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
         caption=f"""<b>Hᴇʏ {update.from_user.mention}
-ഞാൻ Cɪɴᴇᴍᴀ Zɪʟʟᴀ  എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
+ഞാൻ <a href="https://t.me/cinemazilla">Cɪɴᴇᴍᴀ Zɪʟʟᴀ</a> എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
 
 നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!</b>""",
         reply_markup=InlineKeyboardMarkup(
