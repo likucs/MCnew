@@ -31,7 +31,6 @@ async def start(client, message):
               ]
            ]
           )
-              
-                disable_web_page_preview=True,        
+              disable_web_page_preview=True,        
                 parse_mode="html")
 Peaky.run()
