@@ -28,18 +28,26 @@ Peaky = Client(
 @Peaky.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Peaky.send_message(
-               chat_id=message.chat.id,
-               text=START_TEXT,
-                reply_markup=InlineKeyboardMarkup(
-            [[
-                InlineKeyboardButton("𝘾𝙍𝙀𝘼𝙏𝙊𝙍", callback_data="help_alert"),
-                InlineKeyboardButton("⚙ 𝙃𝙀𝙇𝙋", callback_data="help"),
-            ],[
-                InlineKeyboardButton("𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
-            ]]
-           )        
-          )
+       await update.reply_photo(
+        photo="https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
+        caption=f"""**Hello {update.from_user.mention}\nഞാൻ Mᴏᴠɪᴇ Gʀᴀᴍ എന്ന ഗ്രൂപ്പിൽ മൂവി ഫിൽറ്റർ ചെയ്യുന്ന ബോട് അണ്
+നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("⚠️ 𝙂𝙍𝙊𝙐𝙋", url="https://t.me/MGMOVIEGRAM"),
+                    InlineKeyboardButton("🕵‍♂ 𝘾𝙍𝙀𝘼𝙏𝙊𝙍", url="https://t.me/Xxxtentacion_TG"),
+                ],
+                [
+                    InlineKeyboardButton("♻️ 𝙅𝙊𝙄𝙉 𝙊𝙐𝙍 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 ♻️", url="https://t.me/joinchat/WSO_eDhGmFhmMzE1")
+                ],
+                [
+                    InlineKeyboardButton("💡𝙃𝙀𝙇𝙋", callback_data="about_alert"),
+                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
+                ]
+            ]
+        ),
+    )
 
 @Peaky.on_message(filters.command("help"))
 async def help(client, message):
