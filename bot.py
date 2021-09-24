@@ -46,7 +46,7 @@ async def help(client, message):
           )
 
 # for CallbackQuery
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
+@Peaky.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
