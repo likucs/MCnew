@@ -12,9 +12,9 @@ Peaky = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-HELP_TEXT=
+HELP_TEXT= "just for reaching"
 
-@Client.on_message(filters.command(["help"]) & filters.private, group=1)
+@Peaky.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
         InlineKeyboardButton('Home ⚡', url="https://t.me/wafikh"),
