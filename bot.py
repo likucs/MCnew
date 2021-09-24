@@ -22,7 +22,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton("Buttton", url="https://t.me/link"),
-                InlineKeyboardButton("Buttton", url="https://t.me/link")
+                InlineKeyboardButton("Buttton", callback_data="help"),
             ],[
                 InlineKeyboardButton("Buttton", url="https://t.me/link")
             ]]
