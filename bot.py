@@ -19,7 +19,19 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Peaky.send_message(
                chat_id=message.chat.id,
-               text=START_TEXT, 
+               text=START_TEXT,
+                reply_markup=InlineKeyboardMarkup(
+            [
+              [
+                  InlineKeyboardButton("Buttton", url="https://t.me/link"),
+                  InlineKeyboardButton("Buttton", url="https://t.me/link")
+              ],
+              [
+                 InlineKeyboardButton("Buttton", url="https://t.me/link")
+              ]
+           ]
+          )
+              
                 disable_web_page_preview=True,        
-            parse_mode="html")
+                parse_mode="html")
 Peaky.run()
