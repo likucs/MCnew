@@ -30,7 +30,7 @@ async def start(client, message):
           )
 
 # for CallbackQuery
-@peaky.on_callback_query()
+@Peaky.on_callback_query()
 def common(client, query: CallbackQuery):
     data = query.data
     user_id = query.from_user.id
