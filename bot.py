@@ -70,6 +70,8 @@ ABOUT_TEXT ="""<b>Nᴀᴍᴇ :-<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 <b>⍟ Library: <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a></b>
 <b>~ @no_ones_like_me</b>"""
 
+API = "https://apibu.herokuapp.com/api/y-images?query="
+
 Peaky = Client(
    "Lisa_bot",
    api_id=Config.APP_ID,
