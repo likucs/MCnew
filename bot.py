@@ -79,7 +79,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('⚠️ 𝙶𝚁𝙾𝚄𝙿', url ='https://github.com/CrazyBotsz/Adv-Filter-Bot-V2')
         ],[
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', url='https://t.me/CrazyBotszGrp')
-            InlineKeyboardButton('⚙ Help', callback_data="help")
+            InlineKeyboardButton('⚙ 𝙷𝙴𝙻𝙿', callback_data='help')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
