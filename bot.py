@@ -362,34 +362,4 @@ async def showinfo(client, message):
         parse_mode="html"
     )
 
-@Peaky.on_message(filters.private & filters.text)
-async def filter_text(bot, update):
-    await update.reply_text(
-        text=f"Click the button below for searching your query.\n\nQuery: `{update.text}`",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton(text="Search Here", switch_inline_query_current_chat=update.text)],
-                [InlineKeyboardButton(text="Search in another chat", switch_inline_query=update.text)]
-            ]
-        ),
-        disable_web_page_preview=True,
-        quote=True
-    )
-
-
-@Peaky.on_inline_query()
-async def search(bot, update):
-    results = requests.get(API + requote_uri(update.query)).json()["result"][:50]
-    answers = []
-    for result in results:
-        answers.append(
-            InlineQueryResultPhoto(
-                title=update.query,
-                description=result,
-                caption="Made by @FayasNoushad",
-                photo_url=result
-            )
-        )
-    await update.answer(answers)
-
 Peaky.run()
