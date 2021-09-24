@@ -10,3 +10,4 @@ youtube_search
 requests
 ffmpeg-python
 telegraph
+pyromod==1.5
