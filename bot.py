@@ -31,7 +31,7 @@ async def start(client, message):
 
 # for CallbackQuery
 @Peaky.on_callback_query()
-def common(client, query: CallbackQuery):
+def Common(client, query: CallbackQuery):
     data = query.data
     user_id = query.from_user.id
     user_name = query.from_user.first_name
