@@ -21,7 +21,7 @@ async def start(client, message):
                chat_id=message.chat.id,
                text=START_TEXT,
                parse_mode="html"
-               reply_markup=InlineKeyboardMarkup(
+                reply_markup=InlineKeyboardMarkup(
             [
               [
                   InlineKeyboardButton("Buttton", url="https://t.me/link"),
