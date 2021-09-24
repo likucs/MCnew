@@ -8,6 +8,7 @@ from pyrogram import Client, filters
 import math
 import json
 import shutil
+from requests.utils import requote_uri
 
 import youtube_dl
 from youtube_search import YoutubeSearch
