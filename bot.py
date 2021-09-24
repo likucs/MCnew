@@ -4,10 +4,12 @@ from pyrogram import Client, filters
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-START_TEXT ="""hey I'm just a bot so goway stupid
+START_TEXT ="""Hᴇʏ {} ɪᴀᴍ ᴛᴇsᴛ ʙᴏᴛ ᴇᴘᴘᴏʟᴇ ᴘɪɴᴀ ᴇɴᴛʜɪɴᴀ ɴɪʟᴋɴᴇ ᴘᴏʏɪᴋᴏᴅᴇ ᴀᴘᴘᴀᴍ ʙʏᴇ 
 """
 HELP_TEXT = """hey bruhh I can't help you so goway
 """
+ABOUT_TEXT ="""**Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ 
+ᴀʙᴏᴜᴛɪʟ ᴏɴᴜᴍɪʟʟʟᴀʜ**"""
 
 Peaky = Client(
    "Lisa_bot",
@@ -24,10 +26,10 @@ async def start(client, message):
                text=START_TEXT,
                 reply_markup=InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton("Buttton", url="https://t.me/link"),
-                InlineKeyboardButton("Buttton", callback_data="help"),
+                InlineKeyboardButton("𝘾𝙍𝙀𝘼𝙏𝙊𝙍", url="https://t.me/link"),
+                InlineKeyboardButton("⚙ 𝙃𝙀𝙇𝙋", callback_data="help"),
             ],[
-                InlineKeyboardButton("Buttton", callback_data="close"),
+                InlineKeyboardButton("𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
             ]]
            )        
           )
@@ -40,10 +42,10 @@ async def help(client, message):
                text=START_TEXT,
                 reply_markup=InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton("Buttton", callback_data="start"),
-                InlineKeyboardButton("Buttton", callback_data="close"),
+                InlineKeyboardButton("𝙂𝙊 𝘽𝘼𝘾𝙆", callback_data="start"),
+                InlineKeyboardButton("𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
             ],[
-                InlineKeyboardButton("Buttton", url="https://t.me/link")
+                InlineKeyboardButton("GROUP", url="https://t.me/CINEMAZILLA")
             ]]
            )        
           )
@@ -56,7 +58,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('CREATOR👤', url='https://t.me/wasimfaris07'),
+            InlineKeyboardButton('CREATOR👤', url='https://t.me/PEAKY_BLINDER_TG'),
             InlineKeyboardButton('GROUP👥 🧾', url ='https://t.me/MGMOVIEGRAM')
         ],[
             InlineKeyboardButton('CHANNEL 🛠', url='https://t.me/MG_MEDIA')
