@@ -1,3 +1,14 @@
+from pyrogram import Client, filters
+
+import youtube_dl
+from youtube_search import YoutubeSearch
+import requests
+
+import os
+import time
+from config import Config
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 
 @Client.on_message(filters.command('start') & filters.private)
 async def start(client, message):
