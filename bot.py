@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
-START_TEXT ="""Hᴇʏ {} ɪᴀᴍ ᴛᴇsᴛ ʙᴏᴛ ᴇᴘᴘᴏʟᴇ ᴘɪɴᴀ ᴇɴᴛʜɪɴᴀ ɴɪʟᴋɴᴇ ᴘᴏʏɪᴋᴏᴅᴇ ᴀᴘᴘᴀᴍ ʙʏᴇ 
+START_TEXT ="""<b>Hᴇʏ  ɪᴀᴍ ᴛᴇsᴛ ʙᴏᴛ ᴇᴘᴘᴏʟᴇ ᴘɪɴᴀ ᴇɴᴛʜɪɴᴀ ɴɪʟᴋɴᴇ ᴘᴏʏɪᴋᴏᴅᴇ ᴀᴘᴘᴀᴍ ʙʏᴇ</b>
 """
 HELP_TEXT = """hey bruhh I can't help you so goway
 """
