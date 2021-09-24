@@ -1,3 +1,15 @@
+from pyrogram import Client, filters
+
+import youtube_dl
+from youtube_search import YoutubeSearch
+import requests
+
+import os
+import time
+from config import Config
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+
 @Peaky.on_message(filters.command(['song']))
 def a(client, message):
     query = ''
@@ -64,3 +76,4 @@ def a(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
+Peaky.run()
