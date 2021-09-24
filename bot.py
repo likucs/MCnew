@@ -4,6 +4,14 @@ import logging
 from pyrogram import Client, filters
 from config import Config
 import random
+from pyrogram import Client, filters
+
+import youtube_dl
+from youtube_search import YoutubeSearch
+import requests
+
+import os
+import time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 PHOTOS = [
