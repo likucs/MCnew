@@ -29,6 +29,22 @@ async def start(client, message):
            )        
           )
 
+@Peaky.on_message(filters.command("help"))
+async def help(client, message):
+   if message.chat.type == 'private':
+       await Peaky.send_message(
+               chat_id=message.chat.id,
+               text=START_TEXT,
+                reply_markup=InlineKeyboardMarkup(
+            [[
+                InlineKeyboardButton("Buttton", url="https://t.me/link"),
+                InlineKeyboardButton("Buttton", url="https://t.me/link")
+            ],[
+                InlineKeyboardButton("Buttton", url="https://t.me/link")
+            ]]
+           )        
+          )
+
 # for CallbackQuery
 @Peaky.on_callback_query()
 def Common(client, query: CallbackQuery):
