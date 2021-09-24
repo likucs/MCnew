@@ -77,7 +77,9 @@ async def start(bot, update):
         caption=f"""<b>Hᴇʏ {update.from_user.mention}
 ഞാൻ <a href="https://t.me/cinemazilla">Cɪɴᴇᴍᴀ Zɪʟʟᴀ</a> എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
 
-നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!</b>""",
+നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!</b>
+
+<b>Hɪᴛ /help Tᴏ Kɴᴏᴡ Mʏ ɪɴᴛᴇʀᴇsᴛ Cᴍᴅs Aɴᴅ Fᴇᴀᴛᴜʀᴇs</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
