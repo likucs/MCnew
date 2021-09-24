@@ -361,7 +361,7 @@ async def showinfo(client, message):
         parse_mode="html"
     )
 
-@Client.on_inline_query()
+@Peaky.on_inline_query()
 async def inline(client: Client, query: InlineQuery):
     answers = []
     search_query = query.query.lower().strip().rstrip()
