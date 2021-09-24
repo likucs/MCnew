@@ -53,7 +53,7 @@ def Common(client, query: CallbackQuery):
     user_name = query.from_user.first_name
     mention = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
 
-    if data == "start":
+    if data == "help":
         query.message.edit(f"your start message.",
         reply_markup = InlineKeyboardMarkup(
       [[
@@ -63,5 +63,4 @@ def Common(client, query: CallbackQuery):
            InlineKeyboardButton("Buttton", url="https://t.me/link")
       ]]
      )
-           
 Peaky.run()
