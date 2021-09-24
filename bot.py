@@ -58,7 +58,7 @@ async def help(client, message):
           )
 
 # for CallbackQuery
-@Peaky.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
+@Peaky.on_callback_query(filters.regex(r"^(start|help|about|close||help_alert)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -118,4 +118,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "close":
         await update.message.delete()
+
+    if query_data == "help_alert":
+        await update.answer("do not type movpie", show_alert=True)
 Peaky.run()
