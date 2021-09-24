@@ -14,23 +14,11 @@ Peaky = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-HELP_TEXT= "just for reaching"
-
-@Peaky.on_message(filters.command(["help"]) & filters.private, group=1)
-async def help(bot, update):
-    buttons = [[
-        InlineKeyboardButton('Home ⚡', url="https://t.me/wafikh"),
-        InlineKeyboardButton('About 🚩', url='https://t.me/wafikh')
-    ],[
-        InlineKeyboardButton('Close 🔐', url='https://t.me/wafikh')
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await Peaky.send_message(
-        chat_id=update.chat.id,
-        text=HELP_TEXT,
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
+@Peaky.on_message(filters.command("start"))
+async def start(client, message):
+   if message.chat.type == 'private':
+       await Peaky.send_message(
+               chat_id=message.chat.id,
+               text="""<b>Hey There, I'm Telegraph Bot
+I can upload photos or videos to telegraph. Made by <a href="https://t.me/peaky_blinder_tg">[★] ᴘᴇᴀᴋʏ вℓιи∂єя [★]</a>
+Hit help button to find out more about how to use me</b>""",  
