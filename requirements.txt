@@ -2,8 +2,6 @@ Pillow
 Pyrogram
 TgCrypto
 aiohttp
-Pyrogram==1.2.9
-TgCrypto==1.2.2
 youtube_dl
 youtube_search_python
 youtube_search
