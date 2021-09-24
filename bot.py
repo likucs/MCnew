@@ -213,7 +213,7 @@ async def uploadvid(client, message):
   else:
     await message.reply_text("Size Should Be Less Than 5 mb")
 
-@Client.on_message(filters.command(['song']))
+@Peaky.on_message(filters.command(['song']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
