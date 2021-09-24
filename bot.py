@@ -8,7 +8,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 START_TEXT ="""hey iam simpler bot"""
 
 Peaky = Client(
-   "Telegraph Uploader",
+   "Lisa_bot",
    api_id=Config.APP_ID,
    api_hash=Config.API_HASH,
    bot_token=Config.TG_BOT_TOKEN,
