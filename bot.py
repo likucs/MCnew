@@ -20,7 +20,6 @@ async def start(client, message):
        await Peaky.send_message(
                chat_id=message.chat.id,
                text=START_TEXT,
-               parse_mode="html"
                 reply_markup=InlineKeyboardMarkup(
             [
               [
