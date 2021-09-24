@@ -10,7 +10,7 @@ from pyrogram import Client as trojanz
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 #just for fin
-@peaky.on_message(filters.command('info') & (filters.private | filters.group))
+@Peaky.on_message(filters.command('info') & (filters.private | filters.group))
 async def showinfo(client, message):
     try:
         cmd, id = message.text.split(" ", 1)
