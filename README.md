@@ -10,7 +10,7 @@ with & without commands
 
 # depoly to heroku 
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PEAKY-BLINDER-TG/lissa-bot.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shamilhabeebnelli/song-bot/tree/main)
 
 ### Credits: 
 Every one in this journey
