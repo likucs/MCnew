@@ -78,8 +78,8 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('👨‍💻 𝙲𝚁𝙴𝙰𝚃𝙾𝚁', url='https://t.me/PEAKY_BLINDER_TG'),
             InlineKeyboardButton('🔰 𝙶𝚁𝙾𝚄𝙿', url ='https://t.me/cinemazilla')
         ],[
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data="close")
-            InlineKeyboardButton('⚙ Help', callback_data="help")
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data="close"),
+            InlineKeyboardButton('⚙ Help', callback_data="help"),
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
