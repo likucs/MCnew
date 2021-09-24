@@ -362,52 +362,6 @@ async def showinfo(client, message):
         parse_mode="html"
     )
 
-@Peaky.on_inline_query()
-async def inline(client: Client, query: InlineQuery):
-    answers = []
-    search_query = query.query.lower().strip().rstrip()
-
-    if search_query == "":
-        await client.answer_inline_query(
-            query.id,
-            results=answers,
-            switch_pm_text="Type a YouTube video name...",
-            switch_pm_parameter="help",
-            cache_time=0
-        )
-    else:
-        search = VideosSearch(search_query, limit=50)
-
-        for result in search.result()["result"]:
-            answers.append(
-                InlineQueryResultArticle(
-                    title=result["title"],
-                    description="{}, {} views.".format(
-                        result["duration"],
-                        result["viewCount"]["short"]
-                    ),
-                    input_message_content=InputTextMessageContent(
-                        "https://www.youtube.com/watch?v={}".format(
-                            result["id"]
-                        )
-                    ),
-                    thumb_url=result["thumbnails"][0]["url"]
-                )
-            )
-
-        try:
-            await query.answer(
-                results=answers,
-                cache_time=0
-            )
-        except errors.QueryIdInvalid:
-            await query.answer(
-                results=answers,
-                cache_time=0,
-                switch_pm_text="Error: Search timed out",
-                switch_pm_parameter="",
-            )
-
 @Bot.on_message(filters.private & filters.text)
 async def filter_text(bot, update):
     await update.reply_text(
@@ -423,7 +377,7 @@ async def filter_text(bot, update):
     )
 
 
-@Bot.on_inline_query()
+@Peaky.on_inline_query()
 async def search(bot, update):
     results = requests.get(API + requote_uri(update.query)).json()["result"][:50]
     answers = []
