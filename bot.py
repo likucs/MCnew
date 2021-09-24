@@ -5,6 +5,9 @@ from pyrogram import Client, filters
 from config import Config
 import random
 from pyrogram import Client, filters
+import math
+import json
+import shutil
 
 import youtube_dl
 from youtube_search import YoutubeSearch
