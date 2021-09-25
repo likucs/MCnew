@@ -107,26 +107,4 @@ async def help(client, message):
            )        
           )
 
-@Peaky.on_callback_query(filters.regex(r"^(start|help|about|close|plugins)$"), group=2)
-async def callback_data(bot, update: CallbackQuery):
-
-    query_data = update.data
-
- if query_data == "plugins":
-        buttons = [[
-            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
-            InlineKeyboardButton('🤖 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
-        ],[
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
-        ]]
-    
-        reply_markup = InlineKeyboardMarkup(buttons)
-        
-        await update.message.edit_text(
-            HELP_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html",
-            disable_web_page_preview=True
-        )
-
 Peaky.run()
