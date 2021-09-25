@@ -112,7 +112,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
 
-    elif query_data == "plugins":
+    query_data == "plugins":
         buttons = [[
             InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
             InlineKeyboardButton('🤖 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
