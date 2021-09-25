@@ -44,13 +44,17 @@ async def callback_data(bot, update: CallbackQuery):
     query_data = update.data
 
     if query_data == "start":
-        buttons = [[
-            InlineKeyboardButton('👨‍💻 𝙲𝚁𝙴𝙰𝚃𝙾𝚁', url='https://t.me/PEAKY_BLINDER_TG'),
-            InlineKeyboardButton('🔰 𝙶𝚁𝙾𝚄𝙿', url ='https://t.me/cinemazilla')
-        ],[
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data="close"),
-            InlineKeyboardButton('⚙ Help', callback_data="help"),
-        ]]
+        buttons = [
+                     [
+                    InlineKeyboardButton("🔎 𝚈𝚃 𝚂𝙴𝙰𝚁𝙲𝙷", switch_inline_query_current_chat='')
+                    ],[
+                    InlineKeyboardButton("⚠️ 𝙶𝚁𝙾𝚄𝙿", url="https://t.me/cinemazilla"),
+                    InlineKeyboardButton("🕵‍♂ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁", url="https://t.me/peaky_blinder_tg"),
+                    ],[
+                    InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="help"),
+                    InlineKeyboardButton("♻️ 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂", callback_data="home"),
+                    ]
+                 ]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
