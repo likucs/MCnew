@@ -93,6 +93,7 @@ async def callback_data(bot, update: CallbackQuery):
         ],[
             InlineKeyboardButton('📅 𝙸𝙽𝙵𝙾', callback_data='close'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 ', callback_data='close'),
+        ]]
 
         reply_markup = InlineKeyboardMarkup(buttons)
         
