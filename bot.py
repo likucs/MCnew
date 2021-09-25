@@ -83,8 +83,7 @@ async def start(bot, update):
                 ],[
                     InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="alert"),
                 ],[
-                    InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="sourcecode"),
-                ],[
+                    InlineKeyboardButton("♻️ 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂", callback_data="sourcecode"),
                     InlineKeyboardButton("🔐 𝙲𝙻𝙾𝚂𝙴", callback_data="close"),
                 ]
             ]
