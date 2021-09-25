@@ -104,7 +104,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('🔗 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='Telegraph'),
         ],[
             InlineKeyboardButton('📅 𝙸𝙽𝙵𝙾', callback_data='info'),
-            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴 ', callback_data='start'),
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺 ', callback_data='start'),
         ]]
 
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -117,7 +117,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "song": 
         buttons = [[
-            InlineKeyboardButton('🏘 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
         ]]
         
@@ -131,7 +131,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "Telegraph": 
         buttons = [[
-            InlineKeyboardButton('🏘 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
         ]]
         
@@ -145,7 +145,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "info": 
         buttons = [[
-            InlineKeyboardButton('🏘 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
         ]]
         
