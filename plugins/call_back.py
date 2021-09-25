@@ -167,10 +167,4 @@ async def callback_data(bot, update: CallbackQuery):
         await update.message.delete()
 
     elif query_data == "song_ex":
-        await update.answer("""𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦 :
-
-/song no idea ✅
-No idea ❌
-
-/song fadded ✅
-fadded ❌""", show_alert=True))
+        await update.answer("𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦 :\n\n/song no idea ✅\nNo idea ❌\n\n/song fadded ✅\nfadded ❌", show_alert=True))
