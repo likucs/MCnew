@@ -108,4 +108,4 @@ async def callback_data(bot, update: CallbackQuery):
         await update.message.delete()
 
     elif query_data == "alert":
-        await update.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
+        await update.message.edit_text("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀")
