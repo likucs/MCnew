@@ -82,6 +82,9 @@ async def start(bot, update):
                     InlineKeyboardButton("🕵‍♂ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁", url="https://t.me/peaky_blinder_tg"),
                 ],[
                     InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="alert"),
+                ],[
+                    InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="sourcecode"),
+                ],[
                     InlineKeyboardButton("🔐 𝙲𝙻𝙾𝚂𝙴", callback_data="close"),
                 ]
             ]
