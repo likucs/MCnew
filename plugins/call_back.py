@@ -12,7 +12,9 @@ START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 ⍟ /song - ᴇx (/song no idea)
 ⍟/info - Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Iɴғᴏʀᴍᴀᴛɪᴏɴ</b>"""
 
-SONG_TEXT = """THIS IS SONG TEXT"""
+SONG_TEXT = """<b>🎧 𝙸𝙰𝙼 𝙰 𝚂𝙸𝙼𝙿𝙻𝙴 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝚃𝙾 𝙼𝙿3 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 𝙱𝙾𝚃 
+
+𝚂𝙴𝙽𝙳 𝙼𝙴 𝙰𝙽𝚈 𝚂𝙾𝙽𝙶 𝙽𝙰𝙼𝙴 𝚆𝙸𝚃𝙷 /song 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 🎧</b>"""
 
 HELP_TEXT = """<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 ⍟ I ᴄᴀɴ Uᴘʟᴏᴀᴅ Pʜᴏᴛᴏs Oʀ Vɪᴅᴇᴏs Tᴏ Tᴇʟᴇɢʀᴀᴘʜ
@@ -30,7 +32,9 @@ ABOUT_TEXT ="""<b>Nᴀᴍᴇ :-<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 <b>~ @no_ones_like_me</b>"""
 
 SOURCE_TEXT = """ HERE MY PLUGINS"""
-TELEGRAPH_TEXT = """HLOOBDBBDJDBDBDBDBBDBDB"""
+TELEGRAPH_TEXT = """<b>🔗 𝙸 𝙲𝙰𝙽 𝚄𝙿𝙻𝙾𝙰𝙳 𝙿𝙷𝙾𝚃𝙾𝚂 𝙰𝙽𝙳 𝚅𝙸𝙳𝙴𝙾 𝚃𝙾 𝚃𝙴𝙻𝙶𝚁𝙰𝙿𝙷. 
+
+𝚂𝙴𝙽𝙳 𝙼𝙴 𝙰𝙽𝚈 𝙿𝙷𝙾𝚃𝙾 𝙾𝚁 𝚅𝙸𝙳𝙴𝙾 🔗</b>"""
 INFO_TEXT = """wafikh bddbfjfjfjfj"""
 
 
