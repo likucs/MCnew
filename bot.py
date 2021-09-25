@@ -81,7 +81,7 @@ async def start(bot, update):
                     InlineKeyboardButton("⚠️ 𝙶𝚁𝙾𝚄𝙿", url="https://t.me/cinemazilla"),
                     InlineKeyboardButton("🕵‍♂ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁", url="https://t.me/peaky_blinder_tg"),
                 ],[
-                    InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="plugins"),
+                    InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="home"),
                 ],[
                     InlineKeyboardButton("♻️ 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂", callback_data="sourcecode"),
                     InlineKeyboardButton("🔐 𝙲𝙻𝙾𝚂𝙴", callback_data="close"),
