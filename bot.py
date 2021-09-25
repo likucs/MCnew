@@ -110,9 +110,9 @@ async def help(client, message):
 @Peaky.on_callback_query(filters.regex(r"^(start|help|about|close|plugins)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
-   if query_data = update.data
+    query_data = update.data
 
-    query_data == "plugins":
+ if query_data == "plugins":
         buttons = [[
             InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
             InlineKeyboardButton('🤖 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
