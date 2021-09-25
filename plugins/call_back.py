@@ -27,6 +27,8 @@ ABOUT_TEXT ="""<b>Nᴀᴍᴇ :-<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 <b>⍟ Library: <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a></b>
 <b>~ @no_ones_like_me</b>"""
 
+SOURCE_TEXT = """ HERE MY PLUGINS"""
+
 
 @Client.on_callback_query(filters.regex(r"^(start|help|about|close|alert|sourcecode)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
@@ -84,7 +86,7 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html"
         )
        await update.message.edit_text(
-            CALLBACK_TEXT.format(update.from_user.mention),
+            SOURCE_TEXT.format(update.from_user.mention),
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
