@@ -4,7 +4,7 @@ import asyncio
 from pyromod import listen
 from asyncio.exceptions import TimeoutError
 
-from pyrogram import filters, Client
+from pyrogram import filters, Client as Peaky
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import (
     SessionPasswordNeeded, FloodWait,
