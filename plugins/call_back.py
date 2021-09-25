@@ -6,6 +6,7 @@ import asyncio
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from bot import HELP_TEXT, START_TEXT,
 
 @Client.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
