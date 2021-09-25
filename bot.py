@@ -1,37 +1,8 @@
 import os
-from telegraph import upload_file
 import logging
 from pyrogram import Client, filters
 from config import Config
 import random
-from pyrogram import Client, filters
-import math
-import json
-import shutil
-from requests.utils import requote_uri
-
-import youtube_dl
-from youtube_search import YoutubeSearch
-import requests
-
-from pyrogram import Client, errors
-from pyrogram.types import InlineQuery, InlineQueryResultArticle, InputTextMessageContent
-
-from youtubesearchpython import VideosSearch
-
-import time
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-import asyncio
-
-from asyncio.exceptions import TimeoutError
-
-from pyrogram import filters, Client
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.errors import (
-    SessionPasswordNeeded, FloodWait,
-    PhoneNumberInvalid, ApiIdInvalid,
-    PhoneCodeInvalid, PhoneCodeExpired
-)
 
 PHOTOS = [
     "https://telegra.ph/file/b4d4c014012f3c31552ed.jpg",
