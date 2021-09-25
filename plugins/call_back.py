@@ -95,9 +95,9 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
         ]]
+
        await update.message.edit_text(
-        SOURCE_TEXT,
-        reply_markup=reply_markup,
-        parse_mode="html"
-      )
-       reply_markup = InlineKeyboardMarkup(buttons)
+            ABOUT_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
