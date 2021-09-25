@@ -28,7 +28,7 @@ ABOUT_TEXT ="""<b>Nᴀᴍᴇ :-<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 <b>~ @no_ones_like_me</b>"""
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|alert)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -87,3 +87,5 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "close":
         await update.message.delete()
+    elif query_data == "alert":
+        await update.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
