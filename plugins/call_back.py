@@ -85,23 +85,6 @@ async def callback_data(bot, update: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode="html"
         )
-       await update.message.edit_text(
-            SOURCE_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html",
-            disable_web_page_preview=True
-        )
-
-
-    elif query_data == "sourcecode":
-        buttons = [[
-            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
-            InlineKeyboardButton('🤖 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
-        ],[
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
-        ]]
-    
-        reply_markup = InlineKeyboardMarkup(buttons)
 
 
     elif query_data == "close":
