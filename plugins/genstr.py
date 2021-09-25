@@ -24,7 +24,7 @@ PHONE_NUMBER_TEXT = (
     "Press /cancel to Cancel Task."
 )
 
-@Client.on_message(filters.private & filters.command("wasim"))
+@Peaky.on_message(filters.private & filters.command("wasim"))
 async def genStr(_, msg: Message):
     chat = msg.chat
     api = await bot.ask(
@@ -135,7 +135,7 @@ async def genStr(_, msg: Message):
         return
 
 
-@Client.on_message(filters.private & filters.command("restart"))
+@Peaky.on_message(filters.private & filters.command("restart"))
 async def restart(_, msg: Message):
     await msg.reply("Restarted Bot!")
     HU_APP.restart()
