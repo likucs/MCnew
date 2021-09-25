@@ -44,7 +44,7 @@ INFO_TEXT = """<b>☆ 𝙸𝙵 𝚈𝙾𝚄 𝙽𝙴𝙴𝙳 𝙰 𝚃𝙴𝙻�
 ☆ 𝙸𝙵 𝚈𝙾𝚄 𝚂𝙴𝙽𝙳 𝙰 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 [ᴜsɪɴɢ ᴛʜᴇ ғᴏʀᴡᴀʀᴅ ᴛᴀɢ] 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚁 [ᴘᴜʙʟɪᴄ ᴏʀ ᴘʀɪᴠᴛᴇ] 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝚈𝙾𝚄𝚁 𝙸𝙳 𝙾𝙵 𝚃𝙷𝙰𝚃 𝙶𝚁𝙾𝚄𝙿 𝙾𝚁 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b>"""
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -124,7 +124,7 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "song": 
         buttons = [[
             InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
+            InlineKeyboardButton('❓ 𝙴𝚇𝙰𝙼𝙿𝙻𝙴𝚂', callback_data='song_ex')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
