@@ -31,9 +31,10 @@ ABOUT_TEXT ="""<b>Nᴀᴍᴇ :-<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 
 SOURCE_TEXT = """ HERE MY PLUGINS"""
 TELEGRAPH_TEXT = """HLOOBDBBDJDBDBDBDBBDBDB"""
+INFO_TEXT = """wafikh bddbfjfjfjfj"""
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -94,7 +95,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('🎧 𝚂𝙾𝙽𝙶', callback_data='song'),
             InlineKeyboardButton('🔗 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='Telegraph'),
         ],[
-            InlineKeyboardButton('📅 𝙸𝙽𝙵𝙾', callback_data='close'),
+            InlineKeyboardButton('📅 𝙸𝙽𝙵𝙾', callback_data='info'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 ', callback_data='close'),
         ]]
 
@@ -130,6 +131,20 @@ async def callback_data(bot, update: CallbackQuery):
         
         await update.message.edit_text(
             TELEGRAPH_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
+    elif query_data == "info": 
+        buttons = [[
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            INFO_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
