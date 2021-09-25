@@ -165,3 +165,12 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "close":
         await update.message.delete()
+
+    elif query_data == "song_ex":
+        await update.answer("""𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦 :
+
+/song no idea ✅
+No idea ❌
+
+/song fadded ✅
+fadded ❌""", show_alert=True))
