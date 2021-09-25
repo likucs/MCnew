@@ -31,7 +31,7 @@ ABOUT_TEXT ="""<b>Nᴀᴍᴇ :-<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 <b>⍟ Library: <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a></b>
 <b>~ @no_ones_like_me</b>"""
 
-SOURCE_TEXT = """ HERE MY PLUGINS"""
+SOURCE_TEXT = """<b>എന്നെ കൊണ്ട് ചെയ്യാൻ കഴിയുന്ന കുറച്ചു കാര്യങ്ങൾ ആണ് താഴേ കൊടുത്തിട്ടുള്ളത്..</b>"""
 TELEGRAPH_TEXT = """<b>🔗 𝙸 𝙲𝙰𝙽 𝚄𝙿𝙻𝙾𝙰𝙳 𝙿𝙷𝙾𝚃𝙾𝚂 𝙰𝙽𝙳 𝚅𝙸𝙳𝙴𝙾 𝚃𝙾 𝚃𝙴𝙻𝙶𝚁𝙰𝙿𝙷. 
 
 𝚂𝙴𝙽𝙳 𝙼𝙴 𝙰𝙽𝚈 𝙿𝙷𝙾𝚃𝙾 𝙾𝚁 𝚅𝙸𝙳𝙴𝙾 🔗</b>"""
@@ -100,7 +100,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('🔗 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='Telegraph'),
         ],[
             InlineKeyboardButton('📅 𝙸𝙽𝙵𝙾', callback_data='info'),
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 ', callback_data='close'),
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴 ', callback_data='start'),
         ]]
 
         reply_markup = InlineKeyboardMarkup(buttons)
