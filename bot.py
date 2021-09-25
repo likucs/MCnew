@@ -107,10 +107,10 @@ async def help(client, message):
            )        
           )
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|plugins)$"), group=2)
+@Peaky.on_callback_query(filters.regex(r"^(start|help|about|close|plugins)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
-    query_data = update.data
+   if query_data = update.data
 
     query_data == "plugins":
         buttons = [[
