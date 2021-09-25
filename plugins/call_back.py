@@ -30,7 +30,7 @@ ABOUT_TEXT ="""<b>Nᴀᴍᴇ :-<b>Lɪssᴀ ᴛᴇsᴛ Bᴏᴛ</b>
 SOURCE_TEXT = """ HERE MY PLUGINS"""
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|alert|sourcecode)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|plugins)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -90,5 +90,14 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "close":
         await update.message.delete()
 
-    elif query_data == "alert":
-        await update.message.edit_text("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀")
+    elif query_data == "plugins":
+        buttons = [[
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
+        ]]
+       await update.message.edit_text(
+        SOURCE_TEXT,
+        reply_markup=reply_markup,
+        parse_mode="html"
+      )
+reply_markup = InlineKeyboardMarkup(buttons)
