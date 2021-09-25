@@ -112,15 +112,21 @@ async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
 
-    if query_data == "plugins":
+    elif query_data == "plugins":
         buttons = [[
-            InlineKeyboardButton('👨‍💻 𝙲𝚁𝙴𝙰𝚃𝙾𝚁', url='https://t.me/PEAKY_BLINDER_TG'),
-            InlineKeyboardButton('🔰 𝙶𝚁𝙾𝚄𝙿', url ='https://t.me/cinemazilla')
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
+            InlineKeyboardButton('🤖 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
         ],[
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data="close"),
-            InlineKeyboardButton('⚙ Help', callback_data="help"),
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            HELP_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html",
+            disable_web_page_preview=True
+        )
 
 Peaky.run()
