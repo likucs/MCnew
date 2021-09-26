@@ -5,7 +5,8 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
-
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
 
 @Client.on_message(filters.join_chat_members)
 async def welcome(bot,message):
