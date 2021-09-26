@@ -9,11 +9,8 @@ from pyrogram.types import InlineKeyboardMarkup
 @Client.on_message(filters.new_chat_members)
 async def welcome(bot,message):
 	chatid=message.chat.id
-	await bot.send_photo(
-        photo="https://telegra.ph/file/83dd03f6cd75ffb341a9e.jpg",
+	await bot.send_text(text=f"Welcome {message.from_user.mention} to {message.chat.username} ,  Happy to have here",chat_id=chatid)
         chatid=message.chat.id
-        caption=f"Welcome {message.from_user.mention} to {message.chat.username} ,  Happy to have here",chat_id=chatid)
-       
 	
 @Client.on_message(filters.left_chat_member)
 async def goodbye(bot,message):
