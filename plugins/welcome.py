@@ -21,5 +21,5 @@ async def welcome(bot, message):
       chatid=message.chat.id
       await bot.send_message(text=f"""heyiamhvdbdvdv""",chat_id=chatid)
 
-  Else: 
-       await bot.edit_message(text=f"""wasimfaridbd""",chat_id=chatid)
+  except :
+      await bot.edit_message(text=f"""wasimfaridbd""",chat_id=chatid)
