@@ -19,4 +19,7 @@ async def goodbye(bot,message):
 @Client.on_message(filters.command(["welcome"]) & filters.private, group=1)
 async def welcome(bot, message):
       chatid=message.chat.id
-      await bot.send_message(text=f"""heyiamhvdbdvdv""",chat_id=chatid)
+  if message.reply_to_message.sticker:
+     await bot.send_message(text=f"""heywasimhow areyou""")
+  else :
+       await bot.edit_message(text=f"""heyhow are youu""")
