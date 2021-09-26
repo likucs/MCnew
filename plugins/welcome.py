@@ -16,3 +16,7 @@ async def goodbye(bot,message):
 	chatid= message.chat.id
 	await bot.send_message(text=f"Bye ,  {message.from_user.mention} , Have a Nice Day",chat_id=chatid)
 	
+@Client.on_message(filters.command(["start"]) & filters.private, group=1)
+async def welcome(bot, update):
+
+  await bot.send_text(text=f"""heyiamhvdbdvdv""",
