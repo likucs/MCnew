@@ -10,7 +10,6 @@ from pyrogram.types import InlineKeyboardMarkup
 async def welcome(bot,message):
 	chatid=message.chat.id
 	await bot.send_text(text=f"Welcome {message.from_user.mention} to {message.chat.username} ,  Happy to have here",chat_id=chatid)
-        chatid=message.chat.id
 	
 @Client.on_message(filters.left_chat_member)
 async def goodbye(bot,message):
