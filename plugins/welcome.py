@@ -20,5 +20,7 @@ async def goodbye(bot,message):
 async def welcome(bot, message):
       chatid=message.chat.id
       await bot.send_message(text=f"""heyiamhvdbdvdv""",chat_id=chatid)
+  except:
+      await msg.edit_text("Something really Happend Wrong...") 
   else:
     await message.reply_text("Size Should Be Less Than 5 mb")
