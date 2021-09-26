@@ -162,8 +162,11 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "devs": 
         buttons = [[
-            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
+            InlineKeyboardButton('♻️ 1 𝙳𝙴𝚅', url="https://t.me/Peaky_blinder_tg"),
+            InlineKeyboardButton('♻️ 2 𝙳𝙴𝚅', url="https://t.me/Xxxtentacion_TG")
+        ],[
+            InlineKeyboardButton('♻️ 3 𝙳𝙴𝚅', url="https://t.me/THEREALMR_JINN_OF_TG"),
+            InlineKeyboardButton('▶️ 𝙱𝙰𝙲𝙺', callback_data='home'),
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
