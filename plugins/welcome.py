@@ -15,7 +15,8 @@ async def welcome(bot,message):
 	reply_markup=InlineKeyboardMarkup(
         [[
           InlineKeyboardButton("MAIN CHANNEL🎧", url="https://t.me/NAZRIYASUPPORT")
-        ]]))
+        ]]
+      ),
 
     time.sleep(10)
     welcome.delete()
