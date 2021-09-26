@@ -10,8 +10,8 @@ from pyrogram.types import InlineKeyboardMarkup
 async def welcome(bot,message):
 	chatid=message.chat.id
 	await bot.send_photo(
-        chatid=message.chat.id
         photo="https://telegra.ph/file/83dd03f6cd75ffb341a9e.jpg",
+        chatid=message.chat.id
         caption=f"Welcome {message.from_user.mention} to {message.chat.username} ,  Happy to have here",chat_id=chatid)
        
 	
