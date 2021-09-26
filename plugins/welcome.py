@@ -15,12 +15,3 @@ async def welcome(bot,message):
 async def goodbye(bot,message):
 	chatid= message.chat.id
 	await bot.send_message(text=f"Bye ,  {message.from_user.mention} , Have a Nice Day",chat_id=chatid)
-
-@Peaky.on_message(filters.command(["sticker"]) & filters.private, group=1)
-async def sticker(bot, update):
-
-if message.reply_to_message.sticker:
-       await message.reply(f"**Sticker ID is**  \n `{message.reply_to_message.sticker.file_id}` \n \n ** Unique ID is ** \n\n`{message.reply_to_message.sticker.file_unique_id}`", quote=True)
-    else: 
-       await message.reply("Oops !! Not a sticker file")
-	
