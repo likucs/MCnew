@@ -19,6 +19,7 @@ SONG_TEXT = """<b>🎧 𝙸𝙰𝙼 𝙰 𝚂𝙸𝙼𝙿𝙻𝙴 𝚈𝙾𝚄�
 HELP_TEXT = """<b>നീ ഏതാ..... ഒന്ന് പോടെയ് അവൻ help ചോയ്ച്ച് വന്നിരിക്കുന്നു😤...I'm Different Bot U Know</b>"""
 
 CALLBACK_TEXT = """<b>𝙷𝙴𝚈 𝙸𝙰𝙼 𝙹𝚄𝚂𝚃 𝚃𝙴𝚂𝚃 𝙾𝙵 𝙿𝙴𝙰𝙺𝚈 𝙱𝙻𝙸𝙽𝙳𝙴𝚁 </b>"""
+DEVS_TEXT = """JDHHDHDBDBDBDV"""
 
 ABOUT_TEXT ="""<b>★ 𝙼𝚈 𝙽𝙰𝙼𝙴 :- 𝙻𝙸𝚂𝚂𝙰 𝙱𝙾𝚃</b>
 <b>★ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 :- <a href="https://t.me/Xxxtentacion_TG">𝚇𝚇𝚇𝚃𝙴𝙽𝚃𝙰𝙲𝚃𝙸𝙾𝙽_𝚃𝙶</a></b>
@@ -40,7 +41,7 @@ INFO_TEXT = """<b>☆ 𝙸𝙵 𝚈𝙾𝚄 𝙽𝙴𝙴𝙳 𝙰 𝚃𝙴𝙻�
 ☆ 𝙸𝙵 𝚈𝙾𝚄 𝚂𝙴𝙽𝙳 𝙰 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 [ᴜsɪɴɢ ᴛʜᴇ ғᴏʀᴡᴀʀᴅ ᴛᴀɢ] 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚁 [ᴘᴜʙʟɪᴄ ᴏʀ ᴘʀɪᴠᴛᴇ] 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝚈𝙾𝚄𝚁 𝙸𝙳 𝙾𝙵 𝚃𝙷𝙰𝚃 𝙶𝚁𝙾𝚄𝙿 𝙾𝚁 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b>"""
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -159,7 +160,7 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html"
         )
 
-    elif query_data == "info": 
+    elif query_data == "devs": 
         buttons = [[
             InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
@@ -168,7 +169,7 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            INFO_TEXT,
+            DEVS_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
