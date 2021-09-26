@@ -1,7 +1,5 @@
 # Thanks bug hunter for repo
 # scraped from bughunter
-
-import join_chat_member
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
