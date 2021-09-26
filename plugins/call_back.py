@@ -159,6 +159,20 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html"
         )
 
+    elif query_data == "info": 
+        buttons = [[
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            INFO_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
     elif query_data == "close":
         await update.message.delete()
 
