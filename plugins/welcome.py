@@ -17,9 +17,6 @@ async def welcome(bot,message):
           InlineKeyboardButton("MAIN CHANNEL🎧", url="https://t.me/NAZRIYASUPPORT")
         ]]
       ),
-
-    time.sleep(10)
-    welcome.delete()
 	
 @Client.on_message(filters.left_chat_member)
 async def goodbye(bot,message):
