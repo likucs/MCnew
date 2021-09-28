@@ -4,10 +4,9 @@ from pyrogram import (
 
 from plugins.admin_check import admin_check
 
-
 def f_sudo_filter(filt, client, message):
     return bool(
-        message.from_user.id in SUDO_USERS
+        message.from_user.id
     )
 
 
