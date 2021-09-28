@@ -20,6 +20,12 @@ HELP_TEXT = """<b>നീ ഏതാ..... ഒന്ന് പോടെയ് അ�
 
 CALLBACK_TEXT = """<b>𝙷𝙴𝚈 𝙸𝙰𝙼 𝙹𝚄𝚂𝚃 𝚃𝙴𝚂𝚃 𝙾𝙵 𝙿𝙴𝙰𝙺𝚈 𝙱𝙻𝙸𝙽𝙳𝙴𝚁 </b>"""
 DEVS_TEXT = """♻️ 𝙷𝙴𝚈  𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙳𝙴𝚅𝚂 ♻️"""
+MUTE_TEXT = """<b>Here is the help for the Muting module:
+
+Admin only:
+ - /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
+ - /tmute <userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
+ - /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.</b>"""
 
 ABOUT_TEXT ="""<b>★ 𝙼𝚈 𝙽𝙰𝙼𝙴 :- 𝙻𝙸𝚂𝚂𝙰 𝙱𝙾𝚃</b>
 <b>★ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 :- <a href="https://t.me/Xxxtentacion_TG">𝚇𝚇𝚇𝚃𝙴𝙽𝚃𝙰𝙲𝚃𝙸𝙾𝙽_𝚃𝙶</a></b>
@@ -41,7 +47,7 @@ INFO_TEXT = """<b>☆ 𝙸𝙵 𝚈𝙾𝚄 𝙽𝙴𝙴𝙳 𝙰 𝚃𝙴𝙻�
 ☆ 𝙸𝙵 𝚈𝙾𝚄 𝚂𝙴𝙽𝙳 𝙰 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 [ᴜsɪɴɢ ᴛʜᴇ ғᴏʀᴡᴀʀᴅ ᴛᴀɢ] 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚁 [ᴘᴜʙʟɪᴄ ᴏʀ ᴘʀɪᴠᴛᴇ] 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝚈𝙾𝚄𝚁 𝙸𝙳 𝙾𝙵 𝚃𝙷𝙰𝚃 𝙶𝚁𝙾𝚄𝙿 𝙾𝚁 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b>"""
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -181,6 +187,9 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "ban": 
         buttons = [[
+            InlineKeyboardButton('😐 𝙼𝚄𝚃𝙴', callback_data='mute'),
+            InlineKeyboardButton('🚫 𝙱𝙰𝙲𝙺', callback_data='home')
+        ],[
             InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
             InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home')
         ]]
@@ -189,6 +198,20 @@ async def callback_data(bot, update: CallbackQuery):
         
         await update.message.edit_text(
             SONG_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
+    elif query_data == "mute": 
+        buttons = [[
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='close')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            MUTE_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
