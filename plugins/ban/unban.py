@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from plugins.admin_check import admin_check
-from pyrobot.extract_user import extract_user
+from plugins.extract_user import extract_user
 
 
 @Client.on_message(filters.command(["unban", "unmute"]))
