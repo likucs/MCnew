@@ -5,9 +5,7 @@ from pyrogram import (
 from pyrogram.types import (
     Message
 )
-from pyrobot import (
-    COMMAND_HAND_LER
-)
+
 from pyrobot.cust_p_filters import (
     admin_fliter
 )
