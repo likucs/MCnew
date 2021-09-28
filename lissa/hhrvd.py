@@ -4,4 +4,6 @@ from pyrogram import Client, filters
 @Client.on_message(filters.command(["stickerid"]))
 async def stickerid(bot, message):   
     if message.reply_to_message.sticker:
-    await message.replay("heyibfbfbbfbfbbf")
+    await message.replay("heyibfbfbbfbfbbf",)
+  else :
+    await message.replay("jdhhdhfbfbdndnfb",)
