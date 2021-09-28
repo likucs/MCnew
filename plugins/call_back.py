@@ -26,6 +26,15 @@ Admin only:
  - /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
  - /tmute <userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
  - /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.</b>"""
+BANS_TEXT = """<b>Here is the help for the Bans module:
+
+ - /kickme: kicks the user who issued the command
+
+Admin only:
+ - /ban <userhandle>: bans a user. (via handle, or reply)
+ - /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
+ - /unban <userhandle>: unbans a user. (via handle, or reply)
+ - /kick <userhandle>: kicks a user, (via handle, or reply)</b>"""
 
 ABOUT_TEXT ="""<b>★ 𝙼𝚈 𝙽𝙰𝙼𝙴 :- 𝙻𝙸𝚂𝚂𝙰 𝙱𝙾𝚃</b>
 <b>★ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 :- <a href="https://t.me/Xxxtentacion_TG">𝚇𝚇𝚇𝚃𝙴𝙽𝚃𝙰𝙲𝚃𝙸𝙾𝙽_𝚃𝙶</a></b>
@@ -188,7 +197,7 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "ban": 
         buttons = [[
             InlineKeyboardButton('😐 𝙼𝚄𝚃𝙴', callback_data='mute'),
-            InlineKeyboardButton('🚫 𝙱𝙰𝙲𝙺', callback_data='home')
+            InlineKeyboardButton('🚫 𝙱𝙰𝙽', callback_data='ban')
         ],[
             InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
             InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home')
@@ -205,13 +214,27 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "mute": 
         buttons = [[
             InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
-            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='close')
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
             MUTE_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
+    elif query_data == "ban": 
+        buttons = [[
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            BANS_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
