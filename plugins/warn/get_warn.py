@@ -5,8 +5,7 @@ from pyrogram.types import (
 from pyrobot import (
     COMMAND_HAND_LER
 )
-from pyrobot.pyrobot import PyroBot
-from pyrobot.helper_functions.cust_p_filters import (
+from pyrobot.cust_p_filters import (
     admin_fliter
 )
 
