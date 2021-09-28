@@ -1,4 +1,7 @@
-from pyrogram import filters
+from pyrogram import (
+    Client,
+    filters
+
 from pyrogram.types import (
     Message
 )
@@ -10,8 +13,8 @@ from pyrobot.cust_p_filters import (
 )
 
 
-@PyroBot.on_message(
-    filters.command(["warns"], COMMAND_HAND_LER) &
+@Client.on_message(
+    filters.command(["warns"]) &
     admin_fliter
 )
 async def check_warns_of_user(client: PyroBot, msg: Message):
