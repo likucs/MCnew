@@ -7,7 +7,7 @@ DART_E_MOJI = "🎯"
 
 
 @Client.on_message(
-    filters.command(["throw", "dart"], COMMAND_HAND_LER) &
+    filters.command(["throw", "dart"])) &
     f_onw_fliter
 )
 async def throw_dart(client, message):
