@@ -1,12 +1,16 @@
 from pyrogram import (
     filters
 )
+from pyrobot import (
+    SUDO_USERS,
+    USE_AS_BOT
+)
+from pyrobot.helper_functions.admin_check import admin_check
 
-from plugins.admin_check import admin_check
 
 def f_sudo_filter(filt, client, message):
     return bool(
-        message.from_user.id
+        message.from_user.id in SUDO_USERS
     )
 
 
@@ -17,6 +21,7 @@ sudo_filter = filters.create(
 
 
 def onw_filter(filt, client, message):
+    if USE_AS_BOT:
         return bool(
             True # message.from_user.id in SUDO_USERS
         )
