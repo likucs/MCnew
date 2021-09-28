@@ -103,7 +103,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "home": 
         buttons = [[
-            InlineKeyboardButton('🎧 𝚂𝙾𝙽𝙶', callback_data='song'),
+            InlineKeyboardButton('🚫 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝚃', callback_data='ban'),
         ],[
             InlineKeyboardButton('🎧 𝚂𝙾𝙽𝙶', callback_data='song'),
             InlineKeyboardButton('🔗 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='Telegraph'),
