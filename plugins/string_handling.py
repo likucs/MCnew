@@ -5,10 +5,6 @@ from pyrogram.types import (
     Message,
     InlineKeyboardButton
 )
-from pyrobot import (
-    COMMAND_HAND_LER
-)
-
 
 # NOTE: the url \ escape may cause double escapes
 # match * (bold) (don't escape if in url)
