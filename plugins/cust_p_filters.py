@@ -1,10 +1,7 @@
 from pyrogram import (
     filters
 )
-from plugins import (
-    SUDO_USERS,
-    USE_AS_BOT
-)
+
 from plugins.admin_check import admin_check
 
 
@@ -21,7 +18,6 @@ sudo_filter = filters.create(
 
 
 def onw_filter(filt, client, message):
-    if USE_AS_BOT:
         return bool(
             True # message.from_user.id in SUDO_USERS
         )
