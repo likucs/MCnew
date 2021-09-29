@@ -9,7 +9,7 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-from config import Config
+from plugins.sample_config import Config
 
 
 # TODO: is there a better way?
