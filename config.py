@@ -13,5 +13,3 @@ class Config(object):
     ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
 
     DB_URL = os.environ.get("DATABASE_1", "")
- 
-    BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
