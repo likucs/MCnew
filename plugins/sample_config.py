@@ -2,7 +2,6 @@ import os
 
 
 # apparently, no error appears even if the path does not exists
-load_dotenv("config.env")
 
 
 class Config:
