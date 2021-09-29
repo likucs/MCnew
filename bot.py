@@ -2,7 +2,7 @@ import os
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 import logging
 from pyrogram import Client, filters
-from plugins.sample_config import Config
+from config import Config
 import random
 
 PHOTOS = [
