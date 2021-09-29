@@ -3,7 +3,6 @@
 import os
 import asyncio
 from pyrogram import Client, filters
-from pyrogram.types InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
 @Client.on_message(filters.private & filters.command(['broadcast']))
