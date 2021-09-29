@@ -6,7 +6,6 @@ import string
 import time
 import traceback
 
-import aiofiles
 from pyrogram.errors import (
     FloodWait,
     InputUserDeactivated,
