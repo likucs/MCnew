@@ -9,7 +9,7 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-from pyrobot.sample_config import Config
+from config import Config
 
 
 # TODO: is there a better way?
