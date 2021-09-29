@@ -7,7 +7,7 @@ from pyrogram.types InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
 @Client.on_message(filters.private & filters.command(['broadcast']))
-async def send_text(client: Message):
+async def send_text(client, message):
     if message.reply_to_message:
         query = await query_msg()
         broadcast_msg = message.reply_to_message
