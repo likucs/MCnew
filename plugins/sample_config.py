@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 
 
 # apparently, no error appears even if the path does not exists
