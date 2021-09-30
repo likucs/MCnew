@@ -5,11 +5,11 @@ from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import ADMINS
 
-from Aswin_Raj.filter_db import add_filter
-from Aswin_Raj.filter_db import find_filter
-from Aswin_Raj.filter_db import get_filters
-from Aswin_Raj.filter_db import delete_filter
-from Aswin_Raj.filter_db import count_filters
+from filter bot.filter_db import add_filter
+from filter bot.filter_db import find_filter
+from filter bot.filter_db import get_filters
+from filter bot.filter_db import delete_filter
+from filter bot.filter_db import count_filters
 
 from Aswin_Raj.connect_db import add_connection
 from Aswin_Raj.connect_db import all_connections
