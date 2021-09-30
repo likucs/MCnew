@@ -74,6 +74,8 @@ Peaky = Client(
 
 @Peaky.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
+if not await db.is_user_exist(update.from_user.id):
+    await db.add_user(update.from_user.id)
     await update.reply_photo(
         photo=random.choice(PHOTOS),
         caption=f"""<b>Hᴇʏ {update.from_user.mention}
