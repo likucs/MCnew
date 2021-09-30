@@ -135,7 +135,7 @@ async def help(client, message):
            )        
           )
 
-@Peaky.on_message(filters.private & filters.command("broadcast") & filters.user(BOT_OWNER) & filters.reply)
+@Peaky.on_message(filters.private & filters.command("cast") & filters.user(BOT_OWNER) & filters.reply)
 async def broadcast(bot, update):
 	broadcast_ids = {}
 	all_users = await db.get_all_users()
