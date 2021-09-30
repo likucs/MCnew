@@ -37,6 +37,7 @@ PHOTOS = [
     "https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
 ]
 
+BOT_OWNER = int(os.environ["BOT_OWNER"])
 
 START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 
