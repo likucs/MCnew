@@ -4,6 +4,17 @@ import logging
 from pyrogram import Client, filters
 from config import Config
 import random
+import json
+import string
+import traceback
+import asyncio
+import datetime
+import aiofiles
+from random import choice 
+from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid, UserNotParticipant, UserBannedInChannel
+from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid
+from telegraph import upload_file
+from database import Database
 
 PHOTOS = [
     "https://telegra.ph/file/b4d4c014012f3c31552ed.jpg",
