@@ -5,7 +5,7 @@ from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import ADMINS
 
-from filter bot.filter_db import add_filter
+from wasim_faris.filter_db import add_filter
 from filter bot.filter_db import find_filter
 from filter bot.filter_db import get_filters
 from filter bot.filter_db import delete_filter
