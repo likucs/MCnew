@@ -7,8 +7,8 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
  
-myclient = pymongo.MongoClient(Config.DATABASE_URI)
-mydb = myclient[Config.DATABASE_NAME]
+myclient = pymongo.MongoClient(FILTER_DB_URI)
+mydb = myclient["Cluster0"]
 
 
 
