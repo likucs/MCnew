@@ -1,122 +1,150 @@
 import os
-import re
 import pymongo
+from info import FILTER_DB_URI
 
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
- 
 myclient = pymongo.MongoClient(FILTER_DB_URI)
 mydb = myclient["Cluster0"]
 mycol = mydb['CONNECTIONS']   
 
 
-async def add_filter(grp_id, text, reply_text, btn, file, alert):
-    mycol = mydb[str(grp_id)]
-    # mycol.create_index([('text', 'text')])
+async def add_connection(group_id, user_id):
+    query = mycol.find_one(
+        { "_id": user_id },
+        { "_id": 0, "active_group": 0 }
+    )
+    if query is not None:
+        group_ids = []
+        for x in query["group_details"]:
+            group_ids.append(x["group_id"])
 
-    data = {
-        'text':str(text),
-        'reply':str(reply_text),
-        'btn':str(btn),
-        'file':str(file),
-        'alert':str(alert)
+        if group_id in group_ids:
+            return False
+
+    group_details = {
+        "group_id" : group_id
     }
 
-    try:
-        mycol.update_one({'text': str(text)},  {"$set": data}, upsert=True)
-    except:
-        print('Couldnt save, check your db')
-             
-     
-async def find_filter(group_id, name):
-    mycol = mydb[str(group_id)]
+    data = {
+        '_id': user_id,
+        'group_details' : [group_details],
+        'active_group' : group_id,
+    }
     
-    query = mycol.find( {"text":name})
-    # query = mycol.find( { "$text": {"$search": name}})
-    try:
-        for file in query:
-            reply_text = file['reply']
-            btn = file['btn']
-            fileid = file['file']
-            try:
-                alert = file['alert']
-            except:
-                alert = None
-        return reply_text, btn, alert, fileid
-    except:
-        return None, None, None, None
+    if mycol.count_documents( {"_id": user_id} ) == 0:
+        try:
+            mycol.insert_one(data)
+            return True
+        except:
+            print('Some error occured!')
 
-
-async def get_filters(group_id):
-    mycol = mydb[str(group_id)]
-
-    texts = []
-    query = mycol.find()
-    try:
-        for file in query:
-            text = file['text']
-            texts.append(text)
-    except:
-        pass
-    return texts
-
-
-async def delete_filter(message, text, group_id):
-    mycol = mydb[str(group_id)]
-    
-    myquery = {'text':text }
-    query = mycol.count_documents(myquery)
-    if query == 1:
-        mycol.delete_one(myquery)
-        await message.reply_text(
-            f"'`{text}`'  deleted. I'll not respond to that filter anymore.",
-            quote=True,
-            parse_mode="md"
-        )
     else:
-        await message.reply_text("Couldn't find that filter!", quote=True)
+        try:
+            mycol.update_one(
+                {'_id': user_id},
+                {
+                    "$push": {"group_details": group_details},
+                    "$set": {"active_group" : group_id}
+                }
+            )
+            return True
+        except:
+            print('Some error occured!')
 
-
-async def del_all(message, group_id, title):
-    if str(group_id) not in mydb.list_collection_names():
-        await message.edit_text(f"Nothing to remove in {title}!")
-        return
         
-    mycol = mydb[str(group_id)]
-    try:
-        mycol.drop()
-        await message.edit_text(f"All filters from {title} has been removed")
-    except:
-        await message.edit_text(f"Couldn't remove all filters from group!")
-        return
+async def active_connection(user_id):
+
+    query = mycol.find_one(
+        { "_id": user_id },
+        { "_id": 0, "group_details": 0 }
+    )
+    if query:
+        group_id = query['active_group']
+        if group_id != None:
+            return int(group_id)
+        else:
+            return None
+    else:
+        return None
 
 
-async def count_filters(group_id):
-    mycol = mydb[str(group_id)]
+async def all_connections(user_id):
+    query = mycol.find_one(
+        { "_id": user_id },
+        { "_id": 0, "active_group": 0 }
+    )
+    if query is not None:
+        group_ids = []
+        for x in query["group_details"]:
+            group_ids.append(x["group_id"])
+        return group_ids
+    else:
+        return None
 
-    count = mycol.count()
-    if count == 0:
+
+async def if_active(user_id, group_id):
+    query = mycol.find_one(
+        { "_id": user_id },
+        { "_id": 0, "group_details": 0 }
+    )
+    if query is not None:
+        if query['active_group'] == group_id:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
+async def make_active(user_id, group_id):
+    update = mycol.update_one(
+        {'_id': user_id},
+        {"$set": {"active_group" : group_id}}
+    )
+    if update.modified_count == 0:
         return False
     else:
-        return count
+        return True
 
 
-async def filter_stats():
-    collections = mydb.list_collection_names()
+async def make_inactive(user_id):
+    update = mycol.update_one(
+        {'_id': user_id},
+        {"$set": {"active_group" : None}}
+    )
+    if update.modified_count == 0:
+        return False
+    else:
+        return True
 
-    if "CONNECTION" in collections:
-        collections.remove("CONNECTION")
-    if "USERS" in collections:
-        collections.remove("USERS")
 
-    totalcount = 0
-    for collection in collections:
-        mycol = mydb[collection]
-        count = mycol.count()
-        totalcount = totalcount + count
+async def delete_connection(user_id, group_id):
 
-    totalcollections = len(collections)
+    try:
+        update = mycol.update_one(
+            {"_id": user_id},
+            {"$pull" : { "group_details" : {"group_id":group_id} } }
+        )
+        if update.modified_count == 0:
+            return False
+        else:
+            query = mycol.find_one(
+                { "_id": user_id },
+                { "_id": 0 }
+            )
+            if len(query["group_details"]) >= 1:
+                if query['active_group'] == group_id:
+                    prvs_group_id = query["group_details"][len(query["group_details"]) - 1]["group_id"]
 
-    return totalcollections, totalcount
+                    mycol.update_one(
+                        {'_id': user_id},
+                        {"$set": {"active_group" : prvs_group_id}}
+                    )
+            else:
+                mycol.update_one(
+                    {'_id': user_id},
+                    {"$set": {"active_group" : None}}
+                )                    
+            return True
+    except Exception as e:
+        print(e)
+        return False
