@@ -41,7 +41,7 @@ BOT_OWNER = int(os.environ["BOT_OWNER"])
 
 DATABASE_URL = os.environ["DATABASE_URL"]
 
-db = Database(DATABASE_URL, "lisaa bot")
+db = Database(DATABASE_URL, "FnTelegraphBot")
 
 START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 
