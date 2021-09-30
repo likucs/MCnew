@@ -74,8 +74,8 @@ Peaky = Client(
 
 @Peaky.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-if not await db.is_user_exist(update.from_user.id):
-    await db.add_user(update.from_user.id)
+     if not await db.is_user_exist(update.from_user.id):
+             await db.add_user(update.from_user.id)
     await update.reply_photo(
         photo=random.choice(PHOTOS),
         caption=f"""<b>Hᴇʏ {update.from_user.mention}
@@ -102,6 +102,8 @@ if not await db.is_user_exist(update.from_user.id):
 
 @Peaky.on_message(filters.command("help"))
 async def help(client, message):
+    if not await db.is_user_exist(update.from_user.id):
+            await db.add_user(update.from_user.id)
    if message.chat.type == 'private':
        await Peaky.send_message(
                chat_id=message.chat.id,
