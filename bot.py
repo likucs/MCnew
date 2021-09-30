@@ -74,9 +74,9 @@ Peaky = Client(
 
 @Peaky.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-     if not await db.is_user_exist(update.from_user.id):
+    if not await db.is_user_exist(update.from_user.id):
              await db.add_user(update.from_user.id)
-     await update.reply_photo(
+    await update.reply_photo(
         photo=random.choice(PHOTOS),
         caption=f"""<b>Hᴇʏ {update.from_user.mention}
 ഞാൻ <a href="https://t.me/cinemazilla">Cɪɴᴇᴍᴀ Zɪʟʟᴀ</a> എന്ന ഗ്രൂപ്പിൽ  ചുമ്മാ ഇരികുനാ bot അണ്
