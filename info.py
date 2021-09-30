@@ -27,7 +27,7 @@ DATABASE_URI = environ['DATABASE_URI']
 DATABASE_NAME = environ['DATABASE_NAME']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
-FILTER_DB_URI = "mongodb+srv://Wafikh:wafikh@cluster0.pjcpl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 # Messages
 default_start_msg = """
