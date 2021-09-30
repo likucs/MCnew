@@ -104,7 +104,7 @@ async def start(bot, update):
 async def help(client, message):
     if not await db.is_user_exist(update.from_user.id):
             await db.add_user(update.from_user.id)
-   if message.chat.type == 'private':
+    if message.chat.type == 'private':
        await Peaky.send_message(
                chat_id=message.chat.id,
                text=START_TEXT,
