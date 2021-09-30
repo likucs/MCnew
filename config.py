@@ -12,7 +12,7 @@ class Config(object):
 
     ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
 
-    FILTER_DB_URI = "mongodb+srv://Wafikh:wafikh@cluster0.pjcpl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 
     
