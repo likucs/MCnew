@@ -14,16 +14,4 @@ class Config(object):
 
     FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
-    async def start(self):
-        await super().start()
-
-    async def stop(self):
-        await super().stop()
-
-    async def sleep(self, msg):
-        await msg.reply("`Sleeping for (10) Seconds.`")
-        Config.HU_APP.restart()
-
- 
-
     
