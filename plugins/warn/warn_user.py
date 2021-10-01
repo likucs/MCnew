@@ -19,7 +19,7 @@ from plugins.cust_p_filters import (
 )
 
 
-@PyroBot.on_message(
+@Peaky.on_message(
     filters.command(["warnuser", "warn"], COMMAND_HAND_LER) &
     admin_fliter
 )
