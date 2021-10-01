@@ -31,6 +31,8 @@ AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
 SUDO_USERS = "1287385877"
 
+USE_AS_BOT = True
+
 # Messages
 
 default_start_msg = """
