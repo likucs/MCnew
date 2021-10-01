@@ -337,14 +337,4 @@ Give a Star ⭐️ to [REPO](https://github.com/Krishna-Singhal/genStr) if you l
 """
     await msg.reply(out, disable_web_page_preview=True)
 
-
-async def is_cancel(msg: Message, text: str):
-    if text.startswith("/cancel"):
-        await msg.reply("`Process Cancelled.`")
-        return True
-    return False
-
-
-if __name__ == "__main__":
-
 Peaky.run()
