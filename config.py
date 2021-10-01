@@ -14,7 +14,7 @@ class Config(object):
 
     FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
  
-  
+    HU_APP = from_key(API_KEY).apps()[APP_NAME]
 
  
 
