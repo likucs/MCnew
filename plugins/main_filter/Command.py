@@ -6,10 +6,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import ADMINS
 
 from wasim_faris.filter_db import add_filter
-from filter bot.filter_db import find_filter
-from filter bot.filter_db import get_filters
-from filter bot.filter_db import delete_filter
-from filter bot.filter_db import count_filters
+from wasim_faris.filter_db import find_filter
+from wasim_faris.filter_db import get_filters
+from wasim_faris.filter_db import delete_filter
+from wasim_faris.filter_db import count_filters
 
 from wasim_faris.connect_db import add_connection
 from wasim_faris.connect_db import all_connections
