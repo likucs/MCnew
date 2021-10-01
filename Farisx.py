@@ -16,7 +16,6 @@ from config import Config
 LOGGER = logging.getLogger(__name__)
 APP_ID = Config.APP_ID
 API_HASH = Config.API_HASH
-TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 # create download directory, if not exist
 if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
     os.makedirs(TMP_DOWNLOAD_DIRECTORY)
