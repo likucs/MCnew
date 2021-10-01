@@ -207,7 +207,7 @@ async def broadcast(bot, update):
 @Peaky.on_message(filters.private & filters.command("string"))
 async def genStr(_, msg: Message):
     chat = msg.chat
-    api = await bot.ask(
+    api = await Peaky.ask(
         chat.id, API_TEXT.format(msg.from_user.mention)
     )
     if await is_cancel(msg, api.text):
