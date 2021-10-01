@@ -36,7 +36,7 @@ async def cb_handler(client, query):
         )
 
         await query.message.edit_text(
-            Script.START_MSG.format(query.from_user.mention),
+            START_MSG.format(query.from_user.mention),
             reply_markup=keyboard,
             disable_web_page_preview=True
         )
@@ -57,7 +57,7 @@ async def cb_handler(client, query):
         )
 
         await query.message.edit_text(
-            Script.HELP_MSG,
+            HELP_MSG,
             reply_markup=keyboard,
             disable_web_page_preview=True
         )
@@ -75,7 +75,7 @@ async def cb_handler(client, query):
         )
 
         await query.message.edit_text(
-            Script.ABOUT_MSG,
+            ABOUT_MSG,
             reply_markup=keyboard,
             disable_web_page_preview=True
         )
