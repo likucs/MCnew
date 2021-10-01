@@ -14,3 +14,4 @@ pyromod==1.5
 heroku3
 aiofiles
 umongo
+pyrogram
