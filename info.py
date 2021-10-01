@@ -25,6 +25,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 ADMINS = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 WARN_DATA_ID = int(Config.WARN_DATA_ID)
+WARN_SETTINGS_ID = int(Config.WARN_SETTINGS_ID)
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
