@@ -6,7 +6,7 @@ id_pattern = re.compile(r'^.\d+$')
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
 API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+BOT_TOKEN = environ.get['BOT_TOKEN']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
