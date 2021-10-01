@@ -3,7 +3,7 @@ from pyrogram.types import (
     Message
 )
 
-from Bot import Bot
+from bot import bot
 from plugins.helper_functions.cust_p_filters import (
     admin_fliter
 )
