@@ -8,11 +8,10 @@ from plugins.helper_functions.cust_p_filters import (
     admin_fliter
 )
 
+from pyrogram import Client, filters
 
-@Bot.on_message(
-    filters.command(["warns"])) &
-    admin_fliter
-)
+@Client.on_message(filters.command(["warns"])) &
+    admin_fliter)
 async def check_warns_of_user(client: PyroBot, msg: Message):
     replied = msg.reply_to_message
     if not replied:
