@@ -3,7 +3,6 @@ import json
 import time
 import asyncio
 
-from bot import Bot, Config
 from pyromod import listen
 from asyncio.exceptions import TimeoutError
 
