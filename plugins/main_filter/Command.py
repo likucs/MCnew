@@ -17,8 +17,9 @@ from wasim_faris.connect_db import all_connections
 from wasim_faris.connect_db import if_active
 from wasim_faris.connect_db import delete_connection
 from wasim_faris.connect_db import active_connection
-
 from plugins.main_filter.Helpers import parser,split_quotes
+
+NOT_FOR_U ="CAACAgIAAxkBAAIE5WFWnf7I8uPvrlnpp7fj41548xlPAAIiDgACsX2wSyUIjTPiUHFVHgQ",
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 @Client.on_message(filters.command(["add"]))
 async def addfilter(client, message):
