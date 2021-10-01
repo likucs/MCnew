@@ -5,8 +5,9 @@ from pyrogram.types import (
 
 from info import (
     COMMAND_HAND_LER
-
-from plugins.cust_p_filters import admin_fliter
+from plugins.cust_p_filters import (
+    admin_fliter
+)
 from pyrogram import Client, filters
 
 @Client.on_message(
