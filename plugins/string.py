@@ -2,6 +2,7 @@ import os
 import json
 import time
 import asyncio
+
 from bot import Bot, Config
 from pyromod import listen
 from asyncio.exceptions import TimeoutError
@@ -26,7 +27,8 @@ PHONE_NUMBER_TEXT = (
     "Press /cancel to Cancel."
 )
 
-@Bot.on_message(filters.private & filters.command("string"))
+
+@bot.on_message(filters.private & filters.command("start"))
 async def genStr(bot: Bot, msg: Message):
     chat = msg.chat
     api = await bot.ask(
