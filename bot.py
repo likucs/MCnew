@@ -3,6 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 import logging
 from pyrogram import Client, filters
 import random
+from config import config
 import json
 import string
 import traceback
