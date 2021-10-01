@@ -5,8 +5,6 @@ import asyncio
 import os
 import ast
 
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
