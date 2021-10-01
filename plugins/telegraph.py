@@ -7,7 +7,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup, InlineKeyboardButton,
     CallbackQuery, InlineQuery)
 
-@Client.on_message(filters.photo(["telegraph"]))
+@Client.on_message(filters.photo)
 async def uploadphoto(client, message):
   msg = await message.reply_text("`Tʀʏɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅ`")
   userid = str(message.chat.id)
