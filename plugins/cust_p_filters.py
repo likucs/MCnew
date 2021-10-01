@@ -1,7 +1,7 @@
 from pyrogram import (
     filters
 )
-from pyrobot import (
+from lissabot import (
     SUDO_USERS,
     USE_AS_BOT
 )
