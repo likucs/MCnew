@@ -5,10 +5,10 @@ from pyrogram.types import (
 
 from info import (
     COMMAND_HAND_LER
-from plugins.cust_p_filters import (
-    admin_fliter
 )
 from pyrogram import Client, filters
+
+from plugins.cust_p_filters import admin_filter
 
 @Client.on_message(
     filters.command(["warns"], COMMAND_HAND_LER) &
