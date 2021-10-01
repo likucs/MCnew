@@ -14,6 +14,6 @@ class Config(object):
 
     FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
-    WARN_DATA_ID = int(Config.WARN_DATA_ID)
+    WARN_DATA_ID = "1"
 
-    WARN_SETTINGS_ID = int(Config.WARN_SETTINGS_ID)
+    WARN_SETTINGS_ID = "56"
