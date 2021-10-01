@@ -14,8 +14,6 @@ class Config(object):
 
     FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
-    super().__init__(**kwargs)
-
     async def start(self):
         await super().start()
 
