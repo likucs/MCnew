@@ -2,7 +2,7 @@ import os
 import json
 import time
 import asyncio
-from bot import bot
+from bot import Bot, Config
 from pyromod import listen
 from asyncio.exceptions import TimeoutError
 
@@ -14,6 +14,8 @@ from pyrogram.errors import (
     PhoneCodeInvalid, PhoneCodeExpired
 )
 
+bot = Bot()
+
 API_TEXT = """Hi {}
 Welcome to Pyrogram's `HU_STRING_SESSION` generator Bot.
 `Send your API_ID to Continue.`"""
@@ -24,8 +26,8 @@ PHONE_NUMBER_TEXT = (
     "Press /cancel to Cancel."
 )
 
-@Peaky.on_message(filters.private & filters.command("string"))
-async def genStr(bot: Peaky, msg: Message):
+@Bot.on_message(filters.private & filters.command("string"))
+async def genStr(bot: Bot, msg: Message):
     chat = msg.chat
     api = await bot.ask(
         chat.id, API_TEXT.format(msg.from_user.mention)
