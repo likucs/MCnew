@@ -15,7 +15,7 @@ COMMAND_HAND_LER = "/"
 
 HU_APP = "nthingdnbdbd"
 
-TG_MAX_SELECT_LEN = "100"
+TG_MAX_SELECT_LEN = "1000"
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
