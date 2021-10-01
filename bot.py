@@ -20,7 +20,6 @@ from asyncio.exceptions import TimeoutError
 from pyromod import listen
 from pyrogram.errors import MessageNotModified
 from typing import Dict, Optional, List
-from config import config
 
 from pyrogram import filters, Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
