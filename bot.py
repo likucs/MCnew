@@ -2,7 +2,6 @@ import os
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 import logging
 from pyrogram import Client, filters
-from config import Config
 import random
 import json
 import string
