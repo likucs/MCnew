@@ -23,8 +23,12 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 # MongoDB information
 
 FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+# auth groups
+
+AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
 # Messages
+
 default_start_msg = """
 **Hi, I'm Media Search Bot or ypu can call me as Auto-Filter Bot**
 Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
