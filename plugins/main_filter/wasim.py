@@ -19,6 +19,9 @@ from wasim_faris.connect_db import delete_connection
 from wasim_faris.connect_db import active_connection
 from plugins.main_filter.Helpers import parser,split_quotes
 
+buttons = [[ 
+             InlineKeyboardButton("wasim", url="https://t.me/wasim"),
+          ]]
 
 @Client.on_message(filters.private & filters.command(["connections"]))
 async def connections(client,message):
