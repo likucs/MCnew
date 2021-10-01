@@ -5,7 +5,9 @@ from info import (
     SUDO_USERS,
     USE_AS_BOT
 )
-from plugins.helper_functions.admin_check import admin_check
+
+from plugins.admin_check import admin_check
+
 from plugins import plugins
 def f_sudo_filter(filt, client, message):
     return bool(
