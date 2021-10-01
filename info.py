@@ -1,5 +1,8 @@
 import re
 from os import environ
+from heroku3 import from_key
+from pyrogram import Client
+from pyromod import listen
 
 id_pattern = re.compile(r'^.\d+$')
 
@@ -9,6 +12,8 @@ API_HASH = environ['API_HASH']
 
 
 COMMAND_HAND_LER = "/"
+
+HU_APP = from_key(API_KEY).apps()[APP_NAME]
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
