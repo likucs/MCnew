@@ -13,7 +13,7 @@ API_HASH = environ['API_HASH']
 
 COMMAND_HAND_LER = "/"
 
-HU_APP = from_key(API_KEY).apps()[APP_NAME]
+HU_APP = "nthingdnbdbd"
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
