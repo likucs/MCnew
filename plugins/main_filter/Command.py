@@ -3,7 +3,7 @@ import re
 import io
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from config import ADMINS
+from info import ADMINS
 
 from wasim_faris.filter_db import add_filter
 from wasim_faris.filter_db import find_filter
