@@ -314,12 +314,6 @@ async def genStr(bot: Peaky, msg: Message):
     await bot.send_message(chat.id, text, reply_markup=reply_markup)
     return await bot.sleep(msg)
 
-@Peaky.on_message(filters.private & filters.command("restart"))
-async def restart(bot: Peaky, msg: Message):
-    if msg.from_user.id == 1158855661:
-        await msg.reply('✅')
-        return Config.HU_APP.restart()
-
 
 @Peaky.on_message(filters.private & filters.command("wasim"))
 async def start(_, msg: Message):
