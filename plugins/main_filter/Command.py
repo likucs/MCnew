@@ -268,7 +268,7 @@ async def deletefilter(client, message):
 
     await delete_filter(message, query, grp_id)
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message(filters.command(["delallfilter"]))
+@Client.on_message(filters.command(Config.DELETE_ALL_CMD))
 async def delallconfirm(client, message):
     userid = message.from_user.id
     chat_type = message.chat.type
@@ -293,6 +293,17 @@ async def delallconfirm(client, message):
 
     else:
         return
+
+    st = await client.get_chat_member(grp_id, userid)
+    if (st.status == "creator") or (str(userid) in Config.AUTH_USERS):
+        await message.reply_text(
+            f"This will delete all filters from '{title}'.\nDo you want to continue??",
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton(text="YES",callback_data="delallconfirm")],
+                [InlineKeyboardButton(text="CANCEL",callback_data="delallcancel")]
+            ]),
+            quote=True
+        )
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 @Client.on_message((filters.private | filters.group) & filters.command(["connect"]))
 async def addconnection(client,message):
