@@ -7,7 +7,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton
 )
-from info import (
+from config import (
     COMMAND_HAND_LER,
     WARN_DATA_ID,
     WARN_SETTINGS_ID
