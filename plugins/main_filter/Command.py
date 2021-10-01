@@ -19,7 +19,7 @@ from wasim_faris.connect_db import active_connection
 
 from plugins.main_filter.Helpers import parser,split_quotes
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message(filters.command(["filter"]), group=3)
+@Client.on_message(filters.command(["filter"]))
 async def addfilter(client, message):
       
     userid = message.from_user.id
@@ -168,7 +168,7 @@ async def addfilter(client, message):
         parse_mode="md"
     )
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message(filters.command('filters'), group=3)
+@Client.on_message(filters.command(["filters"]))
 async def get_all(client, message):    
     chat_type = message.chat.type
     user_id = message.from_user.id
@@ -226,7 +226,7 @@ async def get_all(client, message):
         parse_mode="md"
     )
 #-------------------------------------------------------------------------------------------------------------------------------------------------        
-@Client.on_message(filters.command("delfilter"), group=3)
+@Client.on_message(filters.command(["delfilter"]))
 async def deletefilter(client, message):
     userid = message.from_user.id
     chat_type = message.chat.type
@@ -303,7 +303,7 @@ async def delallconfirm(client, message):
              ]]
         ))
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message((filters.private | filters.group) & filters.command("connect"), group=3)
+@Client.on_message((filters.private | filters.group) & filters.command(["connect"]))
 async def addconnection(client,message):
     userid = message.from_user.id
     chat_type = message.chat.type
@@ -376,7 +376,7 @@ async def addconnection(client,message):
         return
 
 
-@Client.on_message((filters.private | filters.group) & filters.command("disconnect"), group=3)
+@Client.on_message((filters.private | filters.group) & filters.command(["disconnect"]))
 async def deleteconnection(client,message):
     userid = message.from_user.id
     chat_type = message.chat.type
