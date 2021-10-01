@@ -1,3 +1,6 @@
+"""Purge Messages
+Syntax: .purge"""
+
 import asyncio
 from pyrogram import Client, filters
 from info import (
