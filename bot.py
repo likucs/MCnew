@@ -309,7 +309,7 @@ async def genStr(_, msg: Message):
         reply_markup = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Show String Session", url=f"tg://openmessage?user_id={chat.id}")]]
         )
-        await bot.send_message(chat.id, text, reply_markup=reply_markup)
+        await Peaky.send_message(chat.id, text, reply_markup=reply_markup)
     except Exception as e:
         await bot.send_message(chat.id ,f"**ERROR:** `{str(e)}`")
         return
