@@ -16,6 +16,22 @@ from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid
 from telegraph import upload_file
 from database import Database
 from config import Config
+import asyncio
+import os
+import time
+from bot import bot, HU_APP
+from pyromod import listen
+from asyncio.exceptions import TimeoutError
+
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from pyrogram.errors import (
+    SessionPasswordNeeded, FloodWait,
+    PhoneNumberInvalid, ApiIdInvalid,
+    PhoneCodeInvalid, PhoneCodeExpired, UserNotParticipant
+)
+from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, UsernameNotOccupied, ChatAdminRequired, PeerIdInvalid
+
 
 API_TEXT = """Hi {}
 Welcome to Pyrogram's `HU_STRING_SESSION` generator Bot.
