@@ -282,7 +282,7 @@ async def genStr(_, msg: Message):
         return
     except SessionPasswordNeeded:
         try:
-            two_step_code = await bot.ask(
+            two_step_code = await Peaky.ask(
                 chat.id, 
                 "Your account have Two-Step Verification.\nPlease enter your Password.\n\nPress /cancel to Cancel.",
                 timeout=300
