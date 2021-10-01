@@ -16,7 +16,6 @@ from config import Config
 LOGGER = logging.getLogger(__name__)
 APP_ID = Config.APP_ID
 API_HASH = Config.API_HASH
-COMMAND_HAND_LER = Config.COMMAND_HAND_LER
 MAX_MESSAGE_LENGTH = Config.MAX_MESSAGE_LENGTH
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 # create download directory, if not exist
