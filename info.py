@@ -15,6 +15,8 @@ COMMAND_HAND_LER = "/"
 
 HU_APP = "nthingdnbdbd"
 
+TG_MAX_SELECT_LEN = "100"
+
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
