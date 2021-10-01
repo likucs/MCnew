@@ -8,6 +8,7 @@ SESSION = environ.get('SESSION', 'Media_search')
 API_HASH = environ['API_HASH']
 
 
+COMMAND_HAND_LER = "/"
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
