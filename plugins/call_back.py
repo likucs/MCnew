@@ -2,7 +2,26 @@
 import re
 import time
 import asyncio
+import os
+import ast
 
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
+
+from wasim_faris.filter_db import del_all, find_filter
+
+from wasim_faris.connect_db import(
+    all_connections,
+    active_connection,
+    if_active,
+    delete_connection,
+    make_active,
+    make_inactive
+)
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
