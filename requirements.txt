@@ -10,7 +10,7 @@ youtube_search
 requests
 ffmpeg-python
 telegraph
-pyromod==1.5
+pyromod
 heroku3
 aiofiles
 umongo
