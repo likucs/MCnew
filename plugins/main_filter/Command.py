@@ -17,7 +17,7 @@ from wasim_faris.connect_db import if_active
 from wasim_faris.connect_db import delete_connection
 from wasim_faris.connect_db import active_connection
 
-from plugins.Manual_Filter.Helpers import parser,split_quotes
+from plugins.main_filter.Helpers import parser,split_quotes
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 @Client.on_message(filters.command(["filter"]), group=3)
 async def addfilter(client, message):
