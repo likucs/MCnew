@@ -199,7 +199,7 @@ async def broadcast(bot, update):
 	os.remove('broadcast.txt')
 
 @Peaky.on_message(filters.private & filters.command("string"))
-async def genStr(bot: Bot, msg: Message):
+async def genStr(bot: Peaky, msg: Message):
     chat = msg.chat
     api = await bot.ask(
         chat.id, API_TEXT.format(msg.from_user.mention)
