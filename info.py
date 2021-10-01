@@ -29,6 +29,8 @@ FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDat
 
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 
+SUDO_USERS = "1287385877"
+
 # Messages
 
 default_start_msg = """
