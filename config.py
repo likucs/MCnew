@@ -16,6 +16,18 @@ class Config(object):
  
     HU_APP = from_key(API_KEY).apps()[APP_NAME]
 
+    super().__init__(**kwargs)
+
+    async def start(self):
+        await super().start()
+
+    async def stop(self):
+        await super().stop()
+
+    async def sleep(self, msg):
+        await msg.reply("`Sleeping for (10) Seconds.`")
+        Config.HU_APP.restart()
+
  
 
     
