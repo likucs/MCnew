@@ -1,6 +1,7 @@
 import os
 import re
 import io
+import pyrogram
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from info import ADMINS
