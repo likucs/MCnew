@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from info import COMMAND_HAND_LER
-from pyrobot.cust_p_filters import (
+from plugins.cust_p_filters import (
     admin_fliter
 )
 
