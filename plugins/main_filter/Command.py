@@ -11,11 +11,11 @@ from filter bot.filter_db import get_filters
 from filter bot.filter_db import delete_filter
 from filter bot.filter_db import count_filters
 
-from Aswin_Raj.connect_db import add_connection
-from Aswin_Raj.connect_db import all_connections
-from Aswin_Raj.connect_db import if_active
-from Aswin_Raj.connect_db import delete_connection
-from Aswin_Raj.connect_db import active_connection
+from wasim_faris.connect_db import add_connection
+from wasim_faris.connect_db import all_connections
+from wasim_faris.connect_db import if_active
+from wasim_faris.connect_db import delete_connection
+from wasim_faris.connect_db import active_connection
 
 from plugins.Manual_Filter.Helpers import parser,split_quotes
 #-------------------------------------------------------------------------------------------------------------------------------------------------
