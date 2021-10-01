@@ -14,3 +14,4 @@ pyromod
 heroku3
 aiofiles
 umongo
+pymongo
