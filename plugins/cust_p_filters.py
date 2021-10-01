@@ -1,7 +1,7 @@
 from pyrogram import (
     filters
 )
-from Farisx import (
+from info import (
     SUDO_USERS,
     USE_AS_BOT
 )
