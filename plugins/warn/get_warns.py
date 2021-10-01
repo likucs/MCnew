@@ -3,13 +3,13 @@ from pyrogram.types import (
     Message
 )
 
-
+from Bot import Bot
 from plugins.helper_functions.cust_p_filters import (
     admin_fliter
 )
 
 
-@PyroBot.on_message(
+@Bot.on_message(
     filters.command(["warns"])) &
     admin_fliter
 )
