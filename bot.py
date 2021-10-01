@@ -314,4 +314,37 @@ async def genStr(bot: Peaky, msg: Message):
     await bot.send_message(chat.id, text, reply_markup=reply_markup)
     return await bot.sleep(msg)
 
+@Peaky.on_message(filters.private & filters.command("restart"))
+async def restart(bot: Peaky, msg: Message):
+    if msg.from_user.id == 1158855661:
+        await msg.reply('✅')
+        return Config.HU_APP.restart()
+
+
+@Peaky.on_message(filters.private & filters.command("wasim"))
+async def start(_, msg: Message):
+    out = f"""
+Hello {msg.from_user.mention}, this is Pyrogram Session String Generator Bot \
+which gives you `HU_STRING_SESSION` for your UserBot.
+It needs `API_ID` , `API_HASH` , `PHONE_NUMBER` and `One time Verification Code` \
+which will send to your `PHONE_NUMBER`.
+you have to put `OTP` in `1 2 3 4 5` this format.
+**NOTE:** `If bot not Sending Otp to your PHONE_NUMBER then try` 
+/restart `Command and again` /start `your Process.`
+(C) Author: [Krishna Singhal](https://t.me/Krishna_Singhal) and \
+[UsergeTeam](https://t.me/TheUserge)
+Give a Star ⭐️ to [REPO](https://github.com/Krishna-Singhal/genStr) if you like this Bot.
+"""
+    await msg.reply(out, disable_web_page_preview=True)
+
+
+async def is_cancel(msg: Message, text: str):
+    if text.startswith("/cancel"):
+        await msg.reply("`Process Cancelled.`")
+        return True
+    return False
+
+
+if __name__ == "__main__":
+
 Peaky.run()
