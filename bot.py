@@ -130,13 +130,13 @@ async def start(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔎  𝚈𝚃 𝚂𝙴𝙰𝚁𝙲𝙷", switch_inline_query_current_chat='')
+                    InlineKeyboardButton("➕ Add Me To Your Group ➕", url="t.me/Lissa_test_bot?startgroup=true"),
                 ],[
-                    InlineKeyboardButton("🕵‍♂ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁", callback_data="devs"),
-                    InlineKeyboardButton("⚠️ 𝙶𝚁𝙾𝚄𝙿", url="https://t.me/peaky_blinder_tg"),
+                    InlineKeyboardButton("🕵‍♂ Creator", callback_data="devs"),
+                    InlineKeyboardButton("⚠️ Group", url="https://t.me/peaky_blinder_tg"),
                 ],[
-                    InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="help"),
-                    InlineKeyboardButton("♻️ 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂", callback_data="home"),
+                    InlineKeyboardButton("💡 Help", callback_data="help"),
+                    InlineKeyboardButton("😃 About", callback_data="about"),
                 ]
             ]
         ),
