@@ -16,6 +16,8 @@ class Config(object):
  
     ADMINS = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 
+    AUTH_USERS = (auth_users + ADMINS) if auth_users else []
+
  
 
     
