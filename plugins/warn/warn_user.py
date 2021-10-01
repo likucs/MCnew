@@ -7,14 +7,14 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton
 )
-from pyrobot import (
+from info import (
     COMMAND_HAND_LER,
     WARN_DATA_ID,
     WARN_SETTINGS_ID
 )
-from pyrobot.pyrobot import PyroBot
-from pyrobot.helper_functions.admin_check import admin_check
-from pyrobot.helper_functions.cust_p_filters import (
+from Bot import Peaky
+from plugins.admin_check import admin_check
+from plugins.cust_p_filters import (
     admin_fliter
 )
 
