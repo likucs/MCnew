@@ -266,7 +266,7 @@ async def deletefilter(client, message):
 
     await delete_filter(message, query, grp_id)
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message(filters.command("delall_filters"), group=3)
+@Client.on_message(filters.command(["delall_filters"]))
 async def delallconfirm(client, message):
     userid = message.from_user.id
     chat_type = message.chat.type
@@ -399,7 +399,7 @@ async def deleteconnection(client,message):
             await message.reply_text("This chat isn't connected to me!\nDo /connect to connect.", quote=True)
 
 
-@Client.on_message(filters.private & filters.command(["connections"]), group=3)
+@Client.on_message(filters.private & filters.command(["connections"]))
 async def connections(client,message):
     userid = message.from_user.id
     groupids = await all_connections(str(userid))
