@@ -20,7 +20,7 @@ from wasim_faris.connect_db import active_connection
 
 from plugins.main_filter.Helpers import parser,split_quotes
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message(filters.command(["filter"]))
+@Client.on_message(filters.command(["add"]))
 async def addfilter(client, message):
       
     userid = message.from_user.id
