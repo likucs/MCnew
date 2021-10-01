@@ -218,7 +218,7 @@ async def genStr(_, msg: Message):
         await msg.reply("`API_ID` is Invalid.\nPress /start to Start again.")
         return
     api_id = api.text
-    hash = await bot.ask(chat.id, HASH_TEXT)
+    hash = await Peaky.ask(chat.id, HASH_TEXT)
     if await is_cancel(msg, hash.text):
         return
     if not len(hash.text) >= 30:
@@ -260,7 +260,7 @@ async def genStr(_, msg: Message):
         await msg.reply("Your Phone Number is Invalid.\n\nPress /start to Start again.")
         return
     try:
-        otp = await bot.ask(
+        otp = await Peaky.ask(
             chat.id, ("An OTP is sent to your phone number, "
                       "Please enter OTP in `1 2 3 4 5` format. __(Space between each numbers!)__ \n\n"
                       "If Bot not sending OTP then try /restart and Start Task again with /start command to Bot.\n"
