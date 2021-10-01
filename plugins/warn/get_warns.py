@@ -6,7 +6,6 @@ from pyrogram.types import (
 from info import (
     COMMAND_HAND_LER
 
-from bot import bot
 from plugins.helper_functions.cust_p_filters import (
     admin_fliter
 )
