@@ -60,6 +60,18 @@ add_user = """async def add_user(id, username, name, dcid):
     except:
         pass"""
 
+find_user = """async def find_user(id):
+    query = mycol.find( {"_id":id})
+
+    try:
+        for file in query:
+            name = file['name']
+            username = file['username']
+            dc_id = file['dc_id']
+        return name, username, dc_id
+    except:
+        return None, None, None"""
+
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in AUTH_USERS:
