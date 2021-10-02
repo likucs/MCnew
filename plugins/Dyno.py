@@ -19,7 +19,7 @@ from wasim_faris.users_mdb import add_user, find_user, all_users
 
 AUTH_USERS = "1287385877"
 HEROKU_API_KEY = "77961583-b642-42a7-b31f-e4eea6880508"
-SAVE_USER = "yes"
+SAVE_USER = "no"
 
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
