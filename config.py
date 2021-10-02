@@ -17,3 +17,5 @@ class Config(object):
     WARN_DATA_ID = "1"
 
     WARN_SETTINGS_ID = "56"
+
+    DB_URI = os.environ.get("DATABASE_URL", None)
