@@ -270,7 +270,7 @@ async def deletefilter(client, message):
 
     await delete_filter(message, query, grp_id)
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message(filters.command(["del_all_filters"]))
+@Client.on_message(filters.command(["delall_filters"]))
 async def delallconfirm(client, message):
     userid = message.from_user.id
     chat_type = message.chat.type
