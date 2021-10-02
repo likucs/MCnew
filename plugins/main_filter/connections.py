@@ -32,13 +32,12 @@ async def connections(client,message):
                 act = " - ACTIVE"
             else:
                 act = ""
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=f"{title}{act}", callback_data=f"groupcb:{groupid}:{title}:{act}"
-                    )
-                ]
-            )
+            buttons.append
+               (
+                 [
+                    InlineKeyboardButton(text=f"{title}{act}", callback_data=f"groupcb:{groupid}:{act}")
+               )
+             ]
         except:
             pass
     if buttons:
