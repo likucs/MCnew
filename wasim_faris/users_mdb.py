@@ -1,8 +1,6 @@
 import os
 import pymongo
 
-if bool(os.environ.get("WEBHOOK", False)):
-from config import Config
 myclient = pymongo.MongoClient(FILTER_DB_URI)
 mydb = myclient["Cluster0"]
 mycol = mydb['USERS']
