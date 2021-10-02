@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
 
-from plugins.main_filter.Helpers import humanbytes
+from plugins.Helpers import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
 
