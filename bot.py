@@ -23,7 +23,9 @@ import time
 from info import HU_APP
 from pyromod import listen
 from asyncio.exceptions import TimeoutError
-
+import shutil
+import heroku3
+import requests
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import (
