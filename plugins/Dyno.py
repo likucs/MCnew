@@ -18,7 +18,7 @@ if bool(os.environ.get("WEBHOOK", False)):
 #akkinokt enit nokm
 
 
-humanbytes ="""def humanbytes(size):
+def humanbytes(size):
     if not size:
         return ""
     power = 2**10
@@ -29,7 +29,7 @@ humanbytes ="""def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'"""
 
-filter_stats = """async def filter_stats():
+    async def filter_stats():
     collections = mydb.list_collection_names()
 
     if "CONNECTION" in collections:
@@ -47,7 +47,7 @@ filter_stats = """async def filter_stats():
 
     return totalcollections, totalcount"""
 
-add_user = """async def add_user(id, username, name, dcid):
+   async def add_user(id, username, name, dcid):
     data = {
         '_id': id,
         'username' : username,
@@ -59,7 +59,7 @@ add_user = """async def add_user(id, username, name, dcid):
     except:
         pass"""
 
-find_user = """async def find_user(id):
+    async def find_user(id):
     query = mycol.find( {"_id":id})
 
     try:
@@ -71,7 +71,7 @@ find_user = """async def find_user(id):
     except:
         return None, None, None"""
 
-all_users = """async def all_users():
+    async def all_users():
     count = mycol.count()
     return count"""
 
