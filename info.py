@@ -28,7 +28,7 @@ SAVE_USER = "yes"
 
 TG_MAX_SELECT_LEN = "1000"
 DB_URI = Config.DB_URI
-
+BOT_START_TIME = time.time()
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
