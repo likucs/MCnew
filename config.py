@@ -19,3 +19,16 @@ class Config(object):
     WARN_SETTINGS_ID = "56"
 
     DB_URI = os.environ.get("DATABASE_URL", None)
+
+    AUTH_USERS = set(str(x) for x in os.environ.get("AUTH_USERS", "").split())
+
+
+    # To save user details (Usefull for getting userinfo and total user counts)
+    # May reduce filter capacity :(
+    # Give yes or no
+    SAVE_USER = os.environ.get("SAVE_USER", "no").lower()
+
+
+    # Go to https://dashboard.heroku.com/account, scroll down and press Reveal API
+    # To check dyno status
+    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
