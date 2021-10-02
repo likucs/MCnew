@@ -2,9 +2,9 @@ import os
 import pymongo
 from info import FILTER_DB_URI
 
-myclient = pymongo.MongoClient(Config.DATABASE_URI)
-mydb = myclient[Config.DATABASE_NAME]
-mycol = mydb['USERS']   
+myclient = pymongo.MongoClient(FILTER_DB_URI)
+mydb = myclient["Cluster0"]
+mycol = mydb['CONNECTIONS']      
 
 
 async def add_connection(group_id, user_id):
