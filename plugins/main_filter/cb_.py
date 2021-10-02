@@ -10,7 +10,6 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
 
-from script import Script
 from wasim_faris.filter_db import del_all, find_filter
 
 from wasim_faris.connect_db import(
