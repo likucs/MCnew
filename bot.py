@@ -327,7 +327,6 @@ async def is_cancel(msg: Message, text: str):
         await msg.reply("Process Cancelled.")
         return True
     return False
-x = datetime.datetime.now()
-y = "your depoly time"
-print(x+y)
+x = your depoly time datetime.datetime.now()
+print(x)
 Peaky.run()
