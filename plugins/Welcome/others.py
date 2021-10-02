@@ -3,9 +3,10 @@ from pyrogram import (
     filters
 )
 from info import COMMAND_HAND_LER
-from pyrobot.helper_functions.cust_p_filters import admin_fliter
+from plugins.cust_p_filters import admin_fliter
 if DB_URI is not None:
-    import pyrobot.helper_functions.sql_helpers.welcome_sql as sql
+    import plugins.sql_helpers.welcome_sql as sql
+from config import DB_URI
 
 
 @Client.on_message(
