@@ -16,7 +16,7 @@ else:
     from config import Config
 
 from plugins.main_filter.Helpers import humanbytes
-from wasi_faris.filter_db import filter_stats
+from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
 
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
