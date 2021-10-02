@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
 
-from info import (
+from config import (
      HEROKU_API_KEY, 
      AUTH_USERS,
      SAVE_USER
