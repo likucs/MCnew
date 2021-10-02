@@ -1,12 +1,10 @@
 import os
 import pymongo
+from config import FILTER_DB_URI
 
 myclient = pymongo.MongoClient(FILTER_DB_URI)
 mydb = myclient["Cluster0"]
 mycol = mydb['USERS']
-
-FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
 
 async def add_user(id, username, name, dcid):
     data = {
