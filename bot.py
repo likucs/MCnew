@@ -3,6 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 import logging
 from pyrogram import Client, filters
 import random
+import datetime
 import json
 import string
 import traceback
@@ -326,4 +327,6 @@ async def is_cancel(msg: Message, text: str):
         await msg.reply("Process Cancelled.")
         return True
     return False
+x = datetime.datetime.now()
+your depoloy time is print(x)
 Peaky.run()
