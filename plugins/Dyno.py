@@ -16,9 +16,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 if bool(os.environ.get("WEBHOOK", False)):
 
 #akkinokt enit nokm
-from plugins.helpers import humanbytes
-from database.filters_mdb import filter_stats
-from database.users_mdb import add_user, find_user, all_users
+from plugins.main_filter.Helpers import humanbytes
+from wasim_faris.filter_db import filter_stats
+from wasim_faris.users_mdb import add_user, find_user, all_users
 
 
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
