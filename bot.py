@@ -405,7 +405,7 @@ async def bot_status(client,message):
     else:
         quota_details = ""
 
-    uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - Config.BOT_START_TIME))
+    uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - BOT_START_TIME))
 
     try:
         t, u, f = shutil.disk_usage(".")
