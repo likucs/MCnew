@@ -12,8 +12,7 @@ from pyrogram import Client as trojanz
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
-from config import Config
-from info import HEROKU_API_KEY, AUTH_USERS
+from info import HEROKU_API_KEY, AUTH_USERS, SAVE_USER
 from plugins.main_filter.Helpers import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
