@@ -6,7 +6,7 @@ import time
 import shutil
 import heroku3
 import requests
-
+from info import AUTH_USERS
 from pyrogram import filters
 from pyrogram import Client as trojanz
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -15,7 +15,6 @@ if bool(os.environ.get("WEBHOOK", False)):
 
 #akkinokt enit nokm
 
-AUTH_USERS = "1287385877"
 HEROKU_API_KEY = "77961583-b642-42a7-b31f-e4eea6880508"
 SAVE_USER = "no"
 
