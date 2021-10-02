@@ -72,6 +72,8 @@ find_user = """async def find_user(id):
     except:
         return None, None, None"""
 
+all_users = """
+
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in AUTH_USERS:
