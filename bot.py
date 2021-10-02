@@ -328,5 +328,5 @@ async def is_cancel(msg: Message, text: str):
         return True
     return False
 x = datetime.datetime.now()
-your depoloy time is print(x)
+print(x)
 Peaky.run()
