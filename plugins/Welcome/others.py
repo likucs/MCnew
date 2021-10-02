@@ -2,7 +2,7 @@ from pyrogram import (
     Client,
     filters
 )
-from info import COMMAND_HAND_LER
+from info import COMMAND_HAND_LER , DB_URI
 from plugins.cust_p_filters import admin_fliter
 if DB_URI is not None:
     import plugins.sql_helpers.welcome_sql as sql
