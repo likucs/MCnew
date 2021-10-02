@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
 from config import Config
-
+from info import HEROKU_API_KEY, 
 from plugins.main_filter.Helpers import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
@@ -31,9 +31,9 @@ async def bot_status(client,message):
     else:
         userstats = ""
 
-    if Config.HEROKU_API_KEY:
+    if HEROKU_API_KEY:
         try:
-            server = heroku3.from_key(Config.HEROKU_API_KEY)
+            server = heroku3.from_key(HEROKU_API_KEY)
 
             user_agent = (
                 'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
