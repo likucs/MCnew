@@ -35,7 +35,7 @@ async def connections(client,message):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=f"{title}{act}", callback_data=f"wasimh:{groupid}:{act}"
+                        text=f"{title}{act}", callback_data=f"wasimh:{groupid}:{title}:{act}"
                     )
                 ]
             )
