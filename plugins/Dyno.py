@@ -12,7 +12,7 @@ from pyrogram import Client as trojanz
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
-from wasim_faris.filter_db import filter_stats
+
 from wasim_faris.users_mdb import add_user, find_user, all_users
 
 AUTH_USERS = "1287385877"
