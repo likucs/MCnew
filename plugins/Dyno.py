@@ -21,6 +21,17 @@ AUTH_USERS = "1287385877"
 HEROKU_API_KEY = "77961583-b642-42a7-b31f-e4eea6880508"
 SAVE_USER = "no"
 
+humanbytes ="""def humanbytes(size):
+    if not size:
+        return ""
+    power = 2**10
+    n = 0
+    Dic_powerN = {0: ' ', 1: 'Ki', 2: 'Mi', 3: 'Gi', 4: 'Ti'}
+    while size > power:
+        size /= power
+        n += 1
+    return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'"""
+
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in AUTH_USERS:
