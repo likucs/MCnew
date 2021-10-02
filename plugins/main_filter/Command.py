@@ -21,7 +21,7 @@ from plugins.main_filter.Helpers import parser,split_quotes
 
 
 NOT_FOR_U ="CAACAgIAAxkBAAIE5WFWnf7I8uPvrlnpp7fj41548xlPAAIiDgACsX2wSyUIjTPiUHFVHgQ",
-STICKER = "CAACAgUAAxkBAAIGkGFX4pasqw2lvAL51hiC0sKojc4jAAK9AwACoNa5VCN7pl8kEyPsHgQ"
+STICKER = "CAACAgUAAxkBAAIHDGFYELSFHihhbW6SM5re-FhegHR5AAIhAwAC_EcZVKinu1GWDbtpHgQ"
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 @Client.on_message(filters.command(["add"]))
 async def addfilter(client, message):
