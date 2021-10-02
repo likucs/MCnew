@@ -266,8 +266,8 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "song_ex":
         await update.answer("𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦 :\n\n/song no idea ✅\nNo idea ❌\n\n/song fadded ✅\nfadded ❌", show_alert=True)
 
-     elif query_data == "wasimh":
-        await update.answer()
+    elif "wasimh" in query.data:
+        await query.answer()
 
         group_id = query.data.split(":")[1]
         title = query.data.split(":")[2]
@@ -293,113 +293,3 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="md"
         )
         return
-
-    elif "connectcb" in query.data:
-        await query.answer()
-
-        group_id = query.data.split(":")[1]
-        title = query.data.split(":")[2]
-        user_id = query.from_user.id
-
-        mkact = await make_active(str(user_id), str(group_id))
-
-        if mkact:
-            await query.message.edit_text(
-                f"Connected to **{title}**",
-                parse_mode="md"
-            )
-            return
-        else:
-            await query.message.edit_text(
-                f"Some error occured!!",
-                parse_mode="md"
-            )
-            return
-
-    elif "disconnect" in query.data:
-        await query.answer()
-
-        title = query.data.split(":")[2]
-        user_id = query.from_user.id
-
-        mkinact = await make_inactive(str(user_id))
-
-        if mkinact:
-            await query.message.edit_text(
-                f"Disconnected from **{title}**",
-                parse_mode="md"
-            )
-            return
-        else:
-            await query.message.edit_text(
-                f"Some error occured!!",
-                parse_mode="md"
-            )
-            return
-    elif "deletecb" in query.data:
-        await query.answer()
-
-        user_id = query.from_user.id
-        group_id = query.data.split(":")[1]
-
-        delcon = await delete_connection(str(user_id), str(group_id))
-
-        if delcon:
-            await query.message.edit_text(
-                "Successfully deleted connection"
-            )
-            return
-        else:
-            await query.message.edit_text(
-                f"Some error occured!!",
-                parse_mode="md"
-            )
-            return
-    
-    elif query.data == "backcb":
-        await query.answer()
-
-        userid = query.from_user.id
-
-        groupids = await all_connections(str(userid))
-        if groupids is None:
-            await query.message.edit_text(
-                "There are no active connections!! Connect to some groups first.",
-            )
-            return
-        buttons = []
-        for groupid in groupids:
-            try:
-                ttl = await client.get_chat(int(groupid))
-                title = ttl.title
-                active = await if_active(str(userid), str(groupid))
-                if active:
-                    act = " - ACTIVE"
-                else:
-                    act = ""
-                buttons.append(
-                    [
-                        InlineKeyboardButton(
-                            text=f"{title}{act}", callback_data=f"groupcb:{groupid}:{title}:{act}"
-                        )
-                    ]
-                )
-            except:
-                pass
-        if buttons:
-            await query.message.edit_text(
-                "Your connected group details ;\n\n",
-                reply_markup=InlineKeyboardMarkup(buttons)
-            )
-
-    elif "alertmessage" in query.data:
-        grp_id = query.message.chat.id
-        i = query.data.split(":")[1]
-        keyword = query.data.split(":")[2]
-        reply_text, btn, alerts, fileid = await find_filter(grp_id, keyword)
-        if alerts is not None:
-            alerts = ast.literal_eval(alerts)
-            alert = alerts[int(i)]
-            alert = alert.replace("\\n", "\n").replace("\\t", "\t")
-            await query.answer(alert,show_alert=True)
-
