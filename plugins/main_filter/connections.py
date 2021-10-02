@@ -8,7 +8,7 @@ else:
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from wasim_faris.connections_mdb import add_connection, all_connections, if_active, delete_connection
+from wasim_faris.connect_db import add_connection, all_connections, if_active, delete_connection
 
 
 @Client.on_message(filters.private & filters.command(["connections"]))
