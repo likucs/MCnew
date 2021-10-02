@@ -2,15 +2,12 @@ import os
 import pymongo
 
 if bool(os.environ.get("WEBHOOK", False)):
-from info import FILTER_DB_URI
-else:
-    from config import Config
- 
+from config import Config
 myclient = pymongo.MongoClient(FILTER_DB_URI)
 mydb = myclient["Cluster0"]
 mycol = mydb['USERS']
 
-
+FILTER_DB_URI = "mongodb+srv://wasim:wasim@cluster0.wc1o6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 
 async def add_user(id, username, name, dcid):
