@@ -13,14 +13,14 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
 from config import Config
-from info import HEROKU_API_KEY, 
+from info import HEROKU_API_KEY, AUTH_USERS
 from plugins.main_filter.Helpers import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
 
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
-    if str(message.from_user.id) not in Config.AUTH_USERS:
+    if str(message.from_user.id) not in AUTH_USERS:
         return
 
     chats, filters = await filter_stats()
