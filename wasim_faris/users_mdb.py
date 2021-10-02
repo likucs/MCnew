@@ -1,6 +1,6 @@
 import os
 import pymongo
-from config import FILTER_DB_URI
+from info import FILTER_DB_URI
 
 myclient = pymongo.MongoClient(FILTER_DB_URI)
 mydb = myclient["Cluster0"]
