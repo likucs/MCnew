@@ -28,7 +28,7 @@ async def bot_status(client,message):
 
     chats, filters = await filter_stats()
 
-    if Config.SAVE_USER == "yes":
+    if SAVE_USER == "yes":
         users = await all_users()
         userstats = f"> __**{users} users have interacted with your bot!**__\n\n"
     else:
