@@ -10,9 +10,6 @@ from pyrogram import Client as bot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 
-from typing import List
-from info import AUTH_GROUPS
-
 
 id_pattern = re.compile(r'^.\d+$')
 
