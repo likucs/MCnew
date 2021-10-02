@@ -23,6 +23,10 @@ from plugins.main_filter.Helpers import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
 
+AUTH_USERS = "1287385877"
+HEROKU_API_KEY = ""
+SAVE_USER = "yes"
+
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in AUTH_USERS:
