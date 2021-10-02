@@ -29,7 +29,7 @@ def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'"""
 
-    async def filter_stats():
+   async def filter_stats():
     collections = mydb.list_collection_names()
 
     if "CONNECTION" in collections:
