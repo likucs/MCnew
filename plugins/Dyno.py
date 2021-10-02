@@ -16,64 +16,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 if bool(os.environ.get("WEBHOOK", False)):
 
 #akkinokt enit nokm
+from plugins.helpers import humanbytes
+from database.filters_mdb import filter_stats
+from database.users_mdb import add_user, find_user, all_users
 
-
-def humanbytes(size):
-    if not size:
-        return ""
-    power = 2**10
-    n = 0
-    Dic_powerN = {0: ' ', 1: 'Ki', 2: 'Mi', 3: 'Gi', 4: 'Ti'}
-    while size > power:
-        size /= power
-        n += 1
-    return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'"""
-
-   async def filter_stats():
-    collections = mydb.list_collection_names()
-
-    if "CONNECTION" in collections:
-        collections.remove("CONNECTION")
-    if "USERS" in collections:
-        collections.remove("USERS")
-
-    totalcount = 0
-    for collection in collections:
-        mycol = mydb[collection]
-        count = mycol.count()
-        totalcount = totalcount + count
-
-    totalcollections = len(collections)
-
-    return totalcollections, totalcount"""
-
-   async def add_user(id, username, name, dcid):
-    data = {
-        '_id': id,
-        'username' : username,
-        'name' : name,
-        'dc_id' : dcid
-    }
-    try:
-        mycol.update_one({'_id': id},  {"$set": data}, upsert=True)
-    except:
-        pass"""
-
-    async def find_user(id):
-    query = mycol.find( {"_id":id})
-
-    try:
-        for file in query:
-            name = file['name']
-            username = file['username']
-            dc_id = file['dc_id']
-        return name, username, dc_id
-    except:
-        return None, None, None"""
-
-    async def all_users():
-    count = mycol.count()
-    return count"""
 
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
