@@ -11,9 +11,9 @@ else:
     from config import Config
 
 from script import Script
-from wasim_faris.filters_mdb import del_all, find_filter
+from wasim_faris.filter_db import del_all, find_filter
 
-from wasim_faris.connections_mdb import(
+from wasim_faris.connect_db import(
     all_connections,
     active_connection,
     if_active,
