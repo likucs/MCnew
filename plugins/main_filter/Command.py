@@ -21,6 +21,7 @@ from plugins.main_filter.Helpers import parser,split_quotes
 
 
 NOT_FOR_U ="CAACAgIAAxkBAAIE5WFWnf7I8uPvrlnpp7fj41548xlPAAIiDgACsX2wSyUIjTPiUHFVHgQ",
+STICKER = "CAACAgUAAxkBAAIGkGFX4pasqw2lvAL51hiC0sKojc4jAAK9AwACoNa5VCN7pl8kEyPsHgQ"
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 @Client.on_message(filters.command(["add"]))
 async def addfilter(client, message):
@@ -273,38 +274,7 @@ async def deletefilter(client, message):
 async def delallconfirm(client, message):
     userid = message.from_user.id
     chat_type = message.chat.type
-
-    if chat_type == "private":
-        grpid  = await active_connection(str(userid))
-        if grpid is not None:
-            grp_id = grpid
-            try:
-                chat = await client.get_chat(grpid)
-                title = chat.title
-            except:
-                await message.reply_text("Make sure I'm present in your group!!", quote=True)
-                return
-        else:
-            await message.reply_text("I'm not connected to any groups!", quote=True)
-            return
-
-    elif (chat_type == "group") or (chat_type == "supergroup"):
-        grp_id = message.chat.id
-        title = message.chat.title
-
-    else:
-        return
-
-    st = await client.get_chat_member(grp_id, userid)
-    if (st.status == "creator") or (str(userid) in ADMINS):
-        await message.reply_text(
-            f"This will delete all filters from '{title}'.\nDo you want to continue??",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(text="YES",callback_data="delallconfirm")],
-                [InlineKeyboardButton(text="CANCEL",callback_data="delallcancel")]
-            ]),
-            quote=True
-        )
+    await message.reply_sticker(STICKER)
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 @Client.on_message((filters.private | filters.group) & filters.command(["connect"]))
 async def addconnection(client,message):
