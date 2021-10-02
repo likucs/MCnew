@@ -14,6 +14,8 @@ API_HASH = environ['API_HASH']
 
 COMMAND_HAND_LER = "/"
 
+HEROKU_API_KEY = "77961583-b642-42a7-b31f-e4eea6880508"
+
 HU_APP = "nthingdnbdbd"
 
 TG_MAX_SELECT_LEN = "1000"
