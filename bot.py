@@ -33,7 +33,7 @@ from pyrogram.errors import (
     PhoneCodeInvalid, PhoneCodeExpired, UserNotParticipant
 )
 
-from info import WASIM_FARISX
+from sample_config import 
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
 
