@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
 
-from wasim_faris.users_mdb import add_user, find_user, all_users
+#akkinokt enit nokm
 
 AUTH_USERS = "1287385877"
 HEROKU_API_KEY = "77961583-b642-42a7-b31f-e4eea6880508"
@@ -72,7 +72,9 @@ find_user = """async def find_user(id):
     except:
         return None, None, None"""
 
-all_users = """
+all_users = """async def all_users():
+    count = mycol.count()
+    return count"""
 
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
