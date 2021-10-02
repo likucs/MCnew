@@ -48,6 +48,18 @@ filter_stats = """async def filter_stats():
 
     return totalcollections, totalcount"""
 
+add_user = """async def add_user(id, username, name, dcid):
+    data = {
+        '_id': id,
+        'username' : username,
+        'name' : name,
+        'dc_id' : dcid
+    }
+    try:
+        mycol.update_one({'_id': id},  {"$set": data}, upsert=True)
+    except:
+        pass"""
+
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in AUTH_USERS:
