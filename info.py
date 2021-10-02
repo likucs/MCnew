@@ -2,6 +2,7 @@ import re
 from os import environ
 from heroku3 import from_key
 from pyrogram import Client
+from config import Config
 from pyromod import listen
 
 id_pattern = re.compile(r'^.\d+$')
@@ -16,6 +17,7 @@ COMMAND_HAND_LER = "/"
 HU_APP = "nthingdnbdbd"
 
 TG_MAX_SELECT_LEN = "1000"
+DB_URI = Config.DB_URI
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
