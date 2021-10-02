@@ -30,6 +30,24 @@ humanbytes ="""def humanbytes(size):
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'"""
 
+filter_stats = """async def filter_stats():
+    collections = mydb.list_collection_names()
+
+    if "CONNECTION" in collections:
+        collections.remove("CONNECTION")
+    if "USERS" in collections:
+        collections.remove("USERS")
+
+    totalcount = 0
+    for collection in collections:
+        mycol = mydb[collection]
+        count = mycol.count()
+        totalcount = totalcount + count
+
+    totalcollections = len(collections)
+
+    return totalcollections, totalcount"""
+
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in AUTH_USERS:
