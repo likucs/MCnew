@@ -13,18 +13,12 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
 
-from config import (
-     HEROKU_API_KEY, 
-     AUTH_USERS,
-     SAVE_USER
-    )
-
 from plugins.main_filter.Helpers import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
 
 AUTH_USERS = "1287385877"
-HEROKU_API_KEY = ""
+HEROKU_API_KEY = "77961583-b642-42a7-b31f-e4eea6880508"
 SAVE_USER = "yes"
 
 @trojanz.on_message((filters.private | filters.group) & filters.command('status'))
