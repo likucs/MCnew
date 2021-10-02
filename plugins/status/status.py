@@ -15,7 +15,6 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
 
-from script import Script
 from plugins.main_Helpers import humanbytes
 from database.filters_mdb import filter_stats
 from database.users_mdb import add_user, find_user, all_users
