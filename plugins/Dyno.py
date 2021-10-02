@@ -12,9 +12,7 @@ from pyrogram import Client as trojanz
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
+from config import Config
 
 from plugins.helpers import humanbytes
 from wasim_faris.filter_db import filter_stats
