@@ -150,7 +150,6 @@ async def cb_handler(client, query):
 
         group_id = query.data.split(":")[1]
         title = query.data.split(":")[2]
-        act = query.data.split(":")[3]
         user_id = query.from_user.id
 
         if act == "":
