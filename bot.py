@@ -33,8 +33,6 @@ from pyrogram.errors import (
     PhoneNumberInvalid, ApiIdInvalid,
     PhoneCodeInvalid, PhoneCodeExpired, UserNotParticipant
 )
-from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, UsernameNotOccupied, ChatAdminRequired, PeerIdInvalid
-if bool(os.environ.get("WEBHOOK", False)):
 
 from info import WASIM_FARISX
 from wasim_faris.filter_db import filter_stats
