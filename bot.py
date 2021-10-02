@@ -35,8 +35,8 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant, Usern
 if bool(os.environ.get("WEBHOOK", False)):
 
 from plugins.helpers import humanbytes
-from database.filters_mdb import filter_stats
-from database.users_mdb import add_user, find_user, all_users
+from wasim_faris.filters_mdb import filter_stats
+from wasim_faris.users_mdb import add_user, find_user, all_users
 
 API_TEXT = """Hi {}
 Welcome to Pyrogram's `HU_STRING_SESSION` generator Bot.
