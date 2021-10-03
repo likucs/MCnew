@@ -45,15 +45,4 @@ Last Update : `{last_update}`
 Latitude : `{latitude}`
 Longitude : `{longitude}`
 Recovered : `{recovered}`"""
-        await update.reply_text(
-            text=covid_info,
-            disable_web_page_preview=True,
-            quote=True,
-            reply_markup=BUTTONS
-        )
-    except Exception as error:
-        await update.reply_text(
-            text=error,
-            disable_web_page_preview=True,
-            quote=True
-        )
+       
