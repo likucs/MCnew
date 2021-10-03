@@ -29,9 +29,9 @@ START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 ⍟ /song - ᴇx (/song no idea)
 ⍟/info - Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Iɴғᴏʀᴍᴀᴛɪᴏɴ</b>"""
 
-SONG_TEXT = """<b>🎧 𝙸𝙰𝙼 𝙰 𝚂𝙸𝙼𝙿𝙻𝙴 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝚃𝙾 𝙼𝙿3 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 𝙱𝙾𝚃 
+SONG_TEXT = """<code>🎧 Iam a Simple YouTube To MP3 Downloader Bot 
 
-𝚂𝙴𝙽𝙳 𝙼𝙴 𝙰𝙽𝚈 𝚂𝙾𝙽𝙶 𝙽𝙰𝙼𝙴 𝚆𝙸𝚃𝙷 /song 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 🎧</b>"""
+Send Me Any Song Name With <b>/song</b> Command 🎧 </code>"""
 WASIM_TEXT = """<code>Base Commands
 
 👮🏻 Available to Admins&Moderators
