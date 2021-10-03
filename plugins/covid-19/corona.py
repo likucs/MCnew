@@ -7,7 +7,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 API = "https://api.sumanjay.cf/covid/?country="
 
-BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]])
+BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join our Channel ⚙', url='https://telegram.me/cz_films')]])
 
 @Client.on_message(filters.private & filters.text)
 async def reply_info(bot, update):
@@ -43,7 +43,7 @@ Last Update : `{last_update}`
 Latitude : `{latitude}`
 Longitude : `{longitude}`
 Recovered : `{recovered}`
-Made by @FayasNoushad"""
+Made by @Cinemazilla"""
         return covid_info
     except Exception as error:
         return error
