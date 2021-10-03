@@ -172,7 +172,7 @@ async def addfilter(client, message):
         parse_mode="md"
     )
 #-------------------------------------------------------------------------------------------------------------------------------------------------
-@Client.on_message(filters.command(["filters"]))
+@Client.on_message(filters.command(["view"]))
 async def get_all(client, message):    
     chat_type = message.chat.type
     user_id = message.from_user.id
