@@ -84,7 +84,7 @@ If You Need Telegram Sticker Id Click /stickerid To Get Sticker Id ( Reply With 
 ☆ If You Send a message ( Using Forward Tag ) From Your ( Public Or private ) Group and channnel You Will Receive Your Id Of That Group Or Channel</code>"""
 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|wasimh)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -146,13 +146,17 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "home": 
         buttons = [[
-            InlineKeyboardButton('🎧 Song', callback_data='song'),
-            InlineKeyboardButton('🔗 Telegraph', callback_data='Telegraph'),
+            InlineKeyboardButton('🎶 Song', callback_data='song'),
+            InlineKeyboardButton('🖇️ Telegraph', callback_data='Telegraph'),
             InlineKeyboardButton('📅 Info', callback_data='info'),
         ],[
+            InlineKeyboardButton('🤖 String Gen', callback_data='mute'),
             InlineKeyboardButton('🤐 Mute', callback_data='mute'),
-            InlineKeyboardButton('🚫 Ban', callback_data='bans'),
-            
+            InlineKeyboardButton('🚫 Ban', callback_data='bans'),   
+        ],[
+            InlineKeyboardButton('🗃️ Filter', callback_data='bans'),
+            InlineKeyboardButton('🦠Corona', callback_data='bans'),
+            InlineKeyboardButton('🌍 Country', callback_data='bans'),
         ],[
             InlineKeyboardButton('◀️ Back', callback_data='start'),
         ]]
