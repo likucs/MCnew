@@ -10,6 +10,7 @@ import traceback
 import datetime
 import aiofiles
 import asyncio
+from countryinfo import CountryInfo
 import time
 from random import choice 
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid, UserNotParticipant, UserBannedInChannel
