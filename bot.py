@@ -364,7 +364,7 @@ Timezone : `{country.timezones()}`
     return info, wiki, google
 
 
-@Bot.on_message(filters.private & filters.text)
+@Peaky.on_message(filters.private & filters.text)
 async def countryinfo(bot, update):
     if not await db.is_user_exist(update.from_user.id):
 	    await db.add_user(update.from_user.id)
