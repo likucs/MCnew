@@ -162,7 +162,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('🤐 Mute', callback_data='mute'),
             InlineKeyboardButton('🚫 Ban', callback_data='bans'),   
         ],[
-            InlineKeyboardButton('🗃️ Filter', callback_data='bans'),
+            InlineKeyboardButton('🗃️ Filter', callback_data='filter'),
             InlineKeyboardButton('🦠Corona', callback_data='bans'),
             InlineKeyboardButton('🌍 Country', callback_data='bans'),
         ],[
