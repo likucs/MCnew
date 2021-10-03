@@ -140,7 +140,7 @@ async def start(bot, update):
                     InlineKeyboardButton("🕵‍♂ Creator", callback_data="devs"),
                     InlineKeyboardButton("⚠️ Group", url="https://t.me/peaky_blinder_tg"),
                 ],[
-                    InlineKeyboardButton("💡 Help", callback_data="help"),
+                    InlineKeyboardButton("💡 Help", callback_data="home"),
                     InlineKeyboardButton("😃 About", callback_data="about"),
                 ]
             ]
