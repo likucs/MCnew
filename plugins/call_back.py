@@ -89,8 +89,9 @@ FILTER_TEXT = """ <b>Help for Filter</b>
 
 <b>𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝖺𝗇𝖽 𝖴𝗌𝖺𝗀𝖾𝗌:</b>
 
-• /filter <code>- 𝖺𝖽𝖽 a filter</code>
-• /filters <code>- list all the filters of a chat.</code>
+• /add <code>- 𝖺𝖽𝖽 a filter</code>
+• /view <code>- list all the filters of a chat.</code>
+• /connect - <code>connect your group</code>
 • /delfilter <code>- delete a specific filter.</code>
 • /delall_filters <code>- deletes whole filters of a chat.</code>"""
 
