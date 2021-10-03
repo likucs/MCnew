@@ -6,6 +6,12 @@ from config import *
 
 API = "https://api.sumanjay.cf/covid/?country="
 
+BUTTONS = [
+             [ 
+               InlineKeyboardButton("wasim", url="https://t.me/wasim"),
+           ]
+              ]
+            
 
 @Client.on_message(filters.command(["covid", "corona"]), group=1)
 async def covid_info(bot, update: Message):
