@@ -69,14 +69,17 @@ TELEGRAPH_TEXT = """<code>⛓ I can Upload Photo And Video To Telegraph
 
 Send me Any  Photo or Video 
  /telegraph With telegraph  Command (reply with photo or video) </code>
+
 <b>CMD /telegraph</b>"""
-INFO_TEXT = """<b>☆ 𝙸𝙵 𝚈𝙾𝚄 𝙽𝙴𝙴𝙳 𝙰 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 𝚄𝚂𝙴𝚁 𝙸𝙳 𝙵𝙾𝚁𝚆𝙰𝚁𝙳 𝙰 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝚃𝙾 𝙷𝙴𝚁𝙴 [ᴡɪᴛʜ ғᴏʀᴡᴀʀᴅ ᴛᴀɢ]
+INFO_TEXT = """<b>Cmd /info, /stickerid</b>
 
-☆ 𝙸𝙵 𝚈𝙾𝚄 𝙽𝙴𝙴𝙳 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝙸𝙳 𝙲𝙻𝙸𝙲𝙺 /stickerid 𝚃𝙾 𝙶𝙴𝚃  𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝙸𝙳
+<code>☆ If You Need a Telegram User Id Forword A message To Here ( With forward tag )
 
-☆ 𝙲𝙻𝙸𝙲𝙺 /info 𝚃𝙾 𝙿𝙸𝙲𝙺 𝚄𝙿 𝚈𝙾𝚄𝚁 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚃𝙸𝙾𝙽
+If You Need Telegram Sticker Id Click /stickerid To Get Sticker Id ( Reply With Sticker )
 
-☆ 𝙸𝙵 𝚈𝙾𝚄 𝚂𝙴𝙽𝙳 𝙰 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 [ᴜsɪɴɢ ᴛʜᴇ ғᴏʀᴡᴀʀᴅ ᴛᴀɢ] 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚁 [ᴘᴜʙʟɪᴄ ᴏʀ ᴘʀɪᴠᴛᴇ] 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝚁𝙴𝙲𝙴𝙸𝚅𝙴 𝚈𝙾𝚄𝚁 𝙸𝙳 𝙾𝙵 𝚃𝙷𝙰𝚃 𝙶𝚁𝙾𝚄𝙿 𝙾𝚁 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b>"""
+☆ Click /info To Pick Up Your Telegram Information
+
+☆ If You Send a message ( Using Forward Tag ) From Your ( Public Or private ) Group and channnel You Will Receive Your Id Of That Group Or Channel</code>"""
 
 
 @Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|wasimh)$"), group=2)
