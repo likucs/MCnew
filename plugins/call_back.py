@@ -41,21 +41,21 @@ HELP_TEXT = """<b>നീ ഏതാ..... ഒന്ന് പോടെയ് അ�
 
 CALLBACK_TEXT = """<b>𝙷𝙴𝚈 𝙸𝙰𝙼 𝙹𝚄𝚂𝚃 𝚃𝙴𝚂𝚃 𝙾𝙵 𝙿𝙴𝙰𝙺𝚈 𝙱𝙻𝙸𝙽𝙳𝙴𝚁 </b>"""
 DEVS_TEXT = """♻️ 𝙷𝙴𝚈  𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙳𝙴𝚅𝚂 ♻️"""
-MUTE_TEXT = """<code>Here is the help for the Muting module:
+MUTE_TEXT = """<code> Here is the help for the Muting module:</code>
 
-Admin only:
- - /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
- - /tmute <userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- - /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.</b>"""
-BANS_TEXT = """<b>Here is the help for the Bans module:
+<code>Admin only:</code>
+ - /mute <code><userhandle>: silences a user. Can also be used as a reply, muting the replied to user.</code>
+ - /tmute <code><userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.</code>
+ - /unmute <code><userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user<code>."""
+BANS_TEXT = """<code>Here is the help for the Bans module:</code>
 
- - /kickme: kicks the user who issued the command
+ - /kickme: <code>kicks the user who issued the command</code>
 
-Admin only:
- - /ban <userhandle>: bans a user. (via handle, or reply)
- - /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- - /unban <userhandle>: unbans a user. (via handle, or reply)
- - /kick <userhandle>: kicks a user, (via handle, or reply)</code>"""
+<code>Admin only:
+ - /ban <code><userhandle>: bans a user. (via handle, or reply)</code>
+ - /tban <code><userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.</code>
+ - /unban <code><userhandle>: unbans a user. (via handle, or reply)</code>
+ - /kick <code><userhandle>: kicks a user, (via handle, or reply)</code>"""
 
 ABOUT_TEXT ="""<code>★ My name  :- Lissa Bot</code>
 <b>★Developer :- <a href="https://t.me/Xxxtentacion_TG">xxxtentacion</a></b>
@@ -139,10 +139,10 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "home": 
         buttons = [[
-            InlineKeyboardButton('mute', callback_data='mute'),
-        ],[
             InlineKeyboardButton('🎧 Song', callback_data='song'),
             InlineKeyboardButton('🔗 Telegraph', callback_data='Telegraph'),
+            InlineKeyboardButton('🤐 Mute', callback_data='mute'),
+            InlineKeyboardButton('🚫 Ban', callback_data='bans'),
         ],[
             InlineKeyboardButton('📅 Info', callback_data='info'),
             InlineKeyboardButton('◀️ Back', callback_data='start'),
