@@ -6,6 +6,14 @@ from pyrogram.types import *
 
 API = "https://api.abirhasan.wtf/google?query="
 
+JOIN_BUTTON = [
+    InlineKeyboardButton(
+        text='⚙ Join Updates Channel ⚙',
+        url='https://telegram.me/FayasNoushad'
+    )
+]
+
+
 @Client.on_inline_query()
 async def inline(bot, update):
     results = google(update.query)
