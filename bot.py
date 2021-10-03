@@ -21,6 +21,7 @@ from database import Database
 from config import Config
 import asyncio
 import os
+import traceback
 import time
 from pyromod import listen
 from asyncio.exceptions import TimeoutError
