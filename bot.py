@@ -11,6 +11,7 @@ import datetime
 import aiofiles
 import asyncio
 from countryinfo import CountryInfo
+from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid, UserNotParticipant, UserBannedInChannel
 import time
 from random import choice 
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid, UserNotParticipant, UserBannedInChannel
