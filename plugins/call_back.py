@@ -32,16 +32,16 @@ START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 SONG_TEXT = """<b>🎧 𝙸𝙰𝙼 𝙰 𝚂𝙸𝙼𝙿𝙻𝙴 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝚃𝙾 𝙼𝙿3 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 𝙱𝙾𝚃 
 
 𝚂𝙴𝙽𝙳 𝙼𝙴 𝙰𝙽𝚈 𝚂𝙾𝙽𝙶 𝙽𝙰𝙼𝙴 𝚆𝙸𝚃𝙷 /song 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 🎧</b>"""
-WASIM_TEXT = """<b>Base Commands
+WASIM_TEXT = """<code>Base Commands
 
 👮🏻 Available to Admins&Moderators
-🕵🏻 Available to Admins</b>"""
+🕵🏻 Available to Admins</code>"""
 
 HELP_TEXT = """<b>നീ ഏതാ..... ഒന്ന് പോടെയ് അവൻ help ചോയ്ച്ച് വന്നിരിക്കുന്നു😤...I'm Different Bot U Know</b>"""
 
 CALLBACK_TEXT = """<b>𝙷𝙴𝚈 𝙸𝙰𝙼 𝙹𝚄𝚂𝚃 𝚃𝙴𝚂𝚃 𝙾𝙵 𝙿𝙴𝙰𝙺𝚈 𝙱𝙻𝙸𝙽𝙳𝙴𝚁 </b>"""
 DEVS_TEXT = """♻️ 𝙷𝙴𝚈  𝙷𝙴𝚁𝙴 𝙸𝚂 𝙼𝚈 𝙳𝙴𝚅𝚂 ♻️"""
-MUTE_TEXT = """<b>Here is the help for the Muting module:
+MUTE_TEXT = """<code>Here is the help for the Muting module:
 
 Admin only:
  - /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
@@ -55,14 +55,14 @@ Admin only:
  - /ban <userhandle>: bans a user. (via handle, or reply)
  - /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
  - /unban <userhandle>: unbans a user. (via handle, or reply)
- - /kick <userhandle>: kicks a user, (via handle, or reply)</b>"""
+ - /kick <userhandle>: kicks a user, (via handle, or reply)</code>"""
 
-ABOUT_TEXT ="""<b>★ 𝙼𝚈 𝙽𝙰𝙼𝙴 :- 𝙻𝙸𝚂𝚂𝙰 𝙱𝙾𝚃</b>
-<b>★ 𝙳𝙴𝚅𝙴𝙻𝙾𝙿𝙴𝚁 :- <a href="https://t.me/Xxxtentacion_TG">𝚇𝚇𝚇𝚃𝙴𝙽𝚃𝙰𝙲𝚃𝙸𝙾𝙽_𝚃𝙶</a></b>
-<b>★ 𝙲𝚁𝙴𝙳𝙸𝚃𝚂 :- 𝙴𝚅𝙴𝚁𝚈 𝙾𝙽𝙴 𝙸𝙽 𝚃𝙷𝙸𝚂 𝙹𝙾𝚄𝚁𝙽𝙴𝚈</b>
-<b>★ 𝚂𝙴𝚁𝚅𝙴𝚁 :- <a href="https://herokuapp.com/">𝙷𝙴𝚁𝙾𝙺𝚄</a></b>
-<b>★ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 :- <a href="https://t.me/AdhavaaBiriyaniKittiyalo">𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁𝙴</a></b>
-<b>★ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈 :- <a href="https://github.com/pyrogram/pyrogram">𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼</a></b>"""
+ABOUT_TEXT ="""<code>★ My name  :- Lissa Bot</code>
+<b>★Developer :- <a href="https://t.me/Xxxtentacion_TG">xxxtentacion</a></b>
+<code>★ Credits :- Every One In This Journey</code>
+<b>★ Server :- <a href="https://herokuapp.com/">Heroku</a></b>
+<b>★ Source Code :- <a href="https://t.me/AdhavaaBiriyaniKittiyalo">Click here</a></b>
+<b>★ Library :- <a href="https://github.com/pyrogram/pyrogram">pyrogram</a></b>"""
 
 SOURCE_TEXT = """<b>എന്നെ കൊണ്ട് ചെയ്യാൻ കഴിയുന്ന കുറച്ചു കാര്യങ്ങൾ ആണ് താഴേ കൊടുത്തിട്ടുള്ളത്..</b>"""
 TELEGRAPH_TEXT = """<b>🔗 𝙸 𝙲𝙰𝙽 𝚄𝙿𝙻𝙾𝙰𝙳 𝙿𝙷𝙾𝚃𝙾𝚂 𝙰𝙽𝙳 𝚅𝙸𝙳𝙴𝙾 𝚃𝙾 𝚃𝙴𝙻𝙶𝚁𝙰𝙿𝙷. 
@@ -84,16 +84,16 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [
-                     [
-                    InlineKeyboardButton("🔎 𝚈𝚃 𝚂𝙴𝙰𝚁𝙲𝙷", switch_inline_query_current_chat='')
-                    ],[
-                    InlineKeyboardButton("⚠️ 𝙶𝚁𝙾𝚄𝙿", url="https://t.me/cinemazilla"),
-                    InlineKeyboardButton("🕵‍♂ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁", url="https://t.me/peaky_blinder_tg"),
-                    ],[
-                    InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="help"),
-                    InlineKeyboardButton("♻️ 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂", callback_data="home"),
-                    ]
-                 ]
+                [
+                    InlineKeyboardButton("➕ Add Me To Your Group ➕", url="t.me/Lissa_test_bot?startgroup=true"),
+                ],[
+                    InlineKeyboardButton("🕵‍♂ Creator", callback_data="devs"),
+                    InlineKeyboardButton("⚠️ Group", url="https://t.me/peaky_blinder_tg"),
+                ],[
+                    InlineKeyboardButton("💡 Help", callback_data="home"),
+                    InlineKeyboardButton("😃 About", callback_data="about"),
+                ]
+            ]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
@@ -139,13 +139,13 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "home": 
         buttons = [[
-            InlineKeyboardButton('🚫 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝚃', callback_data='ban'),
+            InlineKeyboardButton('mute', callback_data='mute'),
         ],[
-            InlineKeyboardButton('🎧 𝚂𝙾𝙽𝙶', callback_data='song'),
-            InlineKeyboardButton('🔗 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='Telegraph'),
+            InlineKeyboardButton('🎧 Song', callback_data='song'),
+            InlineKeyboardButton('🔗 Telegraph', callback_data='Telegraph'),
         ],[
-            InlineKeyboardButton('📅 𝙸𝙽𝙵𝙾', callback_data='info'),
-            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺 ', callback_data='start'),
+            InlineKeyboardButton('📅 Info', callback_data='info'),
+            InlineKeyboardButton('◀️ Back', callback_data='start'),
         ]]
 
         reply_markup = InlineKeyboardMarkup(buttons)
