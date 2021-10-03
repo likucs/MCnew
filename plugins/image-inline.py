@@ -45,7 +45,7 @@ def google(query):
     for info in informations:
         text = f"**Title:** `{info['title']}`"
         text += f"\n**Description:** `{info['description']}`"
-        text += f"\n\nMade by @FayasNoushad"
+        text += f"\n\n@CZ_FILMS"
         results.append(
             {
                 "title": info['title'],
