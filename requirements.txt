@@ -16,3 +16,4 @@ aiofiles
 umongo
 pymongo
 countryinfo
+pyshorteners
