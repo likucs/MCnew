@@ -2,6 +2,11 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import *
 
+BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')
+        ]]
+    )
 
 @Client.on_message(filters.command(["info", "information"]), group=1)
 async def information(bot, update: Message):
