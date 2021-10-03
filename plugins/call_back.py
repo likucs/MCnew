@@ -28,7 +28,9 @@ START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 ⍟ I ᴄᴀɴ Uᴘʟᴏᴀᴅ Pʜᴏᴛᴏs Oʀ Vɪᴅᴇᴏs Tᴏ Tᴇʟᴇɢʀᴀᴘʜ
 ⍟ /song - ᴇx (/song no idea)
 ⍟/info - Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Iɴғᴏʀᴍᴀᴛɪᴏɴ</b>"""
+STRING_TEXT = """<b>String Session Generator<b>
 
+I Can Generate Pyrogram's String Session<code>just Click</code> <b>/string</b> <code>to generate String Session of your telegram</code>"""
 SONG_TEXT = """<code>🎧 Iam a Simple YouTube To MP3 Downloader Bot 
 
 Send Me Any Song Name With <b>/song</b> Command 🎧 </code>"""
@@ -146,11 +148,12 @@ async def callback_data(bot, update: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🎧 Song', callback_data='song'),
             InlineKeyboardButton('🔗 Telegraph', callback_data='Telegraph'),
+            InlineKeyboardButton('📅 Info', callback_data='info'),
         ],[
             InlineKeyboardButton('🤐 Mute', callback_data='mute'),
             InlineKeyboardButton('🚫 Ban', callback_data='bans'),
+            
         ],[
-            InlineKeyboardButton('📅 Info', callback_data='info'),
             InlineKeyboardButton('◀️ Back', callback_data='start'),
         ]]
 
@@ -266,36 +269,24 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html"
         )
 
+    elif query_data == "string": 
+        buttons = [[
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            STRING_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
     elif query_data == "close":
         await update.message.delete()
 
     elif query_data == "song_ex":
         await update.answer("𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦 :\n\n/song no idea ✅\nNo idea ❌\n\n/song fadded ✅\nfadded ❌", show_alert=True)
 
-    elif "wasimh" in query.data:
-        await query.answer()
-
-        group_id = query.data.split(":")[1]
-        title = query.data.split(":")[2]
-        act = query.data.split(":")[3]
-        user_id = query.from_user.id
-
-        if act == "":
-            stat = "CONNECT"
-            cb = "connectcb"
-        else:
-            stat = "DISCONNECT"
-            cb = "disconnect"
-
-        keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"{stat}", callback_data=f"{cb}:{group_id}:{title}"),
-                InlineKeyboardButton("DELETE", callback_data=f"deletecb:{group_id}")],
-            [InlineKeyboardButton("BACK", callback_data="backcb")]
-        ])
-
-        await query.message.edit_text(
-            f"Group Name : **{title}**\nGroup ID : `{group_id}`",
-            reply_markup=keyboard,
-            parse_mode="md"
-        )
-        return
+    
