@@ -8,8 +8,8 @@ API = "https://api.abirhasan.wtf/google?query="
 
 JOIN_BUTTON = [
     InlineKeyboardButton(
-        text='⚙ Join Updates Channel ⚙',
-        url='https://telegram.me/FayasNoushad'
+        text='⚙ Channel',
+        url='https://telegram.me/cz_films'
     )
 ]
 
