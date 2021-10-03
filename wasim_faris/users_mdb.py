@@ -35,3 +35,8 @@ async def find_user(id):
         return name, username, dc_id
     except:
         return None, None, None
+
+
+async def get_all_users(self):
+        all_users = self.col.find({})
+        return all_users
