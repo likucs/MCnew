@@ -28,9 +28,11 @@ START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 ⍟ I ᴄᴀɴ Uᴘʟᴏᴀᴅ Pʜᴏᴛᴏs Oʀ Vɪᴅᴇᴏs Tᴏ Tᴇʟᴇɢʀᴀᴘʜ
 ⍟ /song - ᴇx (/song no idea)
 ⍟/info - Yᴏᴜʀ Tᴇʟᴇɢʀᴀᴍ Iɴғᴏʀᴍᴀᴛɪᴏɴ</b>"""
-STRING_TEXT = """<b>String Session Generator<b>
+STRING_TEXT = """<b>String Session Generator</b>
 
-I Can Generate Pyrogram's String Session<code>just Click</code> <b>/string</b> <code>to generate String Session of your telegram</code>"""
+<code>I Can Generate Pyrogram's String Session<code>
+
+<code>just Click</code> <b>/string</b> <code>to generate String Session of your telegram</code>"""
 SONG_TEXT = """<code>🎧 Iam a Simple YouTube To MP3 Downloader Bot 
 
 Send Me Any Song Name With <b>/song</b> Command 🎧 </code>"""
