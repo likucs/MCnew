@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from io import BytesIO
 from config import *
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 BUTTONS = InlineKeyboardMarkup(
         [[
