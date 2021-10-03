@@ -170,6 +170,8 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('🚀 Extra', callback_data='bans'),
             InlineKeyboardButton('🙃 Memes', callback_data='bans'),
         ],[
+            InlineKeyboardButton('🖼️ ytdl', callback_data='bans'),
+            InlineKeyboardButton('📌 Pin', callback_data='bans'),
             InlineKeyboardButton('◀️ Back', callback_data='start'),
         ]]
 
