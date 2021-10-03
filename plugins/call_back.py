@@ -143,11 +143,11 @@ async def callback_data(bot, update: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🎧 Song', callback_data='song'),
             InlineKeyboardButton('🔗 Telegraph', callback_data='Telegraph'),
+            InlineKeyboardButton('📅 Info', callback_data='info'),
         ],[
             InlineKeyboardButton('🤐 Mute', callback_data='mute'),
             InlineKeyboardButton('🚫 Ban', callback_data='bans'),
         ],[
-            InlineKeyboardButton('📅 Info', callback_data='info'),
             InlineKeyboardButton('◀️ Back', callback_data='start'),
         ]]
 
