@@ -8,7 +8,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 )
 async def youtube_thumbnail(bot, update: Message):
     reply_markup = InlineKeyboardMarkup(
-        [[InlineKeyboardButton('Join Updates Channel', url='https://telegram.me/FayasNoushad')]]
+        [[InlineKeyboardButton('Join our Channel', url='https://telegram.me/Cz_films')]]
     )
     if len(update.text.split()) == 1 or len(update.text.split()) >= 4:
         await update.reply_text(
