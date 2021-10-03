@@ -49,6 +49,7 @@ PHONE_NUMBER_TEXT = (
     "Press /cancel to Cancel."
 )
 
+FORCE_SUBSCRIBE_TEXT = "yievdvdvdvvdvdvd"
 PHOTOS = [
     "https://telegra.ph/file/b4d4c014012f3c31552ed.jpg",
     "https://telegra.ph/file/0f1aa03b2162f77871c47.jpg",
