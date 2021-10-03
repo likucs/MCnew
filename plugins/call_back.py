@@ -141,6 +141,7 @@ async def callback_data(bot, update: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🎧 Song', callback_data='song'),
             InlineKeyboardButton('🔗 Telegraph', callback_data='Telegraph'),
+        ],[
             InlineKeyboardButton('🤐 Mute', callback_data='mute'),
             InlineKeyboardButton('🚫 Ban', callback_data='bans'),
         ],[
