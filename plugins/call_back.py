@@ -83,8 +83,16 @@ If You Need Telegram Sticker Id Click /stickerid To Get Sticker Id ( Reply With 
 
 ☆ If You Send a message ( Using Forward Tag ) From Your ( Public Or private ) Group and channnel You Will Receive Your Id Of That Group Or Channel</code>"""
 
+FILTER_TEXT = """ <b>Help for Filter</b>
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string)$"), group=2)
+<b>𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌 𝖺𝗇𝖽 𝖴𝗌𝖺𝗀𝖾𝗌:</b>
+
+• /filter <code>- 𝖺𝖽𝖽 a filter</code>
+• /filters <code>- list all the filters of a chat.</code>
+• /delfilter <code>- delete a specific filter.</code>
+• /delall_filters <code>- deletes whole filters of a chat.</code>"""
+
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -150,7 +158,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('🖇️ Telegraph', callback_data='Telegraph'),
             InlineKeyboardButton('📅 Info', callback_data='info'),
         ],[
-            InlineKeyboardButton('🤖 String Gen', callback_data='mute'),
+            InlineKeyboardButton('🤖 String Gen', callback_data='string'),
             InlineKeyboardButton('🤐 Mute', callback_data='mute'),
             InlineKeyboardButton('🚫 Ban', callback_data='bans'),   
         ],[
@@ -285,6 +293,19 @@ async def callback_data(bot, update: CallbackQuery):
         
         await update.message.edit_text(
             STRING_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+    elif query_data == "filter": 
+        buttons = [[
+            InlineKeyboardButton('◀️ 𝙱𝙰𝙲𝙺', callback_data='home'),
+            InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            FILTER_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
