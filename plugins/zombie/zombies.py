@@ -1,4 +1,4 @@
-from config import Messages
+from config import *
 from time import time, sleep
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
@@ -6,24 +6,6 @@ from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired, UserAdminInvalid
 
 
-START_MSG = "**Hey [{}](tg://user?id={})**\n__I can kick inactive members from group.\nLearn more at /help__"
-      
-      CREATOR_REQUIRED = "❗ **You have to be the group creator to do that.**"
-      
-      INPUT_REQUIRED = "❗ **Arguments Required**\n__See /help in personal message for more information.__"
-      
-      KICKED = "✔️ **Successfully Kicked {} members according to the arguments provided.**"
-      
-      START_KICK = "🚮**Removing inactive members this may take a while...**"
-      
-      ADMIN_REQUIRED = "❗**I am not an admin here**\n__Leaving this chat, add me again as admin with ban user permission.__"
-      
-      DKICK = "✔️ **Kicked {} Deleted Accounts Successfully.**"
-      
-      FETCHING_INFO = "**Collecting users information...**"
-      
-      STATUS = "**{}\nChat Member Status**\n\n```recently``` - {}\n```within_week``` - {}\n```within_month``` - {}\n```long_time_ago``` - {}\nDeleted Account - {}\nBot - {}\nUnCached - {}"
-   
 @Client.on_message(filters.incoming & ~filters.private & filters.command(['inkick']))
 def inkick(client, message):
   user = client.get_chat_member(message.chat.id, message.from_user.id)
