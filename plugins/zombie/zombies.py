@@ -1,4 +1,4 @@
-from config import *
+from config import Messages
 from time import time, sleep
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
