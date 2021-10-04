@@ -27,13 +27,13 @@ def inkick(client, message):
           except FloodWait as e:
             sleep(e.x)
       try:
-        sent_message.edit(KICKED.format(count))
+        sent_message.edit(Messages.KICKED.format(count))
       except ChatWriteForbidden:
         pass
     else:
-      message.reply_text(INPUT_REQUIRED)
+      message.reply_text(Messages.INPUT_REQUIRED)
   else:
-    sent_message = message.reply_text(CREATOR_REQUIRED)
+    sent_message = message.reply_text(Messages.CREATOR_REQUIRED)
     sleep(5)
     sent_message.delete()
 
@@ -41,7 +41,7 @@ def inkick(client, message):
 def dkick(client, message):
   user = client.get_chat_member(message.chat.id, message.from_user.id)
   if user.status == "creator":
-    sent_message = message.reply_text(START_KICK)
+    sent_message = message.reply_text(Messages.START_KICK)
     count = 0
     for member in client.iter_chat_members(message.chat.id):
       if member.user.is_deleted and not member.status in ('administrator', 'creator'):
@@ -50,17 +50,17 @@ def dkick(client, message):
           count += 1
           sleep(1)
         except (ChatAdminRequired, UserAdminInvalid):
-          sent_message.edit(ADMIN_REQUIRED)
+          sent_message.edit(Messages.ADMIN_REQUIRED)
           client.leave_chat(message.chat.id)
           break
         except FloodWait as e:
           sleep(e.x)
     try:
-      sent_message.edit(DKICK.format(count))
+      sent_message.edit(Messages.DKICK.format(count))
     except ChatWriteForbidden:
       pass
   else:
-    sent_message = message.reply_text(CREATOR_REQUIRED)
+    sent_message = message.reply_text(Messages.CREATOR_REQUIRED)
     sleep(5)
     sent_message.delete()
 
@@ -92,4 +92,4 @@ def instatus(client, message):
         long_time_ago += 1
       else:
         uncached += 1
-    sent_message.edit(STATUS.format(message.chat.title, recently, within_week, within_month, long_time_ago, deleted_acc, bot, uncached))
+    sent_message.edit(Messages.STATUS.format(message.chat.title, recently, within_week, within_month, long_time_ago, deleted_acc, bot, uncached))
