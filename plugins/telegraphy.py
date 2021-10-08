@@ -10,7 +10,7 @@ DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 async def getmedia(bot, update):
     medianame = DOWNLOAD_LOCATION + str(update.from_user.id)
     try:
-        message = await update.reply_message(
+        await update.reply_message(
             text="`Processing...`",
             quote=True,
             disable_web_page_preview=True
