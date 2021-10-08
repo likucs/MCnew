@@ -2,10 +2,10 @@ import os
 import shutil
 from pyrogram import Client, filters
 from telegraph import upload_file
-from config import TMP_DOWNLOAD_DIRECTORY
 from pyrobot.helper_functions.cust_p_filters import sudo_filter
 from pyrobot.helper_functions.get_file_id import get_file_id
 
+TMP_DOWNLOAD_DIRECTORY = "TMP_DOWNLOAD_DIRECTORY"
 
 @Client.on_message(
     filters.command("telegraph") &
