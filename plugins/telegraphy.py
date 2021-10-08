@@ -67,3 +67,14 @@ async def button(bot, update):
       elif "start" in cb_data:
         await update.message.delete()
         await start(bot, update.message)
+
+
+link = (
+        r"^((?:https?:)?\/\/)"
+        r"?((?:www|m)\.)"
+       )
+       
+
+@Client.on_message(filters.regex(link) & filters.group))
+async def(client, message ):
+      await message.delete()
