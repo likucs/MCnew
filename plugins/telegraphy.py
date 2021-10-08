@@ -9,7 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 @Client.on_message(filters.photo)
 async def telegraphphoto(client, message):
-    msg = await message.reply_text("Uploading To Telegraph...")
+    msg = await message.reply_text("<code>Uploading To Telegraph...</code>")
     download_location = await client.download_media(
         message=message, file_name='root/jetg')
     try:
@@ -17,7 +17,7 @@ async def telegraphphoto(client, message):
     except:
         await msg.edit_text("Photo size should be less than 5mb!") 
     else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\nJoin @JEBotZ**',
+        await msg.edit_text(f'<code>Uploaded To Telegraph</code>!\n\n**👉 https://telegra.ph{response[0]}\n\nJoin @cinemazilla**',
             disable_web_page_preview=True,
         )
     finally:
@@ -25,7 +25,7 @@ async def telegraphphoto(client, message):
 
 @Client.on_message(filters.video)
 async def telegraphvid(client, message):
-    msg = await message.reply_text("Uploading To Telegraph...")
+    msg = await message.reply_text("<code>Uploading To Telegraph...</code>")
     download_location = await client.download_media(
         message=message, file_name='root/jetg')
     try:
@@ -33,7 +33,7 @@ async def telegraphvid(client, message):
     except:
         await msg.edit_text("Video size should be less than 5mb!") 
     else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\nJoin @JEBotZ**',
+        await msg.edit_text(f'<code>Uploaded To Telegraph!</code>\n\n**👉 https://telegra.ph{response[0]}\n\nJoin @cinemazilla**',
             disable_web_page_preview=True,
         )
     finally:
