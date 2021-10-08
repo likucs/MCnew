@@ -2,8 +2,8 @@ import os
 import shutil
 from pyrogram import Client, filters
 from telegraph import upload_file
-from pyrobot.helper_functions.cust_p_filters import sudo_filter
-from pyrobot.helper_functions.get_file_id import get_file_id
+from plugins.helper_functions.cust_p_filters import sudo_filter
+from plugins.helper_functions.get_file_id import get_file_id
 
 TMP_DOWNLOAD_DIRECTORY = "TMP_DOWNLOAD_DIRECTORY"
 
