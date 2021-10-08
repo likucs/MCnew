@@ -32,8 +32,7 @@ class Config(object):
     # Go to https://dashboard.heroku.com/account, scroll down and press Reveal API
     # To check dyno status
    
-    TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
-
+    TMP_DOWNLOAD_DIRECTORY = "TMP_DOWNLOAD_DIRECTORY"
 
 class Messages():
       HELP_MSG = [
