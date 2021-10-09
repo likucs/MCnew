@@ -38,6 +38,8 @@ from pyrogram.errors import (
     PhoneCodeInvalid, PhoneCodeExpired, UserNotParticipant
 )
 
+HEROKU_API_KEY = "bff3ab0e-99df-433f-be12-466ce58e57a4"
+
 from sample_config import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
@@ -349,7 +351,7 @@ async def status(bot, update):
         disable_web_page_preview=True
     )
 
-@Peaky.on_message((filters.private | filters.group) & filters.command('status'))
+@Peaky.on_message((filters.private | filters.group) & filters.command('wasim'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in Config.AUTH_USERS:
         return
@@ -362,7 +364,7 @@ async def bot_status(client,message):
     else:
         userstats = ""
 
-    if Config.HEROKU_API_KEY:
+    if HEROKU_API_KEY:
         try:
             server = heroku3.from_key(Config.HEROKU_API_KEY)
 
