@@ -40,6 +40,8 @@ from pyrogram.errors import (
 
 HEROKU_API_KEY = "bff3ab0e-99df-433f-be12-466ce58e57a4"
 
+BOT_START_TIME = time.time()
+
 from sample_config import humanbytes
 from wasim_faris.filter_db import filter_stats
 from wasim_faris.users_mdb import add_user, find_user, all_users
@@ -418,7 +420,7 @@ async def bot_status(client,message):
     else:
         quota_details = ""
 
-    uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - Config.BOT_START_TIME))
+    uptime = time.strftime("%Hh %Mm %Ss", time.gmtime(time.time() - BOT_START_TIME))
 
     try:
         t, u, f = shutil.disk_usage(".")
