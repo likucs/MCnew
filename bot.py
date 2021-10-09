@@ -342,7 +342,7 @@ async def is_cancel(msg: Message, text: str):
         return True
     return False
 
-@Peaky.on_message(filters.private & filters.command("status"), group=5)
+@Peaky.on_message(filters.private & filters.command("users"), group=5)
 async def status(bot, update):
     total_users = await db.total_users_count()
     text = "**Bot Status**\n"
@@ -353,7 +353,7 @@ async def status(bot, update):
         disable_web_page_preview=True
     )
 
-@Peaky.on_message((filters.private | filters.group) & filters.command('wasim'))
+@Peaky.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in Config.AUTH_USERS:
         return
