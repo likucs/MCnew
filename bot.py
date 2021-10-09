@@ -354,7 +354,7 @@ async def status(bot, update):
         disable_web_page_preview=True
     )
 
-@Peaky.on_message(filters.private & filters.command("status"), group=5)
+@Peaky.on_message(filters.private & filters.command("wasim"), group=5)
 async def status(bot, update):
 await message.reply_text(
         "**Current status of your bot!**\n\n"
