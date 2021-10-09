@@ -2,11 +2,11 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram import StopPropagation
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from Config import ADMIN_ID 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from Database import Database
 from pyrogram.errors import UserNotParticipant
 
+ADMIN_ID = "1287385877"
 
 @Client.on_message(filters.private & filters.command("ban_user"))
 async def ban(c, m):
