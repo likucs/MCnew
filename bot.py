@@ -354,7 +354,7 @@ async def status(bot, update):
 
 @Peaky.on_message(filters.private & filters.command("wasim"), group=5)
 async def status(bot, update):
-await message.reply_text(
+await Peaky.send_message(
         "**Current status of your bot!**\n\n"
         f"> __**{filters}** filters across **{chats}** chats__\n\n"
         f"{userstats}"
