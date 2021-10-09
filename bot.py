@@ -354,6 +354,19 @@ async def status(bot, update):
         disable_web_page_preview=True
     )
 
+@Peaky.on_message(filters.private & filters.command("status"), group=5)
+async def status(bot, update):
+await message.reply_text(
+        "**Current status of your bot!**\n\n"
+        f"> __**{filters}** filters across **{chats}** chats__\n\n"
+        f"{userstats}"
+        f"> __BOT Uptime__ : **{uptime}**\n\n"
+        f"{quota_details}"
+        f"{disk}",
+        quote=True,
+        parse_mode="md"
+    )
+
 x = datetime.datetime.now()
 print(x)
 Peaky.run()
