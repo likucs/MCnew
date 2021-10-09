@@ -22,6 +22,8 @@ class Config(object):
 
     AUTH_USERS = set(str(x) for x in os.environ.get("AUTH_USERS", "").split())
 
+    ADMIN_ID = "1287385877"
+
 
     # To save user details (Usefull for getting userinfo and total user counts)
     # May reduce filter capacity :(
