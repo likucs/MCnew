@@ -52,6 +52,12 @@ PHONE_NUMBER_TEXT = (
     "Press /cancel to Cancel."
 )
 
+disk = "\n**Disk Details**\n\n" \
+            f"> USED  :  {used} / {total}\n" \
+            f"> FREE  :  {free}\n\n"
+    except:
+        disk = ""
+
 FORCE_SUBSCRIBE_TEXT = "yievdvdvdvvdvdvd"
 PHOTOS = [
     "https://telegra.ph/file/b4d4c014012f3c31552ed.jpg",
