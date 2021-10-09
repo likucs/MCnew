@@ -28,3 +28,50 @@ class Database:
 
     async def delete_user(self, user_id):
         await self.col.delete_many({'id': int(user_id)})
+
+    async def remove_ban(self, id):
+        ban_status = dict(
+            is_banned=False,
+            ban_duration=0,
+            banned_on=datetime.date.max.isoformat(),
+            ban_reason="",
+        )
+        await self.col.update_one({"id": id}, {"$set": {"ban_status": ban_status}})
+
+    async def ban_user(self, user_id, ban_duration, ban_reason):
+        ban_status = dict(
+            is_banned=True,
+            ban_duration=ban_duration,
+            banned_on=datetime.date.today().isoformat(),
+            ban_reason=ban_reason,
+        )
+        await self.col.update_one({"id": user_id}, {"$set": {"ban_status": ban_status}})
+
+    async def get_ban_status(self, id):
+        default = dict(
+            is_banned=False,
+            ban_duration=0,
+            banned_on=datetime.date.max.isoformat(),
+            ban_reason="",
+        )
+        user = await self.col.find_one({"id": int(id)})
+        return user.get("ban_status", default)
+
+    async def get_all_banned_users(self):
+        banned_users = self.col.find({"ban_status.is_banned": True})
+        return banned_users
+
+    async def set_notif(self, id, notif):
+        await self.col.update_one({"id": id}, {"$set": {"notif": notif}})
+
+    async def get_notif(self, id):
+        user = await self.col.find_one({"id": int(id)})
+        return user.get("notif", False)
+
+    async def get_all_notif_user(self):
+        notif_users = self.col.find({"notif": True})
+        return notif_users
+
+    async def total_notif_users_count(self):
+        count = await self.col.count_documents({"notif": True})
+        return count
