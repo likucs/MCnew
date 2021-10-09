@@ -55,8 +55,6 @@ PHONE_NUMBER_TEXT = (
 disk = "\n**Disk Details**\n\n" \
             f"> USED  :  {used} / {total}\n" \
             f"> FREE  :  {free}\n\n"
-    except:
-        disk = ""
 
 FORCE_SUBSCRIBE_TEXT = "yievdvdvdvvdvdvd"
 PHOTOS = [
