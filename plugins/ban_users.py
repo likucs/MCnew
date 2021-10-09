@@ -1,3 +1,13 @@
+import os
+import logging
+from pyrogram import Client, filters
+from pyrogram import StopPropagation
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from Config import ADMIN_ID 
+from Database import Database
+from pyrogram.errors import UserNotParticipant
+
+
 @Client.on_message(filters.private & filters.command("ban_user"))
 async def ban(c, m):
     if m.from_user.id not in ADMIN_ID:
