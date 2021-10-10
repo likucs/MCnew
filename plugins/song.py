@@ -44,7 +44,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**NO DATA FOUNDED WITH THIS TRY WITH ANOTHER !**')
+            m.edit('<code>NO DATA FOUNDED WITH THIS TRY WITH ANOTHER !</code>')
             return
     except Exception as e:
         m.edit(
@@ -52,7 +52,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`... Uploading... PLEASE.....BE..PATIENT...`")
+    m.edit("<code>hey bruh iam Uploading your song pls wait"</code>)
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
