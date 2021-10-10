@@ -16,7 +16,7 @@ async def pdf(client,message):
   
  
  file_id = str(message.photo.file_id)
- ms = await message.reply_text("Converting to PDF ......")
+ ms = await message.reply_text("<code>Converting to PDF ..</code>")
  file = await client.download_media(file_id)
  
  image = Image.open(file)
