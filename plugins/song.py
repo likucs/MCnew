@@ -44,7 +44,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('<code>NO DATA FOUNDED WITH THIS TRY WITH ANOTHER !</code>')
+            m.edit('NO DATA FOUNDED WITH THIS TRY WITH ANOTHER !')
             return
     except Exception as e:
         m.edit(
