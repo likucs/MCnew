@@ -7,7 +7,7 @@ from pyrogram.types import (InlineKeyboardButton,  InlineKeyboardMarkup)
 
 LIST = {}
 
-@Client.on_message(filters.private & filters.photo)
+@Client.on_message(filters.command("convertpdf"))
 async def pdf(client,message):
  
  if not isinstance(LIST.get(message.from_user.id), list):
