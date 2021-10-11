@@ -16,7 +16,7 @@ async def pdf(client,message):
     if not message.reply_to_message:
         return await message.reply("`Reply to a photo to convert it to a pdf..`")
 
-    if not message.reply_to_messagd.photo:
+    if not message.reply_to_message.photo:
         return await message.reply("`Reply to a photo to convert it to a pdf..`")
  
     file_id = str(message.reply_to_message.photo.file_id)
