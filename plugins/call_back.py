@@ -144,7 +144,8 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "about": 
         buttons = [[
             InlineKeyboardButton('🏘 𝙷𝙾𝙼𝙴', callback_data='start'),
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close'),
+            InlineKeyboardButton('♻️', callback_data='about')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
