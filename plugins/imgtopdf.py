@@ -34,10 +34,10 @@ async def done(client,message):
     images = LIST.get(message.from_user.id)
 
     if isinstance(images, list):
-     del LIST[message.from_user.id]
+        del LIST[message.from_user.id]
     if not images:
-     await message.reply_text( "No image !!")
-     return
+        return await message.reply_text("No image !!")
+     
 
     path = f"{message.from_user.id}" + ".pdf"
     images[0].save(path, save_all = True, append_images = images[1:])
