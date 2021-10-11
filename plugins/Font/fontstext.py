@@ -4,7 +4,7 @@ from .fonts import Fonts
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@Client.on_message(filters.command(['song']) & filters.private & filters.incoming & filters.text)
+@Client.on_message(filters.command(["song"])) & filters.private & filters.incoming & filters.text)
 async def style_buttons(c, m, cb=False):
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
