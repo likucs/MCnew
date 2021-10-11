@@ -20,3 +20,6 @@ pyshorteners
 ytthumb
 beautifulsoup4
 html5lib
+async-lru==1.0.2
+pyaes==1.6.1
+PySocks==1.7.1
