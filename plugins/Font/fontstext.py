@@ -7,7 +7,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 @Client.on_message(filters.command(['font']))
 async def style_buttons(c, m, cb=False):
-    texxt = m.message.text.split(None, 1)[1]
     buttons = [[
         InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
         InlineKeyboardButton('𝕆𝕦𝕥𝕝𝕚𝕟𝕖', callback_data='style+outline'),
@@ -40,7 +39,7 @@ async def style_buttons(c, m, cb=False):
         InlineKeyboardButton('Next ➡️', callback_data="nxt")
     ]]
     if not cb:
-        await m.reply_text(texxt, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
+        await m.reply_text(m.text.split(None, 1)[1], reply_markup=InlineKeyboardMarkup(buttons), quote=True)
     else:
         await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
@@ -79,7 +78,7 @@ async def nxt(c, m):
         await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
     else:
-        await style_buttons(c, texxt, cb=True)
+        await style_buttons(c, m, cb=True)
 
 
 @Client.on_callback_query(filters.regex('^style'))
@@ -165,8 +164,7 @@ async def style(c, m):
         cls = Fonts.strike
     if style == 'frozen':
         cls = Fonts.frozen
-    texxxt = m.message.reply_to_message.text.split(None, 1[1]
-    new_text = cls(texxxt)
+    new_text = cls(m.message.reply_to_message.text.split(None, 1)[1])
     try:
         await m.message.edit_text(new_text, reply_markup=m.message.reply_markup)
     except:
