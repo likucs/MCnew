@@ -18,3 +18,5 @@ pymongo
 countryinfo
 pyshorteners
 ytthumb
+beautifulsoup4
+html5lib
