@@ -38,7 +38,7 @@ async def style_buttons(c, m, cb=False):
         InlineKeyboardButton('Next ➡️', callback_data="nxt")
     ]]
     if not cb:
-        await m.reply_text(m.text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
+        await m.reply_text(m.text.split(None, 1)[1], reply_markup=InlineKeyboardMarkup(buttons), quote=True)
     else:
         await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
@@ -163,7 +163,7 @@ async def style(c, m):
         cls = Fonts.strike
     if style == 'frozen':
         cls = Fonts.frozen
-    new_text = cls(m.message.reply_to_message.text)
+    new_text = cls(m.message.reply_to_message.text.split(None, 1)[1])
     try:
         await m.message.edit_text(new_text, reply_markup=m.message.reply_markup)
     except:
