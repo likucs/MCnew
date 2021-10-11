@@ -14,10 +14,10 @@ async def pdf(client,message):
       LIST[message.from_user.id] = []
 
     if not message.reply_to_message:
-        return await message.reply("`Reply to a photo to convert it to a pdf..`
+        return await message.reply("`Reply to a photo to convert it to a pdf..`")
 
     if not message.reply_to_messagd.photo:
-        return await message.reply("`Reply to a photo to convert it to a pdf..`
+        return await message.reply("`Reply to a photo to convert it to a pdf..`")
  
     file_id = str(message.reply_to_message.photo.file_id)
     ms = await message.reply_text("<code>Converting to PDF ..</code>")
