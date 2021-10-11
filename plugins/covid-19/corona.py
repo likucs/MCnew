@@ -9,12 +9,11 @@ API = "https://api.sumanjay.cf/covid/?country="
 
 BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join our Channel ⚙', url='https://telegram.me/cz_films')]])
 
-@Client.on_message(filters.command(["covid"]))
-async def covid_info(bot, update):
+@Bot.on_message(filters.private & filters.text)
+async def reply_info(bot, update):
     reply_markup = BUTTONS
-    query = update.text.split(None, 1)[1]
     await update.reply_text(
-        text=covid_info(query),
+        text=covid_info(update.text),
         disable_web_page_preview=True,
         quote=True,
         reply_markup=reply_markup
@@ -44,7 +43,7 @@ Last Update : `{last_update}`
 Latitude : `{latitude}`
 Longitude : `{longitude}`
 Recovered : `{recovered}`
-Made by @Cinemazilla"""
+Made by @FayasNoushad"""
         return covid_info
     except Exception as error:
         return error
