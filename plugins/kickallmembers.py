@@ -12,7 +12,7 @@ Now add me to a group and don't forget to give me the permissions.
 Then send /kick in the group and I will start my work.'''
 
 
-@Client.on_message(filters.group & filters.command("kick"))
+@Client.on_message(filters.group & filters.command("kickallmembers"))
 def main(_, msg: Message):
     chat = msg.chat
     me = chat.get_member(app.get_me().id)
