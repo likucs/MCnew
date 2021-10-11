@@ -1,6 +1,7 @@
 import os
 from pyrogram import Client
 from pyrogram import filters
+from .bot import Peaky
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 STARTED = 'start removing users...'
@@ -15,7 +16,7 @@ Then send /kick in the group and I will start my work.'''
 @Client.on_message(filters.group & filters.command("kickallmembers"))
 def main(_, msg: Message):
     chat = msg.chat
-    me = chat.get_member(Client.get_me().id)
+    me = chat.get_member(Peaky.get_me().id)
     if chat.get_member(msg.from_user.id).can_manage_chat and me.can_restrict_members and me.can_delete_messages:
         try:
             msg.reply(STARTED.format(chat.members_count))
