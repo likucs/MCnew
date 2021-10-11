@@ -2,7 +2,6 @@ import os
 import requests
 from requests.utils import requote_uri
 from pyrogram import Client, filters
-from bot import Peaky
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
@@ -10,7 +9,7 @@ API = "https://api.sumanjay.cf/covid/?country="
 
 BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join our Channel ⚙', url='https://telegram.me/cz_films')]])
 
-@Peaky.on_message(filters.private & filters.text)
+@Client.on_message(filters.private & filters.text)
 async def reply_info(bot, update):
     reply_markup = BUTTONS
     await update.reply_text(
