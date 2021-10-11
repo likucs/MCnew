@@ -9,11 +9,12 @@ API = "https://api.sumanjay.cf/covid/?country="
 
 BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join our Channel ⚙', url='https://telegram.me/cz_films')]])
 
-@Client.on_message(filters.command("covid"))
+@Bot.on_message(filters.command("covid"))
 async def reply_info(bot, update):
+    query = message.text.split(None, 1)[1]
     reply_markup = BUTTONS
     await update.reply_text(
-        text=covid_info(update.text),
+        text=covid_info(query),
         disable_web_page_preview=True,
         quote=True,
         reply_markup=reply_markup
