@@ -7,7 +7,7 @@ from pyrogram.types import (InlineKeyboardButton,  InlineKeyboardMarkup)
 
 LIST = {}
 
-@Client.on_message(filters.command("convertopdf"))
+@Client.on_message(filters.command("convertpdf"))
 async def pdf(client,message):
  
     if not isinstance(LIST.get(message.from_user.id), list):
@@ -20,7 +20,7 @@ async def pdf(client,message):
         return await message.reply("`Reply to a photo to convert it to a pdf..`")
  
     file_id = str(message.reply_to_message.photo.file_id)
-    ms = await message.reply_text("<code>Converting to PDF ..</code>")
+    ms = await message.reply_text("<code>hey bruh iam Converting to PDF ..</code>")
     file = await client.download_media(file_id)
  
     image = Image.open(file)
