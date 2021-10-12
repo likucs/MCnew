@@ -3,7 +3,7 @@ from pyrogram.types import (
     Message
 )
 from config import Config
-from pyrobot.cust_p_filters import (
+from plugins.cust_p_filters import (
     admin_fliter
 )
 
