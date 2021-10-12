@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from pyrogram.types import *
 
-CALCULATE_TEXT = "<code>wasim Faris</code>"
+CALCULATE_TEXT = ">"
 CALCULATE_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton("DEL", callback_data="DEL"),
