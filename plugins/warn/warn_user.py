@@ -1,6 +1,7 @@
 import json
 import time
 from pyrogram import Client, filters
+from config import Config
 from pyrogram.types import (
     Message,
     ChatPermissions,
