@@ -365,5 +365,3 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "song_ex":
         await update.answer("𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦 :\n\n/song no idea ✅\nNo idea ❌\n\n/song fadded ✅\nfadded ❌", show_alert=True)
-
-    
