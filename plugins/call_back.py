@@ -401,6 +401,10 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "close":
         await update.message.delete()
 
-    elif query_data == "song_ex":
+    elif query_data == "wafikh":
         await update.answer("𝗘𝗫𝗔𝗠𝗣𝗟𝗘𝗦 :\n\n/song no idea ✅\nNo idea ❌\n\n/song fadded ✅\nfadded ❌", show_alert=True)
 
+@Client.on_callback_query()
+async def wafikh(bot, cb):
+    if cb.data =='wafikh':
+      await cb.answer("hi bruhhh", show_alert=True)
