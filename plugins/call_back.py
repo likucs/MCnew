@@ -97,7 +97,7 @@ FILTER_TEXT = """ <b>Help for Filter</b>
 
 CORONA_TEXT ="""<b>Here is the help for the coron information module</b>
 
-<b>/covid  <country name></b><code> you can find a corona information of every country 
+/covid  <country <countryname> <code> you can find a corona information of every country 
 
 example : - /covid india</code>"""
 
