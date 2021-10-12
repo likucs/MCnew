@@ -7,6 +7,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import User, Message, Document 
 from gtts import gTTS
 
+DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
+
+
 @Client.on_message(filters.command(["audiobook"])) # PdfToText 
 async def pdf_to_text(bot, message):
  try:
