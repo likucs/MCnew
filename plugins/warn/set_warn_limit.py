@@ -7,6 +7,7 @@ from pyrogram.types import (
 from plugins.cust_p_filters import (
     sudo_filter
 )
+from config import Config
 
 WARN_DATA_ID = int(Config.WARN_DATA_ID)
 WARN_SETTINGS_ID = int(Config.WARN_SETTINGS_ID)
