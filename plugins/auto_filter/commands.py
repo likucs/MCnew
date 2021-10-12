@@ -2,10 +2,21 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from sample_infos import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
 from utils import Media, get_file_details, get_size
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
+
+START_MSG = """hew jhdkndbdmb
+Jdjdbbddb
+Bsbs"""
+
+ADMINS = "1287385877"
+
+CHANNELS = "-1001544642746"
+
+AUTH_CHANNEL = "-1001544642746"
+
+CUSTOM_FILE_CAPTION = "wahdvdbbdbdbdbsbbdbs"
 
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
