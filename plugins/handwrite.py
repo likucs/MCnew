@@ -4,7 +4,7 @@ from pyrogram.types import User, Message
 import os
 import requests
 
-@bughunter0.on_message(filters.text)
+@Client.on_message(filters.text)
 async def text(bot, message):
     text = str(message.text)
     chat_id = int(message.chat.id)
