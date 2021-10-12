@@ -332,6 +332,7 @@ async def callback_data(bot, update: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode="html"
         )
+
     elif query_data == "coronainfo": 
         buttons = [[
             InlineKeyboardButton('◀️ back', callback_data='home'),
