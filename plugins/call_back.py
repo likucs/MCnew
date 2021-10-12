@@ -106,7 +106,7 @@ COUNTRY_TEXT = """<b>here is the help for County information module</b>
 
 <b>/country [countryname]</b> <code>I can find information of any country of the world</code>"""
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -343,6 +343,19 @@ async def callback_data(bot, update: CallbackQuery):
         
         await update.message.edit_text(
             CORONA_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+    elif query_data == "countryinfo": 
+        buttons = [[
+            InlineKeyboardButton('◀️ back', callback_data='home'),
+            InlineKeyboardButton('🏘 home', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            COUNTRY_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
