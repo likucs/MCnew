@@ -173,7 +173,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('Ban', callback_data='bans'),   
         ],[
             InlineKeyboardButton('Filter', callback_data='filter'),
-            InlineKeyboardButton('Corona', callback_data='bans'),
+            InlineKeyboardButton('Corona', callback_data='coronainfo'),
             InlineKeyboardButton('Country', callback_data='bans'),
         ],[
             InlineKeyboardButton('Google Search', callback_data='bans'),
