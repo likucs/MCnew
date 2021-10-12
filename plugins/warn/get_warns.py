@@ -2,17 +2,21 @@ from pyrogram import Client, filters
 from pyrogram.types import (
     Message
 )
-
+from config import Config
 from pyrobot.cust_p_filters import (
     admin_fliter
 )
 
+WARN_DATA_ID = int(Config.WARN_DATA_ID)
+WARN_SETTINGS_ID = int(Config.WARN_SETTINGS_ID)
+COMMAND_HAND_LER = "/"
 
-@PyroBot.on_message(
+
+@Client.on_message(
     filters.command(["warns"], COMMAND_HAND_LER) &
     admin_fliter
 )
-async def check_warns_of_user(client: PyroBot, msg: Message):
+async def check_warns_of_user(client: Client, msg: Message):
     replied = msg.reply_to_message
     if not replied:
         return
