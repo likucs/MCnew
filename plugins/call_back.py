@@ -113,7 +113,11 @@ PIN_TEXT = """<b>Here is the help for the Pins module:</b>
        : add 'loud' or 'notify' to give notifs to users.</code>
  <b>- /unpin:</b> <code>unpins the currently pinned message</code>"""
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo|pin)$"), group=2)
+CALCULATOR_TEXT = """<b>Here is the help for the calculator module</b>
+
+<code>I am a simple calculator telegram bot. Send me </code><b>/calculator</b>"”"
+
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo|pin|calculator)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -196,7 +200,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('Pin', callback_data='pin'),
             InlineKeyboardButton('font', callback_data='bans'),
         ],[
-            InlineKeyboardButton('calculator', callback_data='bans'),
+            InlineKeyboardButton('calculator', callback_data='calculator'),
             InlineKeyboardButton('img to pdf', callback_data='bans'),
             InlineKeyboardButton('◀️ Back', callback_data='start'),
         ]]
@@ -380,6 +384,21 @@ async def callback_data(bot, update: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode="html"
         )
+
+    elif query_data == "calculator": 
+        buttons = [[
+            InlineKeyboardButton('◀️ back', callback_data='home'),
+            InlineKeyboardButton('🏘 home', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            CALCULATOR_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
 
     elif query_data == "close":
         await update.message.delete()
