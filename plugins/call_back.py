@@ -104,7 +104,7 @@ COUNTRY_TEXT = """<b>here is the help for County information module</b>
 
 <code>I am a country information finder<code>
 
-<b>/country [countryname]</b> <code>I can find information of any country of the world</code>
+<b>/country [countryname]</b> <code>I can find information of any country of the world</code>"""
 
 @Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
