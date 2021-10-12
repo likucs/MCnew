@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from pyrogram.types import *
 
-CALCULATE_TEXT = "Made by @FayasNoushad"
+CALCULATE_TEXT = "<code>wasim Faris</code>"
 CALCULATE_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton("DEL", callback_data="DEL"),
@@ -32,7 +32,7 @@ CALCULATE_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-@Bot.on_message(filters.private & filters.command(["calc", "calculate", "calculator"]))
+@Client.on_message(filters.private & filters.command(["calc", "calculate", "calculator"]))
 async def calculate(bot, update):
     await update.reply_text(
         text=CALCULATE_TEXT,
