@@ -4,13 +4,12 @@ from pyrogram.types import (
     Message
 )
 
-from pyrobot.pyrobot import PyroBot
-from pyrobot.helper_functions.cust_p_filters import (
+from plugins.cust_p_filters import (
     admin_fliter
 )
 
 
-@PyroBot.on_message(
+@Client.on_message(
     filters.command(["resetwarn"], COMMAND_HAND_LER) &
     admin_fliter
 )
