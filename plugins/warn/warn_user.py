@@ -22,7 +22,7 @@ COMMAND_HAND_LER = "/"
     filters.command(["warnuser", "warn"], COMMAND_HAND_LER) &
     admin_fliter
 )
-async def warn_user(client: PyroBot, msg: Message):
+async def warn_user(client: Client, msg: Message):
     chat_id = str(msg.chat.id)
 
     replied = msg.reply_to_message
