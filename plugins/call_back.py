@@ -158,24 +158,28 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "home": 
         buttons = [[
-            InlineKeyboardButton('🎶 Song', callback_data='song'),
-            InlineKeyboardButton('🖇️ Telegraph', callback_data='Telegraph'),
-            InlineKeyboardButton('📅 Info', callback_data='info'),
+            InlineKeyboardButton('Song', callback_data='song'),
+            InlineKeyboardButton('Telegraph', callback_data='Telegraph'),
+            InlineKeyboardButton('Info', callback_data='info'),
         ],[
-            InlineKeyboardButton('🤖 String Gen', callback_data='string'),
-            InlineKeyboardButton('🤐 Mute', callback_data='mute'),
-            InlineKeyboardButton('🚫 Ban', callback_data='bans'),   
+            InlineKeyboardButton('String Gen', callback_data='string'),
+            InlineKeyboardButton('Mute', callback_data='mute'),
+            InlineKeyboardButton('Ban', callback_data='bans'),   
         ],[
-            InlineKeyboardButton('🗃️ Filter', callback_data='filter'),
-            InlineKeyboardButton('🦠Corona', callback_data='bans'),
-            InlineKeyboardButton('🌍 Country', callback_data='bans'),
+            InlineKeyboardButton('Filter', callback_data='filter'),
+            InlineKeyboardButton('Corona', callback_data='bans'),
+            InlineKeyboardButton('Country', callback_data='bans'),
         ],[
-            InlineKeyboardButton('🔎 Google Search', callback_data='bans'),
-            InlineKeyboardButton('🚀 Extra', callback_data='bans'),
-            InlineKeyboardButton('🙃 Memes', callback_data='bans'),
+            InlineKeyboardButton('Google Search', callback_data='bans'),
+            InlineKeyboardButton('Extra', callback_data='bans'),
+            InlineKeyboardButton('Memes', callback_data='bans'),
         ],[
-            InlineKeyboardButton('🖼️ ytdl', callback_data='bans'),
-            InlineKeyboardButton('📌 Pin', callback_data='bans'),
+            InlineKeyboardButton('ytdl', callback_data='bans'),
+            InlineKeyboardButton('Pin', callback_data='bans'),
+            InlineKeyboardButton('font', callback_data='bans'),
+        ],[
+            InlineKeyboardButton('calculator', callback_data='bans'),
+            InlineKeyboardButton('img to pdf', callback_data='bans'),
             InlineKeyboardButton('◀️ Back', callback_data='start'),
         ]]
 
