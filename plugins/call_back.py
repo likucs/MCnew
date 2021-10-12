@@ -106,6 +106,13 @@ COUNTRY_TEXT = """<b>here is the help for County information module</b>
 
 <b>/country [countryname]</b> <code>I can find information of any country of the world</code>"""
 
+PIN_TEXT = """<b>Here is the help for the Pins module:</b>
+
+<b>Admin only:</b>
+<b> - /pin:</b><code> silently pins the message replied to
+       : add 'loud' or 'notify' to give notifs to users.</code>
+ <b>- /unpin:</b> <code>unpins the currently pinned message</code>"""
+
 @Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
