@@ -8,13 +8,16 @@ from plugins.cust_p_filters import (
     admin_fliter
 )
 from config import Config
+WARN_DATA_ID = int(Config.WARN_DATA_ID)
+WARN_SETTINGS_ID = int(Config.WARN_SETTINGS_ID)
+COMMAND_HAND_LER = "/"
 
 
 @Client.on_message(
     filters.command(["resetwarn"], COMMAND_HAND_LER) &
     admin_fliter
 )
-async def reset_all_warns(client: PyroBot, msg: Message):
+async def reset_all_warns(client: Client, msg: Message):
     replied = msg.reply_to_message
     if not replied:
         return
