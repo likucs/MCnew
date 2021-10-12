@@ -384,6 +384,20 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html"
         )
 
+    elif query_data == "calculator": 
+        buttons = [[
+            InlineKeyboardButton('◀️ back', callback_data='home'),
+            InlineKeyboardButton('🏘 home', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            PIN_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
     elif query_data == "close":
         await update.message.delete()
 
