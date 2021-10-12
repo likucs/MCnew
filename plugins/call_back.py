@@ -181,7 +181,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('Corona', callback_data='coronainfo'),
             InlineKeyboardButton('Country', callback_data='countryinfo'),
         ],[
-            InlineKeyboardButton('Google Search', switch_inline_query_current_chat='')
+            InlineKeyboardButton('Google Search', callback_data='bans'),
             InlineKeyboardButton('Extra', callback_data='bans'),
             InlineKeyboardButton('Memes', callback_data='bans'),
         ],[
