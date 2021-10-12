@@ -7,6 +7,7 @@ from pyrogram.types import (
 from plugins.cust_p_filters import (
     admin_fliter
 )
+from config import Config
 
 
 @Client.on_message(
