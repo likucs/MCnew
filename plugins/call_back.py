@@ -1,4 +1,3 @@
-
 import re
 import time
 import asyncio
@@ -101,7 +100,13 @@ CORONA_TEXT ="""<b>Here is the help for the coron information module</b>
 
 example : - /covid india</code>"""
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo)$"), group=2)
+COUNTRY_TEXT = """<b>here is the help for County information module</b>
+
+<code>I am a country information finder<code>
+
+<b>/country [countryname]</b> <code>I can find information of any country of the world</code>
+
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -174,7 +179,7 @@ async def callback_data(bot, update: CallbackQuery):
         ],[
             InlineKeyboardButton('Filter', callback_data='filter'),
             InlineKeyboardButton('Corona', callback_data='coronainfo'),
-            InlineKeyboardButton('Country', callback_data='bans'),
+            InlineKeyboardButton('Country', callback_data='countryinfo'),
         ],[
             InlineKeyboardButton('Google Search', callback_data='bans'),
             InlineKeyboardButton('Extra', callback_data='bans'),
@@ -341,6 +346,19 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html"
         )
 
+    elif query_data == "countryinfo": 
+        buttons = [[
+            InlineKeyboardButton('◀️ back', callback_data='home'),
+            InlineKeyboardButton('🏘 home', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            COUNTRY_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
 
     elif query_data == "close":
         await update.message.delete()
