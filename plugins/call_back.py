@@ -113,7 +113,7 @@ PIN_TEXT = """<b>Here is the help for the Pins module:</b>
        : add 'loud' or 'notify' to give notifs to users.</code>
  <b>- /unpin:</b> <code>unpins the currently pinned message</code>"""
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo|pin)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -193,7 +193,7 @@ async def callback_data(bot, update: CallbackQuery):
             InlineKeyboardButton('Memes', callback_data='bans'),
         ],[
             InlineKeyboardButton('ytdl', callback_data='bans'),
-            InlineKeyboardButton('Pin', callback_data='bans'),
+            InlineKeyboardButton('Pin', callback_data='pin'),
             InlineKeyboardButton('font', callback_data='bans'),
         ],[
             InlineKeyboardButton('calculator', callback_data='bans'),
@@ -363,6 +363,20 @@ async def callback_data(bot, update: CallbackQuery):
         
         await update.message.edit_text(
             COUNTRY_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
+    elif query_data == "pin": 
+        buttons = [[
+            InlineKeyboardButton('◀️ back', callback_data='home'),
+            InlineKeyboardButton('🏘 home', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            PIN_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
