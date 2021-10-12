@@ -95,7 +95,13 @@ FILTER_TEXT = """ <b>Help for Filter</b>
 • /delfilter <code>- delete a specific filter.</code>
 • /delall_filters <code>- deletes whole filters of a chat.</code>"""
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter)$"), group=2)
+CORONA_TEXT ="""<b>Here is the help for the coron information module</b>
+
+<b>/covid  <country name></b><code> you can find a corona information of every country 
+
+example : - /covid india</code>"""
+
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -321,6 +327,20 @@ async def callback_data(bot, update: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode="html"
         )
+    elif query_data == "coronainfo": 
+        buttons = [[
+            InlineKeyboardButton('◀️ back', callback_data='home'),
+            InlineKeyboardButton('🏘 home', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        
+        await update.message.edit_text(
+            CORONA_TEXT,
+            reply_markup=reply_markup,
+            parse_mode="html"
+        )
+
 
     elif query_data == "close":
         await update.message.delete()
