@@ -113,9 +113,9 @@ PIN_TEXT = """<b>Here is the help for the Pins module:</b>
        : add 'loud' or 'notify' to give notifs to users.</code>
  <b>- /unpin:</b> <code>unpins the currently pinned message</code>"""
 
-CALCULATOR_TEXT = """<b>Here is the help for the calculator module</b>
+CALCULATOR_TEXT = """Here is the help for the calculator module
 
-<code>I am a simple calculator telegram bot. Send me </code><b>/calculator</b>"”"
+I am a simple calculator telegram bot. Send me /calculator"”"
 
 @Client.on_callback_query(filters.regex(r"^(start|help|about|close|home|song|Telegraph|info|song_ex|devs|ban|mute|bans|delallconfirm|delallcancel|string|filter|coronainfo|countryinfo|pin|calculator)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
