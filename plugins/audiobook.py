@@ -8,7 +8,7 @@ from pyrogram.types import User, Message, Document
 from gtts import gTTS
 
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
-
+Disclaimer = """ Disclaimer Notice , This Audio Is Generated automatically Through AudioBook Bot, Join BugHunterBots on Telegram for More Bots .     You are Now Listening to your Audio  ."""
 
 @Client.on_message(filters.command(["audiobook"])) # PdfToText 
 async def pdf_to_text(bot, message):
