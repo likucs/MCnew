@@ -436,7 +436,7 @@ async def bot_status(client,message):
 
     await message.reply_text(
         "**Current status of your bot!**\n\n"
-        f"**Total Groups**: `{chat_count()}`
+        f"> __**Total Groups**: `{chat_count()}`
         f"> __**{filters}** filters across **{chats}** chats__\n\n"
         f"{userstats}"
         f"> __BOT Uptime__ : **{uptime}**\n\n"
