@@ -1,6 +1,5 @@
 from pyrogram import Client as bot
 from pyrogram import filters
-from wasim_faris.chat_col import present_in_chats, add_to_chats 
 
 @bot.on_message(filters.group, group=2)
 async def chats(client, message):
