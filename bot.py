@@ -37,7 +37,6 @@ from pyrogram.errors import (
     PhoneNumberInvalid, ApiIdInvalid,
     PhoneCodeInvalid, PhoneCodeExpired, UserNotParticipant
 )
-from wasim_faris.chat_col import chat_count
 HEROKU_API_KEY = "bff3ab0e-99df-433f-be12-466ce58e57a4"
 
 BOT_START_TIME = time.time()
