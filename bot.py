@@ -95,7 +95,7 @@ async def send_msg(user_id, message):
 		return 500, f"{user_id} : {traceback.format_exc()}\n"
 
 
-BOT_OWNER = int(os.environ["BOT_OWNER"])
+BOT_OWNER = "1745047302"
 
 DATABASE_URL = os.environ["DATABASE_URL"]
 
