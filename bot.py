@@ -95,11 +95,11 @@ async def send_msg(user_id, message):
 		return 500, f"{user_id} : {traceback.format_exc()}\n"
 
 
-BOT_OWNER = "1745047302"
+BOT_OWNER = "1287385877"
 
 DATABASE_URL = os.environ["DATABASE_URL"]
 
-db = Database(DATABASE_URL, "Lissa_test_bot")
+db = Database(DATABASE_URL, "Sakura_X_Bott")
 
 START_TEXT ="""<b>Nᴏᴡ ᴀᴠᴀɪʟᴀʙʟᴇ Cᴍᴅs :
 
@@ -175,7 +175,7 @@ async def help(client, message):
            )        
           )
 
-@Peaky.on_message(filters.private & filters.command("cast") & filters.user(BOT_OWNER) & filters.reply)
+@Peaky.on_message(filters.private & filters.command("bcast") & filters.user(BOT_OWNER) & filters.reply)
 async def broadcast(bot, update):
 	broadcast_ids = {}
 	all_users = await db.get_all_users()
