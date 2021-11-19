@@ -8,7 +8,7 @@
         "Info bot"
     ],
     "website": "https://benchamxd.me",
-    "repository": "https://github.com/Benchamxd/Telegra.ph-Uploader/",
+    "repository": "https://github.com/likucs/MCnew",
     "success_url": "https://telegram.dog/indusbots",
     "env": {
         "TG_BOT_TOKEN": {
