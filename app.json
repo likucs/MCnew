@@ -9,7 +9,7 @@
     ],
     "website": "https://benchamxd.me",
     "repository": "https://github.com/likucs/MCnew",
-    "success_url": "https://telegram.dog/indusbots",
+    "success_url": "https://github.com/likucs/MCnew",
     "env": {
         "TG_BOT_TOKEN": {
             "description": "You Telegram Bot Token from @BotFather",
